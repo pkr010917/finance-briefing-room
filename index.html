@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>금융 브리핑 룸</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 상단 바: 제품명 + 시계 -->
+  <header class="topbar">
+    <div class="topbar__brand">
+      <h1 class="topbar__title">금융 브리핑 룸</h1>
+      <p class="topbar__subtitle">FINANCIAL BRIEFING ROOM</p>
+    </div>
+    <div class="topbar__meta">
+      <p class="topbar__clock" id="clock">--:--:--</p>
+      <p class="topbar__date" id="today-date"></p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- 왼쪽: 트렌드 목록 -->
+    <section class="list" id="trend-list" aria-label="거시 트렌드 목록">
+      <p class="list__header">MACRO TRENDS <span id="trend-count"></span></p>
+    </section>
+
+    <!-- 오른쪽: 선택한 트렌드 상세 -->
+    <section class="detail" id="detail" aria-label="트렌드 상세">
+      <p class="detail__category" id="detail-category"></p>
+      <h2 class="detail__title" id="detail-title"></h2>
+      <p class="detail__since" id="detail-since"></p>
+
+      <h3 class="detail__heading">개요<span class="detail__heading-en">OVERVIEW</span></h3>
+      <p class="detail__desc" id="detail-desc"></p>
+
+      <h3 class="detail__heading">주목할 점<span class="detail__heading-en">WHAT TO WATCH</span></h3>
+      <ul class="detail__watch" id="detail-watch"></ul>
+
+      <h3 class="detail__heading">관련 기사<span class="detail__heading-en">HEADLINES</span></h3>
+      <ul class="detail__articles" id="detail-articles"></ul>
+
+      <a class="detail__more" id="detail-more" target="_blank" rel="noopener">네이버 뉴스에서 더 찾아보기 ↗</a>
+    </section>
+  </main>
+
+  <!-- 하단 상태 바 -->
+  <footer class="statusbar">
+    <span id="status-left"></span>
+    <span class="statusbar__hint">↑↓ 이동 · ENTER 선택</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

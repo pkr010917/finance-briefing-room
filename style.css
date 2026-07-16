@@ -1,0 +1,336 @@
+/* ============================================================
+   금융 브리핑 룸 — 터미널 스타일
+   색은 딱 4가지 역할만: 배경(먹색) / 본문(백색) / 보조(회색) / 포인트(앰버)
+   ============================================================ */
+
+:root {
+  --bg: #0b0c10;         /* 화면 바탕 */
+  --panel: #111318;      /* 패널 바탕 */
+  --panel-raised: #171a21;
+  --border: #22262f;
+  --text: #e8e6e0;
+  --muted: #9a9da6;
+  --faint: #63666f;
+  --amber: #f5a623;      /* 유일한 포인트 색 */
+  --amber-dim: rgba(245, 166, 35, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  overflow: hidden; /* 페이지 전체 스크롤 대신 패널 안쪽만 스크롤 */
+  display: flex;
+  flex-direction: column;
+}
+
+.mono {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/* ===== 상단 바 ===== */
+.topbar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 20px 28px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar__title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.topbar__subtitle {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--amber);
+  margin-top: 4px;
+}
+
+.topbar__meta {
+  text-align: right;
+}
+
+.topbar__clock {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 22px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.topbar__date {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ===== 본문: 왼쪽 목록 + 오른쪽 상세 ===== */
+.layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(320px, 400px) 1fr;
+  min-height: 0;
+}
+
+/* --- 왼쪽 목록 --- */
+.list {
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  padding-bottom: 12px;
+}
+
+.list__header {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--faint);
+  padding: 16px 20px 10px;
+}
+
+.list__header span {
+  color: var(--amber);
+}
+
+.row {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-left: 2px solid transparent;
+  padding: 12px 20px 12px 18px;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+.row:hover {
+  background: var(--panel);
+}
+
+.row.is-selected {
+  background: var(--panel-raised);
+  border-left-color: var(--amber);
+}
+
+.row__top {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.row__index {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--faint);
+}
+
+.row.is-selected .row__index {
+  color: var(--amber);
+}
+
+.row__title {
+  font-size: 15px;
+  font-weight: 700;
+  flex: 1;
+}
+
+.row__since {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.row__summary {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 4px;
+  padding-left: 30px;
+}
+
+.row__category {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+  margin-top: 6px;
+  padding-left: 30px;
+}
+
+/* --- 오른쪽 상세 --- */
+.detail {
+  overflow-y: auto;
+  padding: 28px 36px 48px;
+  max-width: 760px;
+}
+
+.detail__category {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--amber);
+}
+
+.detail__title {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 8px 0 6px;
+}
+
+.detail__since {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.detail__heading {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 34px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail__heading-en {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10.5px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--faint);
+}
+
+.detail__desc {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.detail__watch {
+  list-style: none;
+}
+
+.detail__watch li {
+  font-size: 14.5px;
+  line-height: 1.65;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.detail__watch li::before {
+  content: "\25B8"; /* ▸ (직접 쓰면 인코딩에 따라 깨질 수 있어 코드로 표기) */
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+}
+
+.detail__articles {
+  list-style: none;
+}
+
+.detail__articles li {
+  border-bottom: 1px solid var(--border);
+}
+
+.detail__articles a {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 11px 2px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+.detail__articles a:hover .article-title {
+  color: var(--amber);
+}
+
+.article-title {
+  flex: 1;
+}
+
+.article-press {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  color: var(--faint);
+  white-space: nowrap;
+}
+
+.detail__more {
+  display: inline-block;
+  margin-top: 24px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  color: var(--amber);
+  text-decoration: none;
+  border: 1px solid var(--amber);
+  padding: 9px 16px;
+  border-radius: 3px;
+}
+
+.detail__more:hover {
+  background: var(--amber-dim);
+}
+
+/* ===== 하단 상태 바 ===== */
+.statusbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid var(--border);
+  padding: 10px 28px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--faint);
+}
+
+/* ===== 모바일: 세로로 쌓기 ===== */
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .list {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    max-height: 44vh;
+  }
+
+  .detail {
+    padding: 24px 20px 40px;
+  }
+
+  .topbar {
+    padding: 16px 20px 12px;
+  }
+
+  .statusbar__hint {
+    display: none;
+  }
+}
