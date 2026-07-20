@@ -31,7 +31,7 @@ import anthropic
 
 # 사용할 Claude 모델. 비용을 줄이고 싶으면 GitHub Secrets/환경변수
 # BRIEFING_MODEL을 "claude-haiku-4-5"로 설정하세요 (품질↓ 비용↓).
-MODEL = os.environ.get("BRIEFING_MODEL", "claude-opus-4-8")
+MODEL = os.environ.get("BRIEFING_MODEL") or "claude-opus-4-8"  # 빈 값이면 기본 모델 사용
 
 KST = timezone(timedelta(hours=9))
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data.json")
