@@ -36,6 +36,10 @@ KST = timezone(timedelta(hours=9))
 
 TELEGRAM_MSG_LIMIT = 4096        # 텔레그램 메시지 글자수 제한
 
+# 뉴스레터 맨 끝에 붙는 브리핑 룸 웹사이트 링크
+SITE_URL = "https://pkr010917.github.io/finance-briefing-room/"
+SITE_FOOTER = f"\n\n🖥 브리핑 룸에서 트렌드별로 모아보기\n{SITE_URL}"
+
 
 # ────────────────────────── 과거 주제 관리 ──────────────────────────
 def load_recent_topics() -> list[str]:
@@ -317,7 +321,7 @@ def main() -> None:
     print(f"   생성 완료: 본문 {len(body)}자, 주제 {len(topics)}건, 기사 {len(articles)}건")
 
     print("3) 텔레그램 발송 중...")
-    send_to_telegram(bot_token, chat_id, body)
+    send_to_telegram(bot_token, chat_id, body + SITE_FOOTER)
 
     if topics:
         save_topics(topics)
