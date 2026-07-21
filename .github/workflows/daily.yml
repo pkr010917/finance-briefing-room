@@ -1,0 +1,51 @@
+# 평일 아침 7시(한국시간)에 실행되는 통합 파이프라인
+#   1) 뉴스레터 생성 → 텔레그램 발송 + 기사를 트렌드별로 data/trends.json에 축적
+#   2) 축적된 기사·네이버 뉴스로 트렌드 브리핑(설명·주목할 점) 갱신
+#   3) 변경된 데이터 파일을 저장소에 커밋
+name: daily
+
+on:
+  schedule:
+    - cron: "0 22 * * 0-4" # UTC 22:00 (일~목) = 한국시간 월~금 아침 7:00
+  workflow_dispatch: # Actions 탭에서 "Run workflow" 버튼으로 수동 실행도 가능
+
+permissions:
+  contents: write # 갱신된 data/를 저장소에 커밋하기 위해 필요
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Newsletter → Telegram + article archive
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/newsletter_bot.py
+
+      - name: Update trend briefing
+        if: ${{ !cancelled() }} # 뉴스레터가 실패해도 브리핑 갱신은 시도
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BRIEFING_MODEL: ${{ vars.BRIEFING_MODEL }}
+        run: python scripts/update_briefing.py
+
+      - name: Commit and push
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "briefing-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "🤖 자동 브리핑·뉴스레터 업데이트 $(TZ=Asia/Seoul date +'%Y-%m-%d')"
+          git push

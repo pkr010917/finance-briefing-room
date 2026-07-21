@@ -15,13 +15,13 @@ function tick() {
 tick();
 setInterval(tick, 1000);
 
-// ===== 데이터 불러오기 (data.json) =====
+// ===== 데이터 불러오기 (data/trends.json) =====
 let TRENDS = [];
 let selectedIndex = 0;
 const list = document.getElementById("trend-list");
 
 async function init() {
-  const res = await fetch("data.json");
+  const res = await fetch("data/trends.json");
   const data = await res.json();
   TRENDS = data.trends;
 
@@ -72,14 +72,37 @@ function select(index) {
     watchList.appendChild(li);
   });
 
+  renderArticles(trend, false);
+
+  document.getElementById("detail-more").href =
+    `https://search.naver.com/search.naver?where=news&query=${encodeURIComponent(trend.query)}`;
+
+  if (window.matchMedia("(max-width: 860px)").matches) {
+    document.getElementById("detail").scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+// ===== 관련 기사 목록: 최근 5건 + '지난 기사 더 보기' =====
+const VISIBLE_ARTICLES = 5;
+
+function renderArticles(trend, expanded) {
   const articleList = document.getElementById("detail-articles");
   articleList.innerHTML = "";
-  trend.articles.forEach((article) => {
+
+  const articles = expanded
+    ? trend.articles
+    : trend.articles.slice(0, VISIBLE_ARTICLES);
+
+  articles.forEach((article) => {
     const li = document.createElement("li");
     const link = document.createElement("a");
     link.href = article.url;
     link.target = "_blank";
     link.rel = "noopener";
+
+    const date = document.createElement("span");
+    date.className = "article-date";
+    date.textContent = article.date ? article.date.slice(5) : ""; // "2026-07-21" → "07-21"
 
     const title = document.createElement("span");
     title.className = "article-title";
@@ -89,17 +112,22 @@ function select(index) {
     press.className = "article-press";
     press.textContent = article.press;
 
+    link.appendChild(date);
     link.appendChild(title);
     link.appendChild(press);
     li.appendChild(link);
     articleList.appendChild(li);
   });
 
-  document.getElementById("detail-more").href =
-    `https://search.naver.com/search.naver?where=news&query=${encodeURIComponent(trend.query)}`;
-
-  if (window.matchMedia("(max-width: 860px)").matches) {
-    document.getElementById("detail").scrollIntoView({ behavior: "smooth" });
+  const hidden = trend.articles.length - VISIBLE_ARTICLES;
+  if (!expanded && hidden > 0) {
+    const li = document.createElement("li");
+    const button = document.createElement("button");
+    button.className = "article-expand";
+    button.textContent = `+ 지난 기사 ${hidden}건 더 보기`;
+    button.addEventListener("click", () => renderArticles(trend, true));
+    li.appendChild(button);
+    articleList.appendChild(li);
   }
 }
 

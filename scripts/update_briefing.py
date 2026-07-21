@@ -2,9 +2,9 @@
 # 📰 금융 브리핑 자동 업데이트 스크립트
 #
 # 하는 일:
-#   1. data.json의 각 트렌드에 대해 네이버 뉴스 API로 최신 기사 검색
+#   1. data/trends.json의 각 트렌드에 대해 네이버 뉴스 API로 최신 기사 검색
 #   2. Claude API에게 기사들을 읽히고 트렌드 설명·주목할 점을 갱신
-#   3. data.json을 새 내용으로 저장
+#   3. 새 기사는 기존 기사 목록 위에 축적하고 data/trends.json에 저장
 #
 # 실행에 필요한 환경변수 (GitHub Secrets에 등록):
 #   NAVER_CLIENT_ID      네이버 개발자센터에서 발급
@@ -34,7 +34,8 @@ import anthropic
 MODEL = os.environ.get("BRIEFING_MODEL") or "claude-opus-4-8"  # 빈 값이면 기본 모델 사용
 
 KST = timezone(timedelta(hours=9))
-DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data.json")
+DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "trends.json")
+MAX_ARTICLES_PER_TREND = 20  # 트렌드당 축적할 기사 수 (newsletter_bot.py와 동일)
 
 
 def require_env(name):
@@ -184,18 +185,20 @@ def main():
     text = next(b.text for b in response.content if b.type == "text")
     updated = {t["title"]: t for t in json.loads(text)["trends"]}
 
-    # 3) data.json 갱신 (글은 Claude 결과로, 기사는 수집 결과로)
+    # 3) data/trends.json 갱신 (글은 Claude 결과로, 기사는 기존 목록 위에 축적)
     for trend in data["trends"]:
         new = updated.get(trend["title"])
         if new:
             trend["summary"] = new["summary"]
             trend["desc"] = new["desc"]
             trend["watch"] = new["watch"]
-        if trend["title"] in fresh:
-            trend["articles"] = [
-                {"title": a["title"], "press": a["press"], "url": a["url"]}
-                for a in fresh[trend["title"]]
-            ]
+        existing_urls = {a.get("url") for a in trend["articles"]}
+        fresh_entries = [
+            {"title": a["title"], "press": a["press"], "url": a["url"], "date": a["date"]}
+            for a in fresh.get(trend["title"], [])
+            if a["url"] not in existing_urls
+        ]
+        trend["articles"] = (fresh_entries + trend["articles"])[:MAX_ARTICLES_PER_TREND]
 
     data["lastUpdated"] = datetime.now(KST).strftime("%Y.%m.%d")
 
