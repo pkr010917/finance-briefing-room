@@ -14,6 +14,36 @@
       ],
       "articles": [
         {
+          "title": "7월 금통위: 매의 얼굴, 그렇지 못했던 목소리",
+          "press": "ibks.com",
+          "url": "https://m.ibks.com/iko/IKO01/download.do?seq=5199&menuCode=IKO010401&attatchCd=ATTATCH1",
+          "date": "2026-08-04"
+        },
+        {
+          "title": "기준금리, 2026년 7월 인상이 우리 경제에 미치는 영향",
+          "press": "kafi.co.kr",
+          "url": "https://kafi.co.kr/base-rate-2026-july-hike-explained/",
+          "date": "2026-08-04"
+        },
+        {
+          "title": "[전문]한국은행 금융통화위원회 7월 통화정책방향",
+          "press": "daum.net",
+          "url": "https://v.daum.net/v/20260716110353864",
+          "date": "2026-08-04"
+        },
+        {
+          "title": "7월 물가 3% 밑돌까…한은 '8월 연속 인상' 향방 가른다",
+          "press": "heraldcorp.com",
+          "url": "https://biz.heraldcorp.com/article/10827878",
+          "date": "2026-08-04"
+        },
+        {
+          "title": "한은 금통위, 3년 6개월 만에 '금리 인상 모드'로⋯고물가 등 영향 [7월 금통위]",
+          "press": "daum.net",
+          "url": "https://v.daum.net/v/q95do9B3v9?f=p",
+          "date": "2026-08-04"
+        },
+        {
           "title": "고정형 금리 9개월째 상승…주담대 차주들, 변동금리로 '유턴'",
           "press": "daily.hankooki.com",
           "url": "https://daily.hankooki.com/news/articleView.html?idxno=1392106",
@@ -102,36 +132,6 @@
           "press": "edaily.co.kr",
           "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=01823686645518456",
           "date": "2026-07-26"
-        },
-        {
-          "title": "5대 은행 예·적금 금리 줄인상… 1년 만기 예금 연 3%대",
-          "press": "chosun.com",
-          "url": "https://www.chosun.com/economy/stock-finance/2026/07/23/HGYKKMV6MBBQNFQLWB2TPGDZTI/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-          "date": "2026-07-23"
-        },
-        {
-          "title": "“다시 은행으로 돌아갈까”…5대 은행 예금 금리 3.2%대",
-          "press": "mk.co.kr",
-          "url": "https://www.mk.co.kr/article/12105602",
-          "date": "2026-07-23"
-        },
-        {
-          "title": "신한·KB·하나·우리·농협…2026년에도 '시스템 핵심은행' 유지",
-          "press": "ebn.co.kr",
-          "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1671622",
-          "date": "2026-07-23"
-        },
-        {
-          "title": "10개 은행·지주사, '2026년도 금융체계상 중요한 은행·지주사' 선정",
-          "press": "heraldcorp.com",
-          "url": "https://biz.heraldcorp.com/article/10538302",
-          "date": "2026-07-23"
-        },
-        {
-          "title": "2026년도 금융체계상 중요한 은행·은행지주회사 및 금융체계상 중요한 금융기관 선정 결과",
-          "press": "fsc.go.kr",
-          "url": "https://fsc.go.kr/no010101/84988",
-          "date": "2026-07-23"
         }
       ],
       "query": "한국은행 기준금리 인하"
@@ -241,6 +241,12 @@
         "자산관리(PB·WM)·연금·신탁 등 안정적인 고마진 비이자 서비스 확대"
       ],
       "articles": [
+        {
+          "title": "NH농협은행, 하반기 사업추진 결의대회...자산관리 강화",
+          "press": "wikileaks-kr.org",
+          "url": "http://www.wikileaks-kr.org/news/articleView.html?idxno=190096",
+          "date": "2026-08-04"
+        },
         {
           "title": "‘돈 먹는 하마’ 배달앱 왜 할까…신한·하나은행 속내는?",
           "press": "economist.co.kr",
@@ -353,12 +359,6 @@
           "title": "기업은행, 올 상반기 순익 1.4조 전년比 4.4% 줄어",
           "press": "it.chosun.com",
           "url": "https://it.chosun.com/news/articleView.html?idxno=2023092166689",
-          "date": "2026-07-27"
-        },
-        {
-          "title": "신한은행이 2331억 더 벌었는데…'리딩금융'은 KB가 차지한 이유",
-          "press": "news.tf.co.kr",
-          "url": "https://news.tf.co.kr/read/economy/2347239.htm",
           "date": "2026-07-27"
         }
       ],
@@ -1017,6 +1017,18 @@
     }
   ],
   "unclassified": [
+    {
+      "title": "우리은행 대기업영업전략부/연금사업부/신탁부 지원업무전문역(퇴직인력) 채용공고",
+      "press": "woorifg.com",
+      "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do",
+      "date": "2026-08-04"
+    },
+    {
+      "title": "이번주 국내 주요 금융일정(8.3~8.7)",
+      "press": "newspim.com",
+      "url": "https://www.newspim.com/news/view/20260731001282",
+      "date": "2026-08-04"
+    },
     {
       "title": "NH농협금융, 2026년 준법감시협의회 개최",
       "press": "thevaluenews.co.kr",
