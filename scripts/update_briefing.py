@@ -30,8 +30,12 @@ from email.utils import parsedate_to_datetime
 import anthropic
 
 # 사용할 Claude 모델. 비용을 줄이고 싶으면 GitHub Secrets/환경변수
-# BRIEFING_MODEL을 "claude-haiku-4-5"로 설정하세요 (품질↓ 비용↓).
-MODEL = os.environ.get("BRIEFING_MODEL") or "claude-opus-4-8"  # 빈 값이면 기본 모델 사용
+# BRIEFING_MODEL을 "claude-sonnet-5"로 설정하세요 (품질↓ 비용↓).
+MODEL = os.environ.get("BRIEFING_MODEL") or "claude-opus-5"  # 빈 값이면 기본 모델 사용
+
+# 생각 깊이. 지정하지 않으면 자동으로 high가 되어 비용이 올라갑니다.
+# 트렌드 설명을 다듬는 작업에는 medium이면 충분합니다. (low로 더 낮출 수 있음)
+EFFORT = os.environ.get("BRIEFING_EFFORT") or "medium"
 
 KST = timezone(timedelta(hours=9))
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "trends.json")
@@ -176,7 +180,10 @@ def main():
             "매일 아침 금융 입문자를 위해 거시 트렌드 브리핑을 갱신합니다."
         ),
         messages=[{"role": "user", "content": build_prompt(data["trends"], fresh)}],
-        output_config={"format": {"type": "json_schema", "schema": OUTPUT_SCHEMA}},
+        output_config={
+            "effort": EFFORT,
+            "format": {"type": "json_schema", "schema": OUTPUT_SCHEMA},
+        },
     )
 
     if response.stop_reason == "refusal":

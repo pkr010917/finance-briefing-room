@@ -24,7 +24,15 @@
 
 자동화에 필요한 Secrets: NAVER_CLIENT_ID, NAVER_CLIENT_SECRET, ANTHROPIC_API_KEY,
 TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID.
-브리핑 모델은 기본 claude-opus-4-8(변수 BRIEFING_MODEL로 교체 가능), 뉴스레터 모델은 스크립트 상단 MODEL 상수.
+
+## 모델·비용 (2026-08-14 기준)
+
+- 뉴스레터: claude-sonnet-5, 생각하기 끔(`thinking: disabled`), 웹검색 `web_search_20260209` 5회
+  - Sonnet 5는 thinking을 생략하면 자동으로 켜져 MAX_TOKENS를 잡아먹으므로 **명시적으로 꺼야 함**
+  - 검색 결과가 대화에 누적되어 매 호출마다 재전송되므로 **검색 횟수가 비용의 최대 변수**
+- 브리핑: claude-opus-5, `effort: medium` (변수 BRIEFING_MODEL / BRIEFING_EFFORT로 교체 가능)
+- 실측 운영비: 평일 하루 약 $0.42, 월 약 $9~10. 비용은 console.anthropic.com → Usage에서 확인
+- **잔액이 0이 되면 Actions가 매일 조용히 실패한다** (2026-08-05~08-14 10일간 중단된 전례). 월 1회 잔액 확인 권장
 
 ## 실행 방법
 

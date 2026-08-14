@@ -23,9 +23,11 @@ import anthropic
 import requests
 
 # ────────────────────────── 설정 ──────────────────────────
-MODEL = "claude-sonnet-4-6"      # 품질/비용 균형이 좋은 모델
+MODEL = "claude-sonnet-5"        # 품질/비용 균형이 좋은 모델
 MAX_TOKENS = 8000                # 뉴스레터가 길기 때문에 넉넉하게
-MAX_WEB_SEARCHES = 8            # 1회 실행당 최대 검색 횟수 (비용 통제)
+# 검색 1회마다 기사 본문이 대화에 쌓이고 다음 호출 때 전부 다시 전송되므로,
+# 검색 횟수가 비용에 가장 큰 영향을 줍니다. 비용이 부담되면 4로 낮추세요.
+MAX_WEB_SEARCHES = 5             # 1회 실행당 최대 검색 횟수 (비용 통제)
 DATA_DIR = Path(__file__).parent.parent / "data"
 HISTORY_FILE = DATA_DIR / "history.json"
 TRENDS_FILE = DATA_DIR / "trends.json"
@@ -96,7 +98,8 @@ def build_prompt(recent_topics: list[str], trend_titles: list[str]) -> str:
     return f"""오늘은 {today}입니다. 한국 금융권 데일리 뉴스레터를 작성해주세요.
 
 ## 1단계: 뉴스 리서치
-웹 검색으로 아래 세 영역을 리서치하세요. 각 영역당 여러 번 검색해 양질의 최신 기사를 찾으세요.
+먼저 web_search 도구로 반드시 검색하세요. 기억에 의존해 답하지 말고, 오늘 검색한 기사만 근거로 쓰세요.
+아래 세 영역을 각각 최소 1회씩 검색하고, 검색 결과가 부실한 영역만 한 번 더 검색하세요 (총 {MAX_WEB_SEARCHES}회 이내).
 1. 시중은행 동향 (KB국민·신한·하나·우리·NH농협 등)
 2. 금융권 규제·정책당국 동향 (금융위원회, 금융감독원, 한국은행 등)
 3. 금융권 채용·취업 공고 (은행·금융공기업 신입/인턴 공고, 채용 박람회, 마감 임박 일정)
@@ -150,9 +153,15 @@ def generate_newsletter(client: anthropic.Anthropic, prompt: str) -> str:
     response = client.messages.create(
         model=MODEL,
         max_tokens=MAX_TOKENS,
+        # Sonnet 5부터는 이 설정을 생략하면 '생각하기'가 자동으로 켜져서
+        # MAX_TOKENS를 생각에 써버리고 본문이 잘릴 수 있어 명시적으로 끕니다.
+        # (대신 프롬프트 1단계에서 검색을 반드시 하도록 지시)
+        thinking={"type": "disabled"},
         messages=[{"role": "user", "content": prompt}],
         tools=[{
-            "type": "web_search_20250305",
+            # _20260209 버전은 검색 결과를 대화에 넣기 전에 자동으로 걸러내
+            # 토큰 사용량을 줄여줍니다 (Sonnet 4.6 이상에서 사용 가능).
+            "type": "web_search_20260209",
             "name": "web_search",
             "max_uses": MAX_WEB_SEARCHES,
             "user_location": {
