@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.08.17",
+  "lastUpdated": "2026.08.18",
   "trends": [
     {
       "category": "금리·정책",
@@ -8,6 +8,18 @@
       "summary": "인하 기대는 뒤집혔다. 한은 부총재까지 '추가 인상 가능성' 언급한 국면",
       "desc": "기준금리는 은행업의 모든 것이 시작되는 출발점입니다. 금리가 오르면 예대금리차와 순이자마진(NIM)이 벌어져 은행 이자이익에 유리하게 작용하고, 내려가면 대출 수요와 부동산 시장이 살아나는 대신 마진이 줄어듭니다. 2022년 글로벌 인플레이션과 함께 시작된 고금리 시대는 2024~2025년 네 차례 인하로 한 차례 방향을 틀었고, 이후에도 물가·환율·지정학 변수에 따라 인상과 인하 기대가 수시로 뒤집히고 있습니다. 이 흐름을 읽는 틀은 세 가지입니다. 한국은행 금통위가 어느 방향으로 움직이는지, 미국과의 금리 차가 환율에 어떤 압력을 주는지, 그리고 가계의 이자 부담(주택담보대출 금리)이 소비와 부동산으로 어떻게 번지는지입니다. 개별 금리 뉴스는 결국 이 큰 사이클의 어느 지점에 있는지를 보여주는 조각들입니다.",
       "articles": [
+        {
+          "title": "골드만 \"시장 지나치게 매파적…9월 금리 인상 가능성 매우 작아\"",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430419",
+          "date": "2026-08-18"
+        },
+        {
+          "title": "美국채 30년물 19년만에 최고…증시 흔든 금리·유가[뉴욕마감]",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/world/2026/08/18/2026081806063034189",
+          "date": "2026-08-18"
+        },
         {
           "title": "“다시 금 살 때 됐나”…개미들, 4개월 만에 순매수 전환",
           "press": "mk.co.kr",
@@ -115,18 +127,6 @@
           "press": "newsworks.co.kr",
           "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=848624",
           "date": "2026-07-28"
-        },
-        {
-          "title": "3년 6개월 만의 기준금리 인상… 부동산 시장, 어디부터 움직일까",
-          "press": "rcast.co.kr",
-          "url": "https://www.rcast.co.kr/news/articleView.html?idxno=31308",
-          "date": "2026-07-28"
-        },
-        {
-          "title": "'6월은 예고편'···하반기 가계 이자 부담 폭발한다",
-          "press": "newsway.co.kr",
-          "url": "https://newsway.co.kr/news/view?ud=2026072810575366190",
-          "date": "2026-07-28"
         }
       ],
       "query": "한국은행 기준금리 인하"
@@ -138,6 +138,12 @@
       "summary": "'주담대로 돈 벌던 시대'의 종료. 총량 목표는 3%로 완화했지만 DSR은 그대로",
       "desc": "한국 은행업의 전통적 수익 공식은 '주택담보대출로 돈을 버는 것'이었지만, 정부가 가계부채를 국가적 위험으로 보고 총량을 직접 관리하면서 이 공식이 근본부터 흔들리고 있습니다. 금융당국은 은행별 대출 증가 한도를 정해두고, 스트레스 DSR처럼 개인의 대출 한도를 조이는 규제를 단계적으로 강화해 왔습니다. 은행 입장에서는 가장 안전하고 확실한 성장 엔진이 막힌 것이라, 비이자이익 확대·글로벌 진출 같은 다른 트렌드들이 모두 이 규제에서 출발한다고 해도 과언이 아닙니다. 규제가 조여질 때마다 대출 수요가 저축은행·카드론 등 2금융권으로 옮겨가는 풍선효과가 반복되는 것도 구조적 특징입니다. 뉴스를 볼 때는 규제 강도(총량 목표·DSR 단계)의 변화, 은행별 대출 중단 여부, 풍선효과의 크기를 함께 보면 흐름이 잡힙니다.",
       "articles": [
+        {
+          "title": "집단대출 다 풀린다… 일반 주담대도 증액",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/finance/2026/08/18/2026081719385785583",
+          "date": "2026-08-18"
+        },
         {
           "title": "이번주 국내 주요 금융일정(8.17~8.21)",
           "press": "newspim.com",
@@ -251,6 +257,18 @@
       "desc": "한국 은행 수익의 대부분은 예금과 대출의 금리 차이에서 나오는 이자이익입니다. 문제는 이 구조가 금리 사이클에 실적이 통째로 흔들리는 데다, '이자 장사'라는 사회적 비판과 대출 총량규제까지 겹치면서 성장의 한계가 뚜렷해졌다는 점입니다. 그래서 은행들은 수수료·신탁·방카슈랑스·투자은행(IB) 같은 비이자 수익원을 키우는 동시에, 배달앱(신한 땡겨요)·알뜰폰(KB 리브모바일)처럼 은행답지 않은 신사업에도 뛰어들고 있습니다. 겉보기에 '은행이 저걸 왜 하지?' 싶은 뉴스는 대부분 이 트렌드의 연장선입니다. 관전 포인트는 실적 발표 때마다 비이자이익 비중이 실제로 늘고 있는지, 그리고 신사업이 미래 고객 접점 확보(플랫폼 전략)로 이어지는지입니다.",
       "articles": [
         {
+          "title": "롯데百-SC제일은행, 우수 고객에 자산관리·라운지 상호 제공",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260817053100030",
+          "date": "2026-08-18"
+        },
+        {
+          "title": "SGI서울보증, 강북 4개 지점 통합… 광화문 대형 영업거점 신설",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/finance/2026/08/18/2026081416262613922",
+          "date": "2026-08-18"
+        },
+        {
           "title": "상반기 13조 순이익 5대 금융지주…회장·은행장·직원 연봉도 대폭 인...",
           "press": "autodaily.co.kr",
           "url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546678",
@@ -357,18 +375,6 @@
           "press": "dailian.co.kr",
           "url": "https://www.dailian.co.kr/news/view/1671812/?sc=Naver",
           "date": "2026-07-29"
-        },
-        {
-          "title": "NH농협은행, 반기 순익 1.2조…NIM·수수료 동반 개선",
-          "press": "bloter.net",
-          "url": "https://www.bloter.net/news/articleView.html?idxno=669318",
-          "date": "2026-07-29"
-        },
-        {
-          "title": "[금융家] BNK부산은행 ③ㅣ 지역상생·디지털 확대…AI 혁신도",
-          "press": "cbci.co.kr",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=592892",
-          "date": "2026-07-29"
         }
       ],
       "query": "은행 비이자이익 확대"
@@ -380,6 +386,30 @@
       "summary": "챗봇을 넘어 스스로 일하는 '에이전틱 AI'로 업무·상담·심사까지 다시 짜는 중",
       "desc": "금융그룹들이 단순 챗봇을 넘어 업무 방식·고객 접점·인력 구조까지 AI 중심으로 다시 짜는 흐름입니다. 계기는 금융당국의 망분리 규제 완화로, 클라우드와 생성형 AI를 은행 내부 업무에 쓸 수 있는 길이 열리면서 5대 금융그룹의 경쟁이 본격화됐습니다. 농협은행의 '에이전틱 AI 뱅크' 선언, KB금융의 '전 직원 AI 인재화'처럼 그룹 차원의 전환 전략이 잇따르고, AI가 스스로 업무를 처리하는 '에이전틱' 단계로 진화하는 것이 다음 승부처입니다. 이 트렌드는 점포 축소·인력 구조 재편과 맞물려 있어 금융권 취업 시장에도 직접적인 영향을 줍니다. AI 투자가 실제 비용 절감과 수익으로 이어지는지, 아니면 구호에 그치는지가 장기적인 판별 기준입니다.",
       "articles": [
+        {
+          "title": "SK하이닉스 5일째↑…앤트로픽 호실적에 상장 시초가 '170달러' 넘겨",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430402",
+          "date": "2026-08-18"
+        },
+        {
+          "title": "구직 청년 64% \"희망 직무 5년 내 AI로 대체·축소될 것\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260817033400003",
+          "date": "2026-08-18"
+        },
+        {
+          "title": "무디스, 韓성장률 3.5%로 '깜짝' 상향…대체 메모리기업 제한적",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260817048700002",
+          "date": "2026-08-18"
+        },
+        {
+          "title": "\"반도체 호황 내년 중반까지\"…무디스, 韓 성장률 전망 대폭 상향",
+          "press": "hankyung.com",
+          "url": "https://www.hankyung.com/article/2026081857277",
+          "date": "2026-08-18"
+        },
         {
           "title": "AI 스타트업 2분기 성적표 뜯어보니…매출 성장 ‘반반’, 이익은 아직",
           "press": "ddaily.co.kr",
@@ -475,30 +505,6 @@
           "press": "newspim.com",
           "url": "https://www.newspim.com/news/view/20260729000171",
           "date": "2026-07-29"
-        },
-        {
-          "title": "NH농협은행, '에이전틱 AI 뱅크' 전환 본격화",
-          "press": "metroseoul.co.kr",
-          "url": "http://www.metroseoul.co.kr/article/20260727500347",
-          "date": "2026-07-27"
-        },
-        {
-          "title": "NH농협銀, AI 기반 기업여신 심사체계 구축…'에이전틱 AI 뱅크' 전환",
-          "press": "weekly.hankooki.com",
-          "url": "https://weekly.hankooki.com/news/articleView.html?idxno=7176090",
-          "date": "2026-07-27"
-        },
-        {
-          "title": "“통신사 도움없인 은행도 힘들어요”…금융권 휩쓰는 KT AI 에이전틱",
-          "press": "mk.co.kr",
-          "url": "https://www.mk.co.kr/article/12107594",
-          "date": "2026-07-26"
-        },
-        {
-          "title": "“문의 75% 무인 해결”… 오픈AI, AI 상담원 운영 제품 공개",
-          "press": "ddaily.co.kr",
-          "url": "https://www.ddaily.co.kr/page/view/2026072310001479276",
-          "date": "2026-07-23"
         }
       ],
       "query": "은행 AI 전환 에이전틱"
@@ -771,6 +777,12 @@
       "desc": "'돈이 부동산이 아니라 산업으로 흐르게 하자'는 정부 정책 기조 아래, 5대 금융지주가 2030년까지 생산적·포용금융에 총 508조 원을 투입하기로 약속한 흐름입니다. 은행 자산의 중심을 가계·부동산 대출에서 기업금융·모험자본으로 옮기라는 요구로, 가계대출 총량규제와 동전의 양면을 이룹니다. 각 지주는 반도체·AI·이차전지 같은 전략 산업 지원과 벤처 투자 확대를 앞다퉈 발표하고 있으며, 집행 실적이 분기마다 공개되는 것이 특징입니다. 관전 포인트는 구호에 그치지 않고 실제 자금이 산업으로 도는지(집행률), 그리고 주주환원 확대와 동시에 이만한 자금을 풀 수 있는지(자본 여력)입니다. 은행의 사회적 역할과 수익성 사이의 줄다리기를 가장 잘 보여주는 트렌드입니다.",
       "articles": [
         {
+          "title": "수은, 구리 안정적 확보 위해 글로벌 자원업체에 10억달러 지원",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260817063500002",
+          "date": "2026-08-18"
+        },
+        {
           "title": "KB금융, 자연자본도 금융리스크로 관리…ESG 금융 20.8조",
           "press": "newsworks.co.kr",
           "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=850567",
@@ -883,12 +895,6 @@
           "press": "daily.hankooki.com",
           "url": "https://daily.hankooki.com/news/articleView.html?idxno=1390635",
           "date": "2026-07-29"
-        },
-        {
-          "title": "JB·BNK·iM 지방 금융지주 '은행' 실적 주춤, 지역경제 활성화 발맞춰 ...",
-          "press": "businesspost.co.kr",
-          "url": "https://www.businesspost.co.kr/BP?command=article_view&num=443437",
-          "date": "2026-07-29"
         }
       ],
       "query": "생산적 금융 금융지주"
@@ -900,6 +906,12 @@
       "summary": "국내는 저성장·규제로 포화. 해외 이익 비중이 성장성을 가름",
       "desc": "국내 시장이 저성장·규제·포화 상태에 갇히면서, 은행들이 성장의 답을 해외에서 찾는 흐름입니다. 동남아(베트남·인도네시아·캄보디아)가 주력 무대이고, 중소기업의 해외 진출을 따라가는 폴란드 같은 신규 거점도 등장했습니다. 각 은행은 글로벌 이익 비중 목표(전체 순이익의 몇 %)를 내걸고 전담 조직을 신설하며 현지 법인을 키우고 있습니다. 해외 이익 비중이 얼마나 커지는지가 은행별 성장성을 가르는 기준이 되고 있으며, 주요 은행의 동남아 법인 실적이 대표적인 비교 지표입니다. 다만 현지 경기·환율 변동·부실채권 리스크가 국내보다 크기 때문에, 확장 속도와 리스크 관리의 균형이 늘 함께 언급됩니다.",
       "articles": [
+        {
+          "title": "김정관 \"대미투자, 이달내 발표 목표\"",
+          "press": "hankyung.com",
+          "url": "https://www.hankyung.com/article/2026081753041",
+          "date": "2026-08-18"
+        },
         {
           "title": "동남아 진출할 '에너지·기계플랜트 시장개척단' 참여기업 모집",
           "press": "fnnews.com",
@@ -1013,6 +1025,60 @@
     }
   ],
   "unclassified": [
+    {
+      "title": "미·이란 협상 교착에 국제유가 2%대↑…브렌트유 다시 90달러대",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260818005200072",
+      "date": "2026-08-18"
+    },
+    {
+      "title": "청년보다 50대가 많아졌다…대기업 고용시장에 무슨 일이",
+      "press": "hankyung.com",
+      "url": "https://www.hankyung.com/article/2026081857357",
+      "date": "2026-08-18"
+    },
+    {
+      "title": "대기업 신규채용 2년새 15% 감소…청년 줄고 장년 늘며 세대역전",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260817042600003",
+      "date": "2026-08-18"
+    },
+    {
+      "title": "정부, ISA 세제 손질…부동산은 국회 논의",
+      "press": "hankyung.com",
+      "url": "https://www.hankyung.com/article/2026081753061",
+      "date": "2026-08-18"
+    },
+    {
+      "title": "대기업집단, 작년 간판값으로 2.2조 벌었다…SK·LG·한화 순",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260814108000002",
+      "date": "2026-08-18"
+    },
+    {
+      "title": "계열사서 받은 '간판값'만 2.2조…대기업 상표권 수입 역대 최대",
+      "press": "hankyung.com",
+      "url": "https://www.hankyung.com/article/2026081857317",
+      "date": "2026-08-18"
+    },
+    {
+      "title": "KB국민은행, 집중호우 피해 긴급 금융지원",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260817058700002",
+      "date": "2026-08-18"
+    },
+    {
+      "title": "집중호우 이재민, 은행서 최대 5000만원 긴급생활자금 빌린다",
+      "press": "hankyung.com",
+      "url": "https://www.hankyung.com/article/202608175567i",
+      "date": "2026-08-18"
+    },
+    {
+      "title": "4대 은행, 폭우 피해 금융지원…구호 텐트·급식 차량도(종합)",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260817058751002",
+      "date": "2026-08-18"
+    },
     {
       "title": "우리은행 - 채용 홈페이지",
       "press": "jobkorea.co.kr",
