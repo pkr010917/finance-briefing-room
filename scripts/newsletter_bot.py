@@ -34,6 +34,11 @@ TRENDS_FILE = DATA_DIR / "trends.json"
 HISTORY_DAYS = 14                # 최근 14일 주제를 중복 방지에 사용
 MAX_ARTICLES_PER_TREND = 20      # 트렌드당 축적할 기사 수 (오래된 것부터 삭제)
 MAX_UNCLASSIFIED = 30            # 미분류 기사 보관 수
+MAX_RESUMES = 2                  # 검색 루프가 멈췄을 때 이어서 진행할 최대 횟수
+
+# 발송 전 점검 기준 (아래를 못 채우면 실패 처리하고 발송하지 않음)
+MIN_BODY_LENGTH = 500            # 정상 뉴스레터는 보통 2000자 이상
+REQUIRED_SECTIONS = ["1️⃣", "2️⃣", "3️⃣", "4️⃣"]
 KST = timezone(timedelta(hours=9))
 
 TELEGRAM_MSG_LIMIT = 4096        # 텔레그램 메시지 글자수 제한
@@ -150,27 +155,56 @@ def build_prompt(recent_topics: list[str], trend_titles: list[str]) -> str:
 
 
 def generate_newsletter(client: anthropic.Anthropic, prompt: str) -> str:
-    response = client.messages.create(
-        model=MODEL,
-        max_tokens=MAX_TOKENS,
-        # Sonnet 5부터는 이 설정을 생략하면 '생각하기'가 자동으로 켜져서
-        # MAX_TOKENS를 생각에 써버리고 본문이 잘릴 수 있어 명시적으로 끕니다.
-        # (대신 프롬프트 1단계에서 검색을 반드시 하도록 지시)
-        thinking={"type": "disabled"},
-        messages=[{"role": "user", "content": prompt}],
-        tools=[{
-            # _20260209 버전은 검색 결과를 대화에 넣기 전에 자동으로 걸러내
-            # 토큰 사용량을 줄여줍니다 (Sonnet 4.6 이상에서 사용 가능).
-            "type": "web_search_20260209",
-            "name": "web_search",
-            "max_uses": MAX_WEB_SEARCHES,
-            "user_location": {
-                "type": "approximate",
-                "country": "KR",
-                "timezone": "Asia/Seoul",
-            },
-        }],
-    )
+    messages = [{"role": "user", "content": prompt}]
+
+    for attempt in range(MAX_RESUMES + 1):
+        response = client.messages.create(
+            model=MODEL,
+            max_tokens=MAX_TOKENS,
+            # Sonnet 5부터는 이 설정을 생략하면 '생각하기'가 자동으로 켜져서
+            # MAX_TOKENS를 생각에 써버리고 본문이 잘릴 수 있어 명시적으로 끕니다.
+            # (대신 프롬프트 1단계에서 검색을 반드시 하도록 지시)
+            thinking={"type": "disabled"},
+            messages=messages,
+            tools=[{
+                # ⚠️ _20260209(자동 필터링) 버전은 내부적으로 코드 실행을 쓰는데,
+                # 그 작업이 max_uses 한도를 함께 소모해 모델이 검색을 시작하기도 전에
+                # 한도에 걸려 헛도는 문제가 있었습니다(2026-08-16 사고). 기본 버전을 씁니다.
+                "type": "web_search_20250305",
+                "name": "web_search",
+                "max_uses": MAX_WEB_SEARCHES,
+                "user_location": {
+                    "type": "approximate",
+                    "country": "KR",
+                    "timezone": "Asia/Seoul",
+                },
+            }],
+        )
+
+        usage = response.usage
+        print(
+            f"   [{attempt + 1}회차] 종료사유={response.stop_reason} "
+            f"입력 {usage.input_tokens:,} / 출력 {usage.output_tokens:,} 토큰"
+        )
+
+        # 서버측 검색 루프가 반복 한도에 걸려 잠시 멈춘 상태.
+        # 지금까지의 응답을 붙여 다시 요청하면 이어서 진행됩니다.
+        if response.stop_reason != "pause_turn":
+            break
+        messages = messages + [{"role": "assistant", "content": response.content}]
+    else:
+        raise RuntimeError(
+            f"검색 루프가 {MAX_RESUMES}번 이어붙인 뒤에도 끝나지 않았습니다. "
+            "MAX_WEB_SEARCHES를 줄이거나 프롬프트를 단순화하세요."
+        )
+
+    # end_turn이 아니면 모델이 뉴스레터를 완성하지 못한 것 — 발송하지 않고 실패시킵니다.
+    if response.stop_reason != "end_turn":
+        raise RuntimeError(
+            f"모델이 정상 종료하지 않았습니다 (stop_reason={response.stop_reason}). "
+            "max_tokens면 MAX_TOKENS를 늘리고, refusal이면 프롬프트를 확인하세요."
+        )
+
     # 텍스트 블록만 이어붙임 (검색 결과 블록 등은 제외)
     text = "".join(
         block.text for block in response.content if block.type == "text"
@@ -178,6 +212,29 @@ def generate_newsletter(client: anthropic.Anthropic, prompt: str) -> str:
     if not text.strip():
         raise RuntimeError(f"모델 응답에 텍스트가 없습니다: {response}")
     return text
+
+
+def validate_newsletter(body: str, topics: list[str]) -> None:
+    """발송 전 최종 점검. 실패하면 텔레그램으로 보내지 않고 워크플로를 빨간 X로 끝냅니다.
+
+    2026-08-16에 모델이 '다시 시도하겠습니다'만 반복한 응답이 그대로 발송된 적이
+    있어서 추가했습니다. 아래 세 조건은 정상 뉴스레터라면 항상 만족합니다.
+    """
+    problems = []
+    if len(body) < MIN_BODY_LENGTH:
+        problems.append(f"본문이 너무 짧습니다 ({len(body)}자 < {MIN_BODY_LENGTH}자)")
+    if not topics:
+        problems.append("<topics> 블록이 없습니다 (모델이 끝까지 작성하지 못함)")
+    found = [s for s in REQUIRED_SECTIONS if s in body]
+    if len(found) < 2:
+        problems.append(f"본문에 섹션 번호가 {len(found)}개뿐입니다 (최소 2개 필요)")
+
+    if problems:
+        raise RuntimeError(
+            "뉴스레터 점검 실패 — 발송하지 않았습니다:\n  - "
+            + "\n  - ".join(problems)
+            + f"\n\n[본문 앞부분 300자]\n{body[:300]}"
+        )
 
 
 def extract_topics(newsletter: str) -> tuple[str, list[str], list[dict]]:
@@ -329,14 +386,17 @@ def main() -> None:
     body, topics, articles = extract_topics(raw)
     print(f"   생성 완료: 본문 {len(body)}자, 주제 {len(topics)}건, 기사 {len(articles)}건")
 
-    print("3) 텔레그램 발송 중...")
+    print("3) 발송 전 점검 중...")
+    validate_newsletter(body, topics)
+    print("   점검 통과")
+
+    print("4) 텔레그램 발송 중...")
     send_to_telegram(bot_token, chat_id, body + SITE_FOOTER)
 
-    if topics:
-        save_topics(topics)
-        print("4) 주제 기록 저장 완료 (data/history.json)")
+    save_topics(topics)  # 점검을 통과했으므로 topics는 비어 있지 않음
+    print("5) 주제 기록 저장 완료 (data/history.json)")
 
-    print("5) 기사를 트렌드별로 축적 중... (data/trends.json)")
+    print("6) 기사를 트렌드별로 축적 중... (data/trends.json)")
     merge_articles_into_trends(articles)
 
     print("✅ 모든 작업 완료")

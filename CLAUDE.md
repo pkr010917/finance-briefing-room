@@ -27,9 +27,15 @@ TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID.
 
 ## 모델·비용 (2026-08-14 기준)
 
-- 뉴스레터: claude-sonnet-5, 생각하기 끔(`thinking: disabled`), 웹검색 `web_search_20260209` 5회
+- 뉴스레터: claude-sonnet-5, 생각하기 끔(`thinking: disabled`), 웹검색 `web_search_20250305` 5회
   - Sonnet 5는 thinking을 생략하면 자동으로 켜져 MAX_TOKENS를 잡아먹으므로 **명시적으로 꺼야 함**
   - 검색 결과가 대화에 누적되어 매 호출마다 재전송되므로 **검색 횟수가 비용의 최대 변수**
+  - ⚠️ `web_search_20260209`(자동 필터링) 버전은 쓰지 말 것 — 내부 코드 실행이 max_uses를
+    함께 소모해 모델이 한도에 걸려 헛돌고 토큰이 3배로 튐 (2026-08-16 사고)
+- 응답 검증: `generate_newsletter`가 `stop_reason`을 확인하고(`pause_turn`은 최대 2회 이어붙임),
+  `validate_newsletter`가 본문 길이·`<topics>` 존재·섹션 번호를 점검. **통과 못 하면 발송하지 않고 실패**
+  - 이 안전장치가 없던 시절, 모델이 "다시 시도하겠습니다"만 반복한 응답이 그대로 발송되고
+    워크플로는 초록 체크로 끝난 적 있음 (2026-08-16)
 - 브리핑: claude-opus-5, `effort: medium` (변수 BRIEFING_MODEL / BRIEFING_EFFORT로 교체 가능)
 - 실측 운영비: 평일 하루 약 $0.42, 월 약 $9~10. 비용은 console.anthropic.com → Usage에서 확인
 - **잔액이 0이 되면 Actions가 매일 조용히 실패한다** (2026-08-05~08-14 10일간 중단된 전례). 월 1회 잔액 확인 권장
