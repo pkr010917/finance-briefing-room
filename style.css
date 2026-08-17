@@ -1,359 +1,382 @@
-/* ============================================================
-   금융 브리핑 룸 — 터미널 스타일
-   색은 딱 4가지 역할만: 배경(먹색) / 본문(백색) / 보조(회색) / 포인트(앰버)
-   ============================================================ */
+/* ─────────────────────────────────────────────
+   금융 브리핑 룸 — 미니멀 리디자인 (2026-08)
+   원칙: 흰 배경, 본질만 남기기, 색은 '오늘 신규'의
+   초록 하나만. 그래프가 주인공, 나머지는 물러선다.
+   ───────────────────────────────────────────── */
 
 :root {
-  --bg: #0b0c10;         /* 화면 바탕 */
-  --panel: #111318;      /* 패널 바탕 */
-  --panel-raised: #171a21;
-  --border: #22262f;
-  --text: #e8e6e0;
-  --muted: #9a9da6;
-  --faint: #63666f;
-  --amber: #f5a623;      /* 유일한 포인트 색 */
-  --amber-dim: rgba(245, 166, 35, 0.12);
+  --ink: #1d1d1f;          /* 본문 텍스트 */
+  --ink-soft: #6e6e73;     /* 보조 텍스트 */
+  --ink-faint: #a1a1a6;    /* 흐린 텍스트 */
+  --line: #e8e8ed;         /* 헤어라인 */
+  --fill: #f5f5f7;         /* 옅은 배경 */
+  --green: #34c759;        /* 오늘 신규 — 유일한 색 */
+  --green-soft: rgba(52, 199, 89, 0.14);
+  --link: #0066cc;
+  --radius: 18px;
+  --shadow: 0 12px 48px rgba(0, 0, 0, 0.10);
+  --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+          "Apple SD Gothic Neo", "Segoe UI", sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-html {
-  height: 100%;
-}
+html, body { height: 100%; }
 
 body {
-  font-family: "IBM Plex Sans KR", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  height: 100vh;
-  overflow: hidden; /* 페이지 전체 스크롤 대신 패널 안쪽만 스크롤 */
+  font-family: var(--font);
+  background: #ffffff;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
-.mono {
-  font-family: "IBM Plex Mono", monospace;
-}
-
-/* ===== 상단 바 ===== */
-.topbar {
+/* ── 상단 ─────────────────────────────── */
+.top {
   display: flex;
-  align-items: baseline;
   justify-content: space-between;
-  padding: 20px 28px 16px;
-  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+  gap: 24px;
+  padding: 28px 36px 8px;
 }
 
-.topbar__title {
-  font-size: 20px;
+.top__title {
+  font-size: 21px;
   font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.top__meta {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--ink-soft);
   letter-spacing: -0.01em;
 }
 
-.topbar__subtitle {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  color: var(--amber);
-  margin-top: 4px;
+.top__side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
 }
 
-.topbar__meta {
-  text-align: right;
+.hot {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
-.topbar__clock {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 22px;
+.hot__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  background: var(--fill);
+  border: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s ease;
+}
+
+.hot__chip:hover { background: #ebebf0; }
+
+.hot__chip .n {
+  color: var(--ink-faint);
   font-weight: 500;
   font-variant-numeric: tabular-nums;
 }
 
-.topbar__date {
-  font-family: "IBM Plex Mono", monospace;
+.hot__chip--first .n { color: var(--green); }
+
+.legend {
   font-size: 12px;
-  color: var(--muted);
-  margin-top: 2px;
+  color: var(--ink-faint);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-/* ===== 본문: 왼쪽 목록 + 오른쪽 상세 ===== */
-.layout {
+.legend__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  display: inline-block;
+}
+
+/* ── 그래프 ───────────────────────────── */
+.stage {
   flex: 1;
-  display: grid;
-  grid-template-columns: minmax(320px, 400px) 1fr;
+  position: relative;
   min-height: 0;
 }
 
-/* --- 왼쪽 목록 --- */
-.list {
-  border-right: 1px solid var(--border);
-  overflow-y: auto;
-  padding-bottom: 12px;
-}
-
-.list__header {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  color: var(--faint);
-  padding: 16px 20px 10px;
-}
-
-.list__header span {
-  color: var(--amber);
-}
-
-.row {
-  display: block;
+#graph {
   width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  border-left: 2px solid transparent;
-  padding: 12px 20px 12px 18px;
+  height: 100%;
+  display: block;
+  cursor: default;
+}
+
+#graph line {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+#graph .leaf {
+  fill: #c7c7cc;
   cursor: pointer;
-  font-family: inherit;
-  color: inherit;
+  transition: fill 0.2s ease;
 }
 
-.row:hover {
-  background: var(--panel);
+#graph .leaf:hover { fill: var(--ink-soft); }
+
+#graph .leaf--new { fill: var(--green); }
+#graph .leaf--new:hover { fill: #248a3d; }
+
+#graph .hub {
+  fill: #ffffff;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  cursor: pointer;
+  transition: stroke-width 0.2s ease;
 }
 
-.row.is-selected {
-  background: var(--panel-raised);
-  border-left-color: var(--amber);
+#graph .hub:hover { stroke-width: 2.5; }
+
+#graph .hub--selected { stroke-width: 2.5; }
+
+#graph .hub-halo {
+  fill: var(--green-soft);
+  pointer-events: none;
 }
 
-.row__top {
+#graph .hub-label {
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  fill: var(--ink);
+  text-anchor: middle;
+  pointer-events: none;
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+#graph .hub-sub {
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 450;
+  fill: var(--ink-faint);
+  text-anchor: middle;
+  pointer-events: none;
+  font-variant-numeric: tabular-nums;
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+/* ── 툴팁 ─────────────────────────────── */
+.tooltip {
+  position: absolute;
+  max-width: 300px;
+  background: rgba(29, 29, 31, 0.92);
+  color: #ffffff;
+  font-size: 12.5px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  padding: 9px 12px;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 30;
+  backdrop-filter: blur(8px);
+}
+
+.tooltip .sub {
+  display: block;
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 11.5px;
+}
+
+/* ── 패널 ─────────────────────────────── */
+.panel {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  bottom: 24px;
+  width: min(420px, calc(100vw - 48px));
+  background: #ffffff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px 30px 28px;
+  overflow-y: auto;
+  z-index: 20;
+  animation: panel-in 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@keyframes panel-in {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.panel__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: var(--fill);
+  color: var(--ink-soft);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.panel__close:hover { background: #ebebf0; }
+
+.panel__category {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-faint);
+  letter-spacing: 0.04em;
+}
+
+.panel__title {
+  margin-top: 6px;
+  font-size: 24px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.panel__since {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.panel__desc {
+  margin-top: 18px;
+  font-size: 14.5px;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.panel__heading {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--ink-soft);
+}
+
+.panel__articles {
+  list-style: none;
+  margin-top: 6px;
+}
+
+.panel__articles a {
   display: flex;
   align-items: baseline;
   gap: 10px;
+  padding: 10px 0;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 13.5px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--fill);
 }
 
-.row__index {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 12px;
-  color: var(--faint);
-}
+.panel__articles a:hover .a-title { color: var(--link); }
 
-.row.is-selected .row__index {
-  color: var(--amber);
-}
-
-.row__title {
-  font-size: 15px;
-  font-weight: 700;
-  flex: 1;
-}
-
-.row__since {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 12px;
-  color: var(--muted);
+.a-date {
+  flex: none;
+  font-size: 11px;
+  color: var(--ink-faint);
   font-variant-numeric: tabular-nums;
 }
 
-.row__summary {
-  font-size: 13px;
-  line-height: 1.5;
-  color: var(--muted);
-  margin-top: 4px;
-  padding-left: 30px;
-}
-
-.row__category {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 10.5px;
-  letter-spacing: 0.08em;
-  color: var(--faint);
-  margin-top: 6px;
-  padding-left: 30px;
-}
-
-/* --- 오른쪽 상세 --- */
-.detail {
-  overflow-y: auto;
-  padding: 28px 36px 48px;
-  max-width: 760px;
-}
-
-.detail__category {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  color: var(--amber);
-}
-
-.detail__title {
-  font-size: 30px;
+.a-date--new {
+  color: var(--green);
   font-weight: 700;
-  letter-spacing: -0.01em;
-  margin: 8px 0 6px;
 }
 
-.detail__since {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 13px;
-  color: var(--muted);
-}
+.a-title { flex: 1; }
 
-.detail__heading {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  font-size: 15px;
-  font-weight: 700;
-  margin: 34px 0 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
-}
-
-.detail__heading-en {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 10.5px;
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  color: var(--faint);
-}
-
-.detail__desc {
-  font-size: 15px;
-  line-height: 1.75;
-  color: var(--text);
-}
-
-.detail__watch {
-  list-style: none;
-}
-
-.detail__watch li {
-  font-size: 14.5px;
-  line-height: 1.65;
-  padding-left: 20px;
-  position: relative;
-  margin-bottom: 10px;
-  color: var(--text);
-}
-
-.detail__watch li::before {
-  content: "\25B8"; /* ▸ (직접 쓰면 인코딩에 따라 깨질 수 있어 코드로 표기) */
-  position: absolute;
-  left: 0;
-  color: var(--amber);
-}
-
-.detail__articles {
-  list-style: none;
-}
-
-.detail__articles li {
-  border-bottom: 1px solid var(--border);
-}
-
-.detail__articles a {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  padding: 11px 2px;
-  text-decoration: none;
-  color: var(--text);
-  font-size: 14.5px;
-  line-height: 1.5;
-}
-
-.detail__articles a:hover .article-title {
-  color: var(--amber);
-}
-
-.article-title {
-  flex: 1;
-}
-
-.article-press {
-  font-family: "IBM Plex Mono", monospace;
+.a-press {
+  flex: none;
   font-size: 11px;
-  color: var(--faint);
-  white-space: nowrap;
+  color: var(--ink-faint);
 }
 
-.article-date {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
-  color: var(--amber);
-  white-space: nowrap;
-}
-
-.article-expand {
-  width: 100%;
-  padding: 11px 2px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 12px;
-  color: var(--faint);
-}
-
-.article-expand:hover {
-  color: var(--amber);
-}
-
-.detail__more {
+.panel__more {
   display: inline-block;
-  margin-top: 24px;
-  font-family: "IBM Plex Mono", monospace;
+  margin-top: 20px;
   font-size: 13px;
-  color: var(--amber);
+  font-weight: 550;
+  color: var(--link);
   text-decoration: none;
-  border: 1px solid var(--amber);
-  padding: 9px 16px;
-  border-radius: 3px;
 }
 
-.detail__more:hover {
-  background: var(--amber-dim);
+.panel__more:hover { text-decoration: underline; }
+
+/* ── 하단 ─────────────────────────────── */
+.foot {
+  padding: 10px 36px 16px;
+  font-size: 12px;
+  color: var(--ink-faint);
+  text-align: center;
+  letter-spacing: -0.01em;
 }
 
-/* ===== 하단 상태 바 ===== */
-.statusbar {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  border-top: 1px solid var(--border);
-  padding: 10px 28px;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  color: var(--faint);
-}
+/* ── 모바일 ───────────────────────────── */
+@media (max-width: 720px) {
+  body { overflow: auto; }
 
-/* ===== 모바일: 세로로 쌓기 ===== */
-@media (max-width: 860px) {
-  .layout {
-    grid-template-columns: 1fr;
+  .top {
+    flex-direction: column;
+    padding: 20px 20px 4px;
+    gap: 12px;
   }
 
-  .list {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-    max-height: 44vh;
+  .top__side { align-items: flex-start; }
+  .hot { justify-content: flex-start; }
+
+  /* 좁은 화면에서는 세로로 조금 더 펼쳐 겹침을 줄인다 (스크롤 허용) */
+  .stage { min-height: 86vh; }
+
+  .panel {
+    top: auto;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    width: auto;
+    max-height: 72vh;
+    animation-name: panel-up;
   }
 
-  .detail {
-    padding: 24px 20px 40px;
+  @keyframes panel-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 
-  .topbar {
-    padding: 16px 20px 12px;
-  }
-
-  .statusbar__hint {
-    display: none;
-  }
+  .foot { padding: 10px 20px 14px; }
 }

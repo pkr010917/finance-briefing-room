@@ -1,7 +1,10 @@
 # 평일 아침 7시(한국시간)에 실행되는 통합 파이프라인
 #   1) 뉴스레터 생성 → 텔레그램 발송 + 기사를 트렌드별로 data/trends.json에 축적
-#   2) 축적된 기사·네이버 뉴스로 트렌드 브리핑(설명·주목할 점) 갱신
+#   2) 미분류 기사가 충분히 쌓였으면 새 트렌드(카테고리) 발굴
 #   3) 변경된 데이터 파일을 저장소에 커밋
+#
+# ※ 트렌드 설명을 매일 다시 쓰던 '브리핑 갱신'(update_briefing.py + 네이버 수집)은
+#   2026-08-17 폐기 — 설명은 고정하고, 토큰은 새 트렌드 발굴에만 사용
 name: daily
 
 on:
@@ -32,14 +35,14 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/newsletter_bot.py
 
-      - name: Update trend briefing
-        if: ${{ !cancelled() }} # 뉴스레터가 실패해도 브리핑 갱신은 시도
+      - name: Discover new trends
+        if: ${{ !cancelled() }} # 뉴스레터가 실패해도 발굴은 시도
         env:
-          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
-          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          BRIEFING_MODEL: ${{ vars.BRIEFING_MODEL }}
-        run: python scripts/update_briefing.py
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DISCOVER_MODEL: ${{ vars.DISCOVER_MODEL }}
+        run: python scripts/discover_trends.py
 
       - name: Commit and push
         if: ${{ !cancelled() }}

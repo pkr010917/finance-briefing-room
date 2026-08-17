@@ -326,6 +326,7 @@ def merge_articles_into_trends(articles: list[dict]) -> None:
     for trend in data["trends"]:
         trend["articles"] = trend["articles"][:MAX_ARTICLES_PER_TREND]
     data["unclassified"] = data["unclassified"][:MAX_UNCLASSIFIED]
+    data["lastUpdated"] = datetime.now(KST).strftime("%Y.%m.%d")
 
     TRENDS_FILE.write_text(
         json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
