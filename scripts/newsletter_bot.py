@@ -22,12 +22,22 @@ from pathlib import Path
 import anthropic
 import requests
 
+import rss_feeds
+
 # ────────────────────────── 설정 ──────────────────────────
 MODEL = "claude-sonnet-5"        # 품질/비용 균형이 좋은 모델
 MAX_TOKENS = 8000                # 뉴스레터가 길기 때문에 넉넉하게
-# 검색 1회마다 기사 본문이 대화에 쌓이고 다음 호출 때 전부 다시 전송되므로,
-# 검색 횟수가 비용에 가장 큰 영향을 줍니다. 비용이 부담되면 4로 낮추세요.
-MAX_WEB_SEARCHES = 5             # 1회 실행당 최대 검색 횟수 (비용 통제)
+# 하이브리드 구조: 은행·정책 뉴스는 RSS로 공짜로 모으고(rss_feeds.py),
+# 검색은 RSS가 못 잡는 채용 공고·마감일에만 쓴다. 검색 1회마다 기사 본문이
+# 대화에 쌓여 매 호출 재전송되므로 검색 횟수가 비용의 지배 요인이기 때문.
+MAX_WEB_SEARCHES = 2             # 채용 정보 전용 검색 횟수
+# ⚠️ web_fetch는 아낀 비용을 되돌려놓는다. 가져온 본문이 이후 모든 턴에 재전송되기
+# 때문에, 3건×6000토큰을 허용하면 RSS로 줄인 만큼이 그대로 상쇄됐다(추정 $0.39 = 기존과 동일).
+# 꼭 필요한 1~2건만, 짧게 읽도록 제한한다.
+MAX_WEB_FETCHES = 2              # 핵심 기사 본문 읽기 횟수
+FETCH_CONTENT_TOKENS = 2500      # 본문 1건당 가져올 최대 분량
+MAX_RSS_IN_PROMPT = 70           # 프롬프트에 넣을 RSS 기사 수 (입력 토큰 통제)
+MIN_RSS_ARTICLES = 10            # 이보다 적게 수집되면 피드 이상으로 보고 중단
 DATA_DIR = Path(__file__).parent.parent / "data"
 HISTORY_FILE = DATA_DIR / "history.json"
 TRENDS_FILE = DATA_DIR / "trends.json"
@@ -93,7 +103,9 @@ def save_topics(topics: list[str]) -> None:
 
 
 # ────────────────────────── 뉴스레터 생성 ──────────────────────────
-def build_prompt(recent_topics: list[str], trend_titles: list[str]) -> str:
+def build_prompt(
+    recent_topics: list[str], trend_titles: list[str], rss_articles: list[dict]
+) -> str:
     today = datetime.now(KST).strftime("%Y년 %m월 %d일 (%a)")
     topics_block = (
         "\n".join(f"- {t}" for t in recent_topics)
@@ -101,14 +113,26 @@ def build_prompt(recent_topics: list[str], trend_titles: list[str]) -> str:
         else "(없음 — 오늘이 첫 호)"
     )
     trends_block = "\n".join(f"- {t}" for t in trend_titles)
+    feed_block = "\n".join(
+        f"- [{a['time']}] {a['title']} ({a['press']})\n  {a['summary']}\n  {a['url']}"
+        for a in rss_articles
+    )
     return f"""오늘은 {today}입니다. 한국 금융권 데일리 뉴스레터를 작성해주세요.
 
-## 1단계: 뉴스 리서치
-먼저 web_search 도구로 반드시 검색하세요. 기억에 의존해 답하지 말고, 오늘 검색한 기사만 근거로 쓰세요.
-아래 세 영역을 각각 최소 1회씩 검색하고, 검색 결과가 부실한 영역만 한 번 더 검색하세요 (총 {MAX_WEB_SEARCHES}회 이내).
-1. 시중은행 동향 (KB국민·신한·하나·우리·NH농협 등)
-2. 금융권 규제·정책당국 동향 (금융위원회, 금융감독원, 한국은행 등)
-3. 금융권 채용·취업 공고 (은행·금융공기업 신입/인턴 공고, 채용 박람회, 마감 임박 일정)
+## 1단계: 오늘 수집된 기사 (한경·연합뉴스·연합인포맥스·머니투데이 실시간 피드)
+아래는 방금 수집한 최신 기사 {len(rss_articles)}건입니다. 1️⃣2️⃣ 섹션은 **이 목록에서만** 고르세요.
+같은 사안을 여러 언론사가 쓴 경우 하나로 합치고, 중요도가 높은 것부터 다루세요.
+목록에 없는 내용을 기억으로 채워 넣지 마세요. url은 아래에 적힌 것을 그대로 쓰세요.
+
+{feed_block}
+
+## 2단계: 채용 정보만 웹 검색
+위 피드에는 채용 공고가 잘 잡히지 않습니다. **채용 관련해서만** web_search를 최대 {MAX_WEB_SEARCHES}회 쓰세요.
+(예: "은행 신입행원 채용 공고", "금융공기업 채용 마감") 은행·정책 뉴스는 검색하지 마세요 — 이미 위에 있습니다.
+3️⃣ 섹션은 이 검색 결과로 작성하고, 마감일과 남은 기간(D-N)을 명시하세요.
+
+도구를 쓸 때는 **같은 턴에 한꺼번에** 호출하세요. 한 번에 하나씩 나눠 부르면
+그때까지의 대화가 매번 다시 전송되어 비용이 몇 배로 늘어납니다.
 
 ## 중복 방지 규칙 (중요)
 아래는 최근 {HISTORY_DAYS}일간 이미 다룬 주제입니다. 동일한 주제는 다시 다루지 마세요.
@@ -118,16 +142,18 @@ def build_prompt(recent_topics: list[str], trend_titles: list[str]) -> str:
 과거 맥락(인과관계)이 이해에 필요한 기사는 과거 내용을 추가 리서치해 [배경·과거] 태그로 표시하고, 최신 뉴스에는 [최신] 태그를 다세요.
 정말 새 주제가 없어 과거 내용을 써야 한다면 반드시 [과거뉴스] 태그로 표시하세요.
 
-## 2단계: 뉴스레터 작성
+## 3단계: 뉴스레터 작성
 아래 구성으로, 내용을 최대한 알차고 풍부하게 작성하세요. 각 기사마다 핵심 수치와 배경, 의미(So What)를 포함하세요.
+기본적으로 위 요약문만으로 작성하세요. 그것만으로 So What을 쓸 수 없는 결정적인 기사가 있을 때에만
+web_fetch로 본문을 읽으세요 (최대 {MAX_WEB_FETCHES}건, 대개 0~1건이면 충분합니다).
 1️⃣ 주요 시중은행 동향
 2️⃣ 금융 정책·규제
 3️⃣ 금융권 채용·취업 (마감일 명시)
 4️⃣ 오늘의 면접포인트 — 오늘 뉴스 중 면접에 나올 만한 주제 1개를 골라 답변 프레임과 예상 꼬리질문까지 제시
 
 ## 출력 형식 (텔레그램용)
-- 검색하는 동안 "리서치하겠습니다", "추가로 검색하겠습니다" 같은 진행 상황 설명을 쓰지 마세요.
-  검색은 조용히 하고, 완성된 뉴스레터만 출력하세요. (독자가 그 과정을 그대로 받아보게 됩니다)
+- 도구를 쓰는 동안 "리서치하겠습니다", "추가로 검색하겠습니다" 같은 진행 상황 설명을 쓰지 마세요.
+  조용히 하고, 완성된 뉴스레터만 출력하세요. (독자가 그 과정을 그대로 받아보게 됩니다)
 - 제목: 📬 금융 데일리 브리핑 — {today}
 - 텔레그램에서 읽기 좋게 이모지와 짧은 단락 사용
 - 마크다운 특수문자(*, _, #, [ ] 등)는 사용하지 말고 일반 텍스트로 작성 (이모지는 OK, [태그]는 예외)
@@ -169,19 +195,29 @@ def generate_newsletter(client: anthropic.Anthropic, prompt: str) -> str:
             # (대신 프롬프트 1단계에서 검색을 반드시 하도록 지시)
             thinking={"type": "disabled"},
             messages=messages,
-            tools=[{
-                # ⚠️ _20260209(자동 필터링) 버전은 내부적으로 코드 실행을 쓰는데,
-                # 그 작업이 max_uses 한도를 함께 소모해 모델이 검색을 시작하기도 전에
-                # 한도에 걸려 헛도는 문제가 있었습니다(2026-08-16 사고). 기본 버전을 씁니다.
-                "type": "web_search_20250305",
-                "name": "web_search",
-                "max_uses": MAX_WEB_SEARCHES,
-                "user_location": {
-                    "type": "approximate",
-                    "country": "KR",
-                    "timezone": "Asia/Seoul",
+            tools=[
+                {
+                    # ⚠️ _20260209(자동 필터링) 버전은 내부적으로 코드 실행을 쓰는데,
+                    # 그 작업이 max_uses 한도를 함께 소모해 모델이 검색을 시작하기도 전에
+                    # 한도에 걸려 헛도는 문제가 있었습니다(2026-08-16 사고). 기본 버전을 씁니다.
+                    "type": "web_search_20250305",
+                    "name": "web_search",
+                    "max_uses": MAX_WEB_SEARCHES,
+                    "user_location": {
+                        "type": "approximate",
+                        "country": "KR",
+                        "timezone": "Asia/Seoul",
+                    },
                 },
-            }],
+                {
+                    # RSS 요약만으로 So What을 쓰기 어려운 핵심 기사의 본문을 읽는 용도.
+                    # 대화에 이미 있는 URL만 가져올 수 있어 남용될 여지가 적다.
+                    "type": "web_fetch_20250910",
+                    "name": "web_fetch",
+                    "max_uses": MAX_WEB_FETCHES,
+                    "max_content_tokens": FETCH_CONTENT_TOKENS,
+                },
+            ],
         )
 
         usage = response.usage
@@ -399,23 +435,40 @@ def main() -> None:
     trend_titles = load_trend_titles()
     print(f"   최근 {HISTORY_DAYS}일 주제 {len(recent_topics)}건, 트렌드 {len(trend_titles)}개")
 
-    print("2) 뉴스레터 생성 중... (리서치 포함, 1~3분 소요)")
-    raw = generate_newsletter(client, build_prompt(recent_topics, trend_titles))
+    print("2) RSS 피드에서 뉴스 수집 중... (API 비용 없음)")
+    rss_articles, failures = rss_feeds.fetch_all()
+    for f in failures:
+        print(f"   ⚠️  피드 실패: {f}")
+    print(f"   총 {len(rss_articles)}건 수집 (프롬프트에 상위 {MAX_RSS_IN_PROMPT}건 사용)")
+    if len(rss_articles) < MIN_RSS_ARTICLES:
+        # 피드가 대부분 죽었는데 그대로 진행하면 모델이 기억으로 지어낸다.
+        # 비싼 검색으로 조용히 대체하지 않고 실패시켜 원인을 보게 한다.
+        raise RuntimeError(
+            f"RSS 수집이 {len(rss_articles)}건뿐입니다 (최소 {MIN_RSS_ARTICLES}건 필요). "
+            "피드 주소가 바뀌었을 수 있습니다 — scripts/rss_feeds.py를 단독 실행해 확인하세요.\n"
+            + "\n".join(f"  - {f}" for f in failures)
+        )
+
+    print("3) 뉴스레터 생성 중... (채용 검색 포함, 1~2분 소요)")
+    raw = generate_newsletter(
+        client,
+        build_prompt(recent_topics, trend_titles, rss_articles[:MAX_RSS_IN_PROMPT]),
+    )
 
     body, topics, articles = extract_topics(raw)
     print(f"   생성 완료: 본문 {len(body)}자, 주제 {len(topics)}건, 기사 {len(articles)}건")
 
-    print("3) 발송 전 점검 중...")
+    print("4) 발송 전 점검 중...")
     validate_newsletter(body, topics)
     print("   점검 통과")
 
-    print("4) 텔레그램 발송 중...")
+    print("5) 텔레그램 발송 중...")
     send_to_telegram(bot_token, chat_id, body + SITE_FOOTER)
 
     save_topics(topics)  # 점검을 통과했으므로 topics는 비어 있지 않음
-    print("5) 주제 기록 저장 완료 (data/history.json)")
+    print("6) 주제 기록 저장 완료 (data/history.json)")
 
-    print("6) 기사를 트렌드별로 축적 중... (data/trends.json)")
+    print("7) 기사를 트렌드별로 축적 중... (data/trends.json)")
     merge_articles_into_trends(articles)
 
     print("✅ 모든 작업 완료")
