@@ -39,6 +39,7 @@ MAX_RESUMES = 2                  # 검색 루프가 멈췄을 때 이어서 진�
 # 발송 전 점검 기준 (아래를 못 채우면 실패 처리하고 발송하지 않음)
 MIN_BODY_LENGTH = 500            # 정상 뉴스레터는 보통 2000자 이상
 REQUIRED_SECTIONS = ["1️⃣", "2️⃣", "3️⃣", "4️⃣"]
+NEWSLETTER_START = "📬 금융 데일리 브리핑"  # 이 앞의 진행 멘트는 잘라냄
 KST = timezone(timedelta(hours=9))
 
 TELEGRAM_MSG_LIMIT = 4096        # 텔레그램 메시지 글자수 제한
@@ -125,6 +126,8 @@ def build_prompt(recent_topics: list[str], trend_titles: list[str]) -> str:
 4️⃣ 오늘의 면접포인트 — 오늘 뉴스 중 면접에 나올 만한 주제 1개를 골라 답변 프레임과 예상 꼬리질문까지 제시
 
 ## 출력 형식 (텔레그램용)
+- 검색하는 동안 "리서치하겠습니다", "추가로 검색하겠습니다" 같은 진행 상황 설명을 쓰지 마세요.
+  검색은 조용히 하고, 완성된 뉴스레터만 출력하세요. (독자가 그 과정을 그대로 받아보게 됩니다)
 - 제목: 📬 금융 데일리 브리핑 — {today}
 - 텔레그램에서 읽기 좋게 이모지와 짧은 단락 사용
 - 마크다운 특수문자(*, _, #, [ ] 등)는 사용하지 말고 일반 텍스트로 작성 (이모지는 OK, [태그]는 예외)
@@ -259,7 +262,22 @@ def extract_topics(newsletter: str) -> tuple[str, list[str], list[dict]]:
     # 본문 = 첫 번째 블록이 시작되기 전까지
     cut_positions = [m.start() for m in (topics_match, articles_match) if m]
     body = newsletter[: min(cut_positions)] if cut_positions else newsletter
-    return body.strip(), topics, articles
+    return strip_preamble(body.strip()), topics, articles
+
+
+def strip_preamble(body: str) -> str:
+    """뉴스레터 제목 앞에 붙은 모델의 진행 상황 멘트를 제거한다.
+
+    모델은 검색하는 동안 "리서치하겠습니다", "추가로 검색하겠습니다" 같은 텍스트를
+    별도 블록으로 내보내는데, 텍스트 블록을 전부 이어붙이면 그 혼잣말이 발송 메시지
+    맨 앞에 붙는다(2026-08-17 발견). 제목 마커부터 잘라내 본문만 남긴다.
+    제목을 못 찾으면 원본을 그대로 두고, 이상하면 validate_newsletter가 걸러낸다.
+    """
+    idx = body.find(NEWSLETTER_START)
+    if idx <= 0:
+        return body
+    print(f"   앞부분 진행 멘트 {idx}자 제거")
+    return body[idx:].strip()
 
 
 # ────────────────────────── 트렌드별 기사 축적 ──────────────────────────
