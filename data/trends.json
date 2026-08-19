@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.08.19",
+  "lastUpdated": "2026.08.20",
   "trends": [
     {
       "category": "금리·정책",
@@ -8,6 +8,60 @@
       "summary": "인하 기대는 뒤집혔다. 한은 부총재까지 '추가 인상 가능성' 언급한 국면",
       "desc": "기준금리는 은행업의 모든 것이 시작되는 출발점입니다. 금리가 오르면 예대금리차와 순이자마진(NIM)이 벌어져 은행 이자이익에 유리하게 작용하고, 내려가면 대출 수요와 부동산 시장이 살아나는 대신 마진이 줄어듭니다. 2022년 글로벌 인플레이션과 함께 시작된 고금리 시대는 2024~2025년 네 차례 인하로 한 차례 방향을 틀었고, 이후에도 물가·환율·지정학 변수에 따라 인상과 인하 기대가 수시로 뒤집히고 있습니다. 이 흐름을 읽는 틀은 세 가지입니다. 한국은행 금통위가 어느 방향으로 움직이는지, 미국과의 금리 차가 환율에 어떤 압력을 주는지, 그리고 가계의 이자 부담(주택담보대출 금리)이 소비와 부동산으로 어떻게 번지는지입니다. 개별 금리 뉴스는 결국 이 큰 사이클의 어느 지점에 있는지를 보여주는 조각들입니다.",
       "articles": [
+        {
+          "title": "국제유가, UAE·이란 갈등 고조에 나흘 연속 상승…WTI 1%↑",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260820006400072",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "'기자회견 역풍' 불었던 7월 FOMC…\"인플레 안 낮아지면 긴축\"(상보)",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430860",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "트럼프 \"정말로 금리 내려가야…채권시장 우려하지 않아도 돼\"(종합)",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430866",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "[뉴욕증시] 재무부 '기습 바이백'에 숨통 트였다…강세 마감",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430858",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "금융위기 직전 수준 美 장기금리…베선트, '기습 바이백'으로 맞섰다",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430852",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "교보證 \"달러-원, 연내 1,350원까지 하락 후 완만히 반등할 것\"",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430838",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "달러-원, 美 재무부 '바이백 확대'에 추가 하락…1,387원 거래",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430853",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "[외환-마감] 1,300원대 진입…'弱달러·네고출회·역외숏' 트리오 11개월만에 최저",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430835",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "원·달러 환율, 한달 반만에 160원 급락",
+          "press": "hankyung.com",
+          "url": "https://www.hankyung.com/article/2026081904651",
+          "date": "2026-08-20"
+        },
         {
           "title": "국제유가, 중동 불안 지속에 사흘 연속 상승…WTI 0.5%↑",
           "press": "yna.co.kr",
@@ -73,60 +127,6 @@
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260811109600002?input=1195m",
           "date": "2026-08-11"
-        },
-        {
-          "title": "7월 금통위: 매의 얼굴, 그렇지 못했던 목소리",
-          "press": "ibks.com",
-          "url": "https://m.ibks.com/iko/IKO01/download.do?seq=5199&menuCode=IKO010401&attatchCd=ATTATCH1",
-          "date": "2026-08-04"
-        },
-        {
-          "title": "기준금리, 2026년 7월 인상이 우리 경제에 미치는 영향",
-          "press": "kafi.co.kr",
-          "url": "https://kafi.co.kr/base-rate-2026-july-hike-explained/",
-          "date": "2026-08-04"
-        },
-        {
-          "title": "[전문]한국은행 금융통화위원회 7월 통화정책방향",
-          "press": "daum.net",
-          "url": "https://v.daum.net/v/20260716110353864",
-          "date": "2026-08-04"
-        },
-        {
-          "title": "7월 물가 3% 밑돌까…한은 '8월 연속 인상' 향방 가른다",
-          "press": "heraldcorp.com",
-          "url": "https://biz.heraldcorp.com/article/10827878",
-          "date": "2026-08-04"
-        },
-        {
-          "title": "한은 금통위, 3년 6개월 만에 '금리 인상 모드'로⋯고물가 등 영향 [7월 금통위]",
-          "press": "daum.net",
-          "url": "https://v.daum.net/v/q95do9B3v9?f=p",
-          "date": "2026-08-04"
-        },
-        {
-          "title": "고정형 금리 9개월째 상승…주담대 차주들, 변동금리로 '유턴'",
-          "press": "daily.hankooki.com",
-          "url": "https://daily.hankooki.com/news/articleView.html?idxno=1392106",
-          "date": "2026-08-03"
-        },
-        {
-          "title": "이번주 국내 주요 금융일정(8.3~8.7)",
-          "press": "newspim.com",
-          "url": "https://www.newspim.com/news/view/20260731001282",
-          "date": "2026-08-03"
-        },
-        {
-          "title": "美금리 3.50∼3.75% 5연속 동결…연준 의장 \"인플레 2% 목표\"(종합2보)",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260730003852071?input=1195m",
-          "date": "2026-07-30"
-        },
-        {
-          "title": "美 연준 금리 ‘매파적 동결’…한은 금리 추가 인상 가능성 커지나",
-          "press": "kmib.co.kr",
-          "url": "https://www.kmib.co.kr/article/view.asp?arcid=0030182146&code=61141111&cp=nv",
-          "date": "2026-07-30"
         }
       ],
       "query": "한국은행 기준금리 인하"
@@ -138,6 +138,24 @@
       "summary": "'주담대로 돈 벌던 시대'의 종료. 총량 목표는 3%로 완화했지만 DSR은 그대로",
       "desc": "한국 은행업의 전통적 수익 공식은 '주택담보대출로 돈을 버는 것'이었지만, 정부가 가계부채를 국가적 위험으로 보고 총량을 직접 관리하면서 이 공식이 근본부터 흔들리고 있습니다. 금융당국은 은행별 대출 증가 한도를 정해두고, 스트레스 DSR처럼 개인의 대출 한도를 조이는 규제를 단계적으로 강화해 왔습니다. 은행 입장에서는 가장 안전하고 확실한 성장 엔진이 막힌 것이라, 비이자이익 확대·글로벌 진출 같은 다른 트렌드들이 모두 이 규제에서 출발한다고 해도 과언이 아닙니다. 규제가 조여질 때마다 대출 수요가 저축은행·카드론 등 2금융권으로 옮겨가는 풍선효과가 반복되는 것도 구조적 특징입니다. 뉴스를 볼 때는 규제 강도(총량 목표·DSR 단계)의 변화, 은행별 대출 중단 여부, 풍선효과의 크기를 함께 보면 흐름이 잡힙니다.",
       "articles": [
+        {
+          "title": "[단독] 2030 주식 신용거래 역대최대",
+          "press": "hankyung.com",
+          "url": "https://www.hankyung.com/article/2026081904381",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "금융당국, 은행별 목표치 배분협의 돌입…이달 내 마무리 목표",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260819168300002",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "'영끌'에 '빚투'까지 몰려…가계 빚, 사상 첫 2000조 돌파",
+          "press": "hankyung.com",
+          "url": "https://www.hankyung.com/article/2026081904401",
+          "date": "2026-08-20"
+        },
         {
           "title": "집단대출 다 풀린다… 일반 주담대도 증액",
           "press": "mt.co.kr",
@@ -239,12 +257,6 @@
           "press": "mk.co.kr",
           "url": "https://www.mk.co.kr/article/12096932",
           "date": "2026-07-21"
-        },
-        {
-          "title": "\"가계대출 1.5% 관리 유지…KB 3억원 제한은 자율 결정\" [금융위 업무보...",
-          "press": "dailian.co.kr",
-          "url": "https://www.dailian.co.kr/news/view/1667182/?sc=Naver",
-          "date": "2026-07-21"
         }
       ],
       "query": "가계대출 총량규제 스트레스 DSR"
@@ -256,6 +268,12 @@
       "summary": "'이자 장사' 탈피. 자산관리·외환에서 앞선 곳과 뒤처진 곳의 격차가 벌어진다",
       "desc": "한국 은행 수익의 대부분은 예금과 대출의 금리 차이에서 나오는 이자이익입니다. 문제는 이 구조가 금리 사이클에 실적이 통째로 흔들리는 데다, '이자 장사'라는 사회적 비판과 대출 총량규제까지 겹치면서 성장의 한계가 뚜렷해졌다는 점입니다. 그래서 은행들은 수수료·신탁·방카슈랑스·투자은행(IB) 같은 비이자 수익원을 키우는 동시에, 배달앱(신한 땡겨요)·알뜰폰(KB 리브모바일)처럼 은행답지 않은 신사업에도 뛰어들고 있습니다. 겉보기에 '은행이 저걸 왜 하지?' 싶은 뉴스는 대부분 이 트렌드의 연장선입니다. 관전 포인트는 실적 발표 때마다 비이자이익 비중이 실제로 늘고 있는지, 그리고 신사업이 미래 고객 접점 확보(플랫폼 전략)로 이어지는지입니다.",
       "articles": [
+        {
+          "title": "미래운용, 상반기 순이익 '역대 최대' 1조 육박…중소형사 약진(종합)",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260819152451008",
+          "date": "2026-08-20"
+        },
         {
           "title": "롯데百-SC제일은행, 우수 고객에 자산관리·라운지 상호 제공",
           "press": "yna.co.kr",
@@ -369,12 +387,6 @@
           "press": "nspna.com",
           "url": "https://www.nspna.com/news/?mode=view&newsid=822514",
           "date": "2026-07-30"
-        },
-        {
-          "title": "변동장에 홀로 웃는 은행주…고배당·실적 '쌍끌이'",
-          "press": "dailian.co.kr",
-          "url": "https://www.dailian.co.kr/news/view/1671812/?sc=Naver",
-          "date": "2026-07-29"
         }
       ],
       "query": "은행 비이자이익 확대"
@@ -647,6 +659,18 @@
       "desc": "한국 은행주는 오랫동안 이익 규모에 비해 주가가 낮은 '만년 저평가' 상태였고, 이를 해소하려는 정부의 밸류업 정책과 함께 금융지주들이 배당 확대와 자사주 매입·소각을 크게 늘리는 흐름입니다. 핵심 지표는 보통주자본(CET1) 비율로, 목표치를 넘는 초과자본을 주주에게 돌려주는 방식이 업계 표준으로 자리잡았습니다. 그래서 은행 실적 뉴스를 볼 때는 순이익 규모만큼이나 '환원율'(순이익 중 배당과 자사주로 돌려주는 비율)이 중요해졌습니다. 외국인 투자자 수급과 주가가 환원 정책 발표에 민감하게 반응하는 것도 특징입니다. 다만 정부가 생산적 금융(대출 확대)을 동시에 요구하고 있어, 자본을 주주환원에 쓸지 성장에 쓸지의 긴장 관계가 상존합니다.",
       "articles": [
         {
+          "title": "'40조 자사주 매입' 하이닉스 당장 내일부터 산다…1조원 장내 매수 신청",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430834",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "SK하이닉스, 100조 주주환원 시동",
+          "press": "hankyung.com",
+          "url": "https://www.hankyung.com/article/2026081904641",
+          "date": "2026-08-20"
+        },
+        {
           "title": "'돈만 잘 벌면 끝 아냐' 4대 금융 회장 성과급 잣대는",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260818155200002",
@@ -753,18 +777,6 @@
           "press": "newsway.co.kr",
           "url": "https://www.newsway.co.kr/news/view?ud=2026072713580962323",
           "date": "2026-07-27"
-        },
-        {
-          "title": "KB·신한금융, 실적도 주주환원도 '역대급'…올해만 6.5조원+α 푼다",
-          "press": "sidae.com",
-          "url": "https://www.sidae.com/article/2026072315363381925",
-          "date": "2026-07-23"
-        },
-        {
-          "title": "하나금융, ROE 목표 12%로 상향…밸류업 2.0 가동",
-          "press": "newsworks.co.kr",
-          "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=848261",
-          "date": "2026-07-24"
         }
       ],
       "query": "금융지주 밸류업 주주환원"
@@ -1028,9 +1040,79 @@
         }
       ],
       "query": "은행 글로벌 진출 동남아"
+    },
+    {
+      "title": "기후재해 금융지원 상시화",
+      "category": "은행/리스크관리",
+      "since": "2026~",
+      "summary": "폭우·호우 등 이상기후 재해가 반복되면서 은행·카드사의 피해자 대상 긴급 금융지원이 일회성 이벤트가 아닌 정례적 대응 체계로 자리잡는 흐름",
+      "desc": "최근 몇 년간 한국에서도 집중호우, 폭염 등 극단적 기상 현상이 잦아지면서 금융권이 재해 발생 시마다 대출 만기연장, 이자 감면, 카드대금 청구유예, 긴급생활자금 대출 등을 신속히 내놓는 패턴이 반복되고 있다. 4대 시중은행과 카드사들이 거의 동시에 유사한 지원책을 발표하는 것은 개별 기업의 자율적 선의라기보다 금융당국의 가이드라인과 업계 관행이 표준화되어 가고 있음을 시사한다. 이는 기후변화로 인한 자연재해 빈도 증가가 금융회사의 상시적 리스크 관리 항목이자 사회공헌·평판 관리의 축으로 편입되고 있다는 구조적 변화를 반영한다. 향후 관전 포인트는 이러한 지원이 은행의 대손충당금이나 수익성에 미치는 누적 영향, 보험사의 손해율 상승, 그리고 금융당국이 이를 제도화된 의무로 격상시킬지 여부다. 특히 재해 지역에 대한 세금 납부 유예 등 정부 정책과 맞물려 민관 합동 재해 대응 체계가 점차 정교해지는 양상도 함께 지켜볼 필요가 있다.",
+      "query": "집중호우 금융지원 은행 카드사",
+      "articles": [
+        {
+          "title": "카드업계, 호우피해 금융지원…청구유예·카드론 이자 감면 등",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260819159800002",
+          "date": "2026-08-20"
+        },
+        {
+          "title": "신한카드, 경남 집중호우 피해지역에 금융지원 실시",
+          "press": "hankyung.com",
+          "url": "https://www.hankyung.com/article/2026081879151",
+          "date": "2026-08-19"
+        },
+        {
+          "title": "KB국민은행, 집중호우 피해 긴급 금융지원",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260817058700002",
+          "date": "2026-08-18"
+        },
+        {
+          "title": "집중호우 이재민, 은행서 최대 5000만원 긴급생활자금 빌린다",
+          "press": "hankyung.com",
+          "url": "https://www.hankyung.com/article/202608175567i",
+          "date": "2026-08-18"
+        },
+        {
+          "title": "4대 은행, 폭우 피해 금융지원…구호 텐트·급식 차량도(종합)",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260817058751002",
+          "date": "2026-08-18"
+        }
+      ]
     }
   ],
   "unclassified": [
+    {
+      "title": "한국주택금융공사 2026년도 특정직 및 계약직 채용공고",
+      "press": "alio.go.kr",
+      "url": "https://job.alio.go.kr/recruitview.do?idx=302495",
+      "date": "2026-08-20"
+    },
+    {
+      "title": "추석 앞두고 민생지원금 푸는 지자체들…1인당 최대 50만원",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260819154500056",
+      "date": "2026-08-20"
+    },
+    {
+      "title": "교부금 연동제 55년만에 폐지…미래대응기금 100조 넘을 가능성",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260819175800002",
+      "date": "2026-08-20"
+    },
+    {
+      "title": "금감원, 비청산 장외파생거래 증거금 교환 가이드라인 1년 연장",
+      "press": "einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430859",
+      "date": "2026-08-20"
+    },
+    {
+      "title": "'망가진 내부통제'…4대 은행 금융사고 10년간 5천500억원",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260819159400002",
+      "date": "2026-08-20"
+    },
     {
       "title": "iM뱅크, 2026년 신입행원 공개채용 (서류 마감 8/29, D-10)",
       "press": "fintechtimes.co.kr",
@@ -1086,12 +1168,6 @@
       "date": "2026-08-19"
     },
     {
-      "title": "신한카드, 경남 집중호우 피해지역에 금융지원 실시",
-      "press": "hankyung.com",
-      "url": "https://www.hankyung.com/article/2026081879151",
-      "date": "2026-08-19"
-    },
-    {
       "title": "미·이란 협상 교착에 국제유가 2%대↑…브렌트유 다시 90달러대",
       "press": "yna.co.kr",
       "url": "https://www.yna.co.kr/view/AKR20260818005200072",
@@ -1128,24 +1204,6 @@
       "date": "2026-08-18"
     },
     {
-      "title": "KB국민은행, 집중호우 피해 긴급 금융지원",
-      "press": "yna.co.kr",
-      "url": "https://www.yna.co.kr/view/AKR20260817058700002",
-      "date": "2026-08-18"
-    },
-    {
-      "title": "집중호우 이재민, 은행서 최대 5000만원 긴급생활자금 빌린다",
-      "press": "hankyung.com",
-      "url": "https://www.hankyung.com/article/202608175567i",
-      "date": "2026-08-18"
-    },
-    {
-      "title": "4대 은행, 폭우 피해 금융지원…구호 텐트·급식 차량도(종합)",
-      "press": "yna.co.kr",
-      "url": "https://www.yna.co.kr/view/AKR20260817058751002",
-      "date": "2026-08-18"
-    },
-    {
       "title": "우리은행 - 채용 홈페이지",
       "press": "jobkorea.co.kr",
       "url": "https://jrs.jobkorea.co.kr/wooribank",
@@ -1174,42 +1232,6 @@
       "press": "newspim.com",
       "url": "https://www.newspim.com/news/view/20260731001282",
       "date": "2026-08-04"
-    },
-    {
-      "title": "NH농협금융, 2026년 준법감시협의회 개최",
-      "press": "thevaluenews.co.kr",
-      "url": "https://www.thevaluenews.co.kr/news/199290",
-      "date": "2026-08-03"
-    },
-    {
-      "title": "「통신사기피해환급법 시행령」개정안 국무회의 통과",
-      "press": "fsc.go.kr",
-      "url": "https://www.fsc.go.kr/po010106/82912",
-      "date": "2026-08-03"
-    },
-    {
-      "title": "82개 금융사 총출동… 2026 금융권 공동채용 박람회 8월 19일 개최",
-      "press": "newspim.com",
-      "url": "https://www.newspim.com/news/view/20260703000853",
-      "date": "2026-07-30"
-    },
-    {
-      "title": "[금융권 소식] NH농협은행 NH멤버스 달콤한 포인트 루틴 이벤트 출시",
-      "press": "weeklytoday.com",
-      "url": "http://www.weeklytoday.com/news/articleView.html?idxno=786841",
-      "date": "2026-07-28"
-    },
-    {
-      "title": "다음주 금융당국 일정",
-      "press": "edaily.co.kr",
-      "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=01813846645518128",
-      "date": "2026-07-27"
-    },
-    {
-      "title": "이번주 국내 주요 금융일정(7.27~7.31)",
-      "press": "newspim.com",
-      "url": "https://www.newspim.com/news/view/20260724001100",
-      "date": "2026-07-27"
     }
   ]
 }
