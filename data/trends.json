@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.08.20",
+  "lastUpdated": "2026.08.21",
   "trends": [
     {
       "category": "금리·정책",
@@ -8,6 +8,36 @@
       "summary": "인하 기대는 뒤집혔다. 한은 부총재까지 '추가 인상 가능성' 언급한 국면",
       "desc": "기준금리는 은행업의 모든 것이 시작되는 출발점입니다. 금리가 오르면 예대금리차와 순이자마진(NIM)이 벌어져 은행 이자이익에 유리하게 작용하고, 내려가면 대출 수요와 부동산 시장이 살아나는 대신 마진이 줄어듭니다. 2022년 글로벌 인플레이션과 함께 시작된 고금리 시대는 2024~2025년 네 차례 인하로 한 차례 방향을 틀었고, 이후에도 물가·환율·지정학 변수에 따라 인상과 인하 기대가 수시로 뒤집히고 있습니다. 이 흐름을 읽는 틀은 세 가지입니다. 한국은행 금통위가 어느 방향으로 움직이는지, 미국과의 금리 차가 환율에 어떤 압력을 주는지, 그리고 가계의 이자 부담(주택담보대출 금리)이 소비와 부동산으로 어떻게 번지는지입니다. 개별 금리 뉴스는 결국 이 큰 사이클의 어느 지점에 있는지를 보여주는 조각들입니다.",
       "articles": [
+        {
+          "title": "[뉴욕증시] 국채 바이백으론 만족 못 하지…하락 마감",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431092",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "세인트루이스 연은 총재 \"점진적 금리 인상이 급격한 것보다 바람직\"",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431087",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "[뉴욕채권] 베어 스팁…'베선트 풋' 하루만에 소멸 속 역효과 우려도",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431095",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "美재무 \"국채 바이백 회당 40억弗 이상 가능…금리, 펀더멘털 미반영\"(종합)",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431085",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "美 국채가, 하루 만에 반락…재무부 기습 조치 '무색'",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431079",
+          "date": "2026-08-21"
+        },
         {
           "title": "국제유가, UAE·이란 갈등 고조에 나흘 연속 상승…WTI 1%↑",
           "press": "yna.co.kr",
@@ -97,36 +127,6 @@
           "press": "news.einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430419",
           "date": "2026-08-18"
-        },
-        {
-          "title": "美국채 30년물 19년만에 최고…증시 흔든 금리·유가[뉴욕마감]",
-          "press": "mt.co.kr",
-          "url": "https://www.mt.co.kr/world/2026/08/18/2026081806063034189",
-          "date": "2026-08-18"
-        },
-        {
-          "title": "“다시 금 살 때 됐나”…개미들, 4개월 만에 순매수 전환",
-          "press": "mk.co.kr",
-          "url": "https://www.mk.co.kr/article/12129273",
-          "date": "2026-08-17"
-        },
-        {
-          "title": "한은 부총재 \"특별한 요인 없다면 금리 인상 가능성 커\"",
-          "press": "mbn.mk.co.kr",
-          "url": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5211717",
-          "date": "2026-08-11"
-        },
-        {
-          "title": "[역머니무브] 금리 더 뛰기 전 ‘실탄’ 확보…은행·저축銀 수신전쟁",
-          "press": "g-enews.com",
-          "url": "https://www.g-enews.com/view.php?ud=202608141615124239a6e8311f64_1",
-          "date": "2026-08-17"
-        },
-        {
-          "title": "한은 부총재 \"물가 오름세 지속…금리 추가 인상 가능성 커\"",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260811109600002?input=1195m",
-          "date": "2026-08-11"
         }
       ],
       "query": "한국은행 기준금리 인하"
@@ -138,6 +138,30 @@
       "summary": "'주담대로 돈 벌던 시대'의 종료. 총량 목표는 3%로 완화했지만 DSR은 그대로",
       "desc": "한국 은행업의 전통적 수익 공식은 '주택담보대출로 돈을 버는 것'이었지만, 정부가 가계부채를 국가적 위험으로 보고 총량을 직접 관리하면서 이 공식이 근본부터 흔들리고 있습니다. 금융당국은 은행별 대출 증가 한도를 정해두고, 스트레스 DSR처럼 개인의 대출 한도를 조이는 규제를 단계적으로 강화해 왔습니다. 은행 입장에서는 가장 안전하고 확실한 성장 엔진이 막힌 것이라, 비이자이익 확대·글로벌 진출 같은 다른 트렌드들이 모두 이 규제에서 출발한다고 해도 과언이 아닙니다. 규제가 조여질 때마다 대출 수요가 저축은행·카드론 등 2금융권으로 옮겨가는 풍선효과가 반복되는 것도 구조적 특징입니다. 뉴스를 볼 때는 규제 강도(총량 목표·DSR 단계)의 변화, 은행별 대출 중단 여부, 풍선효과의 크기를 함께 보면 흐름이 잡힙니다.",
       "articles": [
+        {
+          "title": "6월 서울 아파트값 한달새 2.5%↑…5년 만에 최대폭 상승",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260821008500004",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "국토장관도 동일 시도 내 토허구역 지정 가능해진다",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260820178600003",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "은행권, 내달 입주 앞둔 '디에이치 방배' 잔금대출 한도 확대",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260820176000002",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "국내은행 6월 말 원화대출 연체율 0.56%…두 달만에 하락",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431093",
+          "date": "2026-08-21"
+        },
         {
           "title": "[단독] 2030 주식 신용거래 역대최대",
           "press": "hankyung.com",
@@ -233,30 +257,6 @@
           "press": "etoday.co.kr",
           "url": "https://www.etoday.co.kr/news/view/2606666",
           "date": "2026-07-23"
-        },
-        {
-          "title": "[7·23부동산토론] \"계약땐 없던 규제, 잔금대출 막혀\"⋯기계약자들 통...",
-          "press": "inews24.com",
-          "url": "http://www.inews24.com/view/1988092",
-          "date": "2026-07-23"
-        },
-        {
-          "title": "“이건 문제다” 李대통령도 공감…은행이 대출 닫자 잔금 못 치르는 현...",
-          "press": "biz.heraldcorp.com",
-          "url": "https://biz.heraldcorp.com/article/10818002?ref=naver",
-          "date": "2026-07-23"
-        },
-        {
-          "title": "저축은행 1분기 소액신용대출' 전년比 19% ↑…은행권 대출 규제에 역대...",
-          "press": "whitepaper.co.kr",
-          "url": "http://www.whitepaper.co.kr/news/articleView.html?idxno=264742",
-          "date": "2026-07-21"
-        },
-        {
-          "title": "하반기 금융권에 불어닥친다는데…대출 셧다운이 뭐예요? [금융가 톺아...",
-          "press": "mk.co.kr",
-          "url": "https://www.mk.co.kr/article/12096932",
-          "date": "2026-07-21"
         }
       ],
       "query": "가계대출 총량규제 스트레스 DSR"
@@ -268,6 +268,12 @@
       "summary": "'이자 장사' 탈피. 자산관리·외환에서 앞선 곳과 뒤처진 곳의 격차가 벌어진다",
       "desc": "한국 은행 수익의 대부분은 예금과 대출의 금리 차이에서 나오는 이자이익입니다. 문제는 이 구조가 금리 사이클에 실적이 통째로 흔들리는 데다, '이자 장사'라는 사회적 비판과 대출 총량규제까지 겹치면서 성장의 한계가 뚜렷해졌다는 점입니다. 그래서 은행들은 수수료·신탁·방카슈랑스·투자은행(IB) 같은 비이자 수익원을 키우는 동시에, 배달앱(신한 땡겨요)·알뜰폰(KB 리브모바일)처럼 은행답지 않은 신사업에도 뛰어들고 있습니다. 겉보기에 '은행이 저걸 왜 하지?' 싶은 뉴스는 대부분 이 트렌드의 연장선입니다. 관전 포인트는 실적 발표 때마다 비이자이익 비중이 실제로 늘고 있는지, 그리고 신사업이 미래 고객 접점 확보(플랫폼 전략)로 이어지는지입니다.",
       "articles": [
+        {
+          "title": "국민은행, 증권사처럼 퇴직연금서 ETF 당일 매매",
+          "press": "hankyung.com",
+          "url": "https://www.hankyung.com/article/2026082030001",
+          "date": "2026-08-21"
+        },
         {
           "title": "미래운용, 상반기 순이익 '역대 최대' 1조 육박…중소형사 약진(종합)",
           "press": "yna.co.kr",
@@ -380,12 +386,6 @@
           "title": "은행 ETF 신탁 판매 8.8배 급증…금감원 단기투자는 후취수수료 유리",
           "press": "newspim.com",
           "url": "https://www.newspim.com/news/view/20260730000685",
-          "date": "2026-07-30"
-        },
-        {
-          "title": "금감원, 은행 ETF 신탁 수수료 '주의' 경보…단기 투자자에 7배 과다 수취",
-          "press": "nspna.com",
-          "url": "https://www.nspna.com/news/?mode=view&newsid=822514",
           "date": "2026-07-30"
         }
       ],
@@ -529,6 +529,30 @@
       "desc": "원화 가치에 1:1로 고정된 디지털 화폐(스테이블코인)를 누가 발행할 것인가를 둘러싼 경쟁으로, 돈의 형태 자체가 바뀔 수 있다는 점에서 금융권 전체가 주목하는 판입니다. 법제화의 핵심 쟁점은 발행사 지분의 51% 이상을 은행이 갖게 하는 '은행 중심 규칙'이 통과되느냐이며, 이에 따라 은행 컨소시엄과 빅테크(두나무·네이버 등) 진영의 주도권이 갈립니다. 은행들이 컨소시엄 구성을 서두르는 배경에는 새 수수료 수익원 확보만이 아니라, 예금이 스테이블코인으로 이동하면 은행의 자금 조달 구조가 흔들릴 수 있다는 방어 논리도 있습니다. 한국은행의 기관용 CBDC 실험, 국채 토큰화 같은 정부 차원의 실증 사업과도 연결됩니다. 발행 주도권·법제화 속도·컨소시엄 구도, 이 세 축으로 개별 뉴스를 배치해 보면 전체 그림이 보입니다.",
       "articles": [
         {
+          "title": "씨티 \"환율 1,390원 아래선 국민연금 환헤지 확대 멈출 수도\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260820170400002",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "씨티 \"韓 당국, 1,350원 이하 환율 선호…필요시 국민연금과 공조\"",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431067",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "달러-원, 뉴욕장서 1,390원 중반대 거래",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431077",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "[외환-마감] 하락 관성에 1,390원대서 낙폭 확대…5.10원↓",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431059",
+          "date": "2026-08-21"
+        },
+        {
           "title": "가상자산 시장 침체에 업비트·빗썸 보유 코인 가치 '뚝'",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260818162200002",
@@ -623,30 +647,6 @@
           "press": "etoday.co.kr",
           "url": "https://www.etoday.co.kr/news/view/2608135",
           "date": "2026-07-28"
-        },
-        {
-          "title": "우리은행 손잡은 쿠팡, 원화코인 시장 도전장",
-          "press": "hankyung.com",
-          "url": "https://www.hankyung.com/article/2026072789111",
-          "date": "2026-07-27"
-        },
-        {
-          "title": "쿠팡-우리은행, 스테이블 코인 결제-정산 기술 검증 완료",
-          "press": "news1.kr",
-          "url": "https://www.news1.kr/industry/distribution/6239846",
-          "date": "2026-07-27"
-        },
-        {
-          "title": "쿠팡·우리은행, ‘원화 스테이블코인’ 실시간 정산 상용화 성큼",
-          "press": "dt.co.kr",
-          "url": "https://www.dt.co.kr/article/12075055?ref=naver",
-          "date": "2026-07-27"
-        },
-        {
-          "title": "[르포]NHN KCP, 스테이블코인 써보니…상용화 문턱까지 왔다",
-          "press": "etnews.com",
-          "url": "https://www.etnews.com/20260724000152",
-          "date": "2026-07-24"
         }
       ],
       "query": "원화 스테이블코인 은행"
@@ -658,6 +658,24 @@
       "summary": "만년 저평가 은행주의 재평가. 자본규제 강화로 '환원 여력'이 시험대에",
       "desc": "한국 은행주는 오랫동안 이익 규모에 비해 주가가 낮은 '만년 저평가' 상태였고, 이를 해소하려는 정부의 밸류업 정책과 함께 금융지주들이 배당 확대와 자사주 매입·소각을 크게 늘리는 흐름입니다. 핵심 지표는 보통주자본(CET1) 비율로, 목표치를 넘는 초과자본을 주주에게 돌려주는 방식이 업계 표준으로 자리잡았습니다. 그래서 은행 실적 뉴스를 볼 때는 순이익 규모만큼이나 '환원율'(순이익 중 배당과 자사주로 돌려주는 비율)이 중요해졌습니다. 외국인 투자자 수급과 주가가 환원 정책 발표에 민감하게 반응하는 것도 특징입니다. 다만 정부가 생산적 금융(대출 확대)을 동시에 요구하고 있어, 자본을 주주환원에 쓸지 성장에 쓸지의 긴장 관계가 상존합니다.",
       "articles": [
+        {
+          "title": "SK하이닉스 ADR 이틀째 상승…적극적 주주환원 정책에 5%↑",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431074",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "성과급 합의날 만난 李·최태원…솔리다임·美 반도체 투자 돌파구 찾나",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431097",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "\"삼성전자·SK하이닉스 300조원 환원 시 달러-원 하단 1,325원\"",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431060",
+          "date": "2026-08-21"
+        },
         {
           "title": "'40조 자사주 매입' 하이닉스 당장 내일부터 산다…1조원 장내 매수 신청",
           "press": "einfomax.co.kr",
@@ -759,24 +777,6 @@
           "press": "edaily.co.kr",
           "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=01813846645518128",
           "date": "2026-07-28"
-        },
-        {
-          "title": "신한투자 \"하나금융지주, 밸류업 2.0 긍정적…주주환원 기대\"",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260727020600008?input=1195m",
-          "date": "2026-07-27"
-        },
-        {
-          "title": "'주주환원' 하나금융 목표가 줄상향",
-          "press": "hankyung.com",
-          "url": "https://www.hankyung.com/article/2026072789281",
-          "date": "2026-07-27"
-        },
-        {
-          "title": "상반기 11조원 번 4대 금융, 피 말리는 '주주환원' 전쟁",
-          "press": "newsway.co.kr",
-          "url": "https://www.newsway.co.kr/news/view?ud=2026072713580962323",
-          "date": "2026-07-27"
         }
       ],
       "query": "금융지주 밸류업 주주환원"
@@ -788,6 +788,18 @@
       "summary": "돈을 부동산이 아닌 산업으로. 다만 늘어난 대출의 절반 이상은 대기업 몫",
       "desc": "'돈이 부동산이 아니라 산업으로 흐르게 하자'는 정부 정책 기조 아래, 5대 금융지주가 2030년까지 생산적·포용금융에 총 508조 원을 투입하기로 약속한 흐름입니다. 은행 자산의 중심을 가계·부동산 대출에서 기업금융·모험자본으로 옮기라는 요구로, 가계대출 총량규제와 동전의 양면을 이룹니다. 각 지주는 반도체·AI·이차전지 같은 전략 산업 지원과 벤처 투자 확대를 앞다퉈 발표하고 있으며, 집행 실적이 분기마다 공개되는 것이 특징입니다. 관전 포인트는 구호에 그치지 않고 실제 자금이 산업으로 도는지(집행률), 그리고 주주환원 확대와 동시에 이만한 자금을 풀 수 있는지(자본 여력)입니다. 은행의 사회적 역할과 수익성 사이의 줄다리기를 가장 잘 보여주는 트렌드입니다.",
       "articles": [
+        {
+          "title": "국민연금 책임투자 강화…대체투자에도 ESG 원칙 적용한다",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260820170200530",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "신한금융 \"반도체 수혜 편중…외형 성장·체감경기 괴리\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260820167300002",
+          "date": "2026-08-21"
+        },
         {
           "title": "서울시, 정비사업 조합설립 소요 시간 1년→4개월로 '단축'",
           "press": "yna.co.kr",
@@ -894,18 +906,6 @@
           "title": "국민참여형 국민성장펀드 판매 계획",
           "press": "fsc.go.kr",
           "url": "https://www.fsc.go.kr/no010101/86834",
-          "date": "2026-07-30"
-        },
-        {
-          "title": "7월 기업 체감경기 희비…반도체 등 제조업 웃고 비제조업 울었다",
-          "press": "etoday.co.kr",
-          "url": "https://www.etoday.co.kr/news/view/2608879",
-          "date": "2026-07-30"
-        },
-        {
-          "title": "조선·반도체 훈풍에 7월 기업심리 개선…제조업 3개월째 상승",
-          "press": "newspim.com",
-          "url": "https://www.newspim.com/news/view/20260729001213",
           "date": "2026-07-30"
         }
       ],
@@ -1080,9 +1080,55 @@
           "date": "2026-08-18"
         }
       ]
+    },
+    {
+      "title": "금융사고·내부통제 부실 리스크",
+      "category": "은행·규제",
+      "since": "2026~",
+      "summary": "은행·보험 등 금융권 전반에서 사기·횡령성 금융사고가 잇따르며 내부통제 부실이 구조적 문제로 부각되는 흐름",
+      "desc": "금융사고란 임직원의 횡령·배임이나 외부 사기 등으로 금융회사가 손실을 입는 사건을 말하며, 내부통제는 이를 예방하기 위한 회사 내부의 감시·점검 체계를 뜻한다. 최근 IBK기업은행에서 94억원 규모의 사기 사고가 발생하고, 4대 시중은행에서 지난 10년간 누적 5,500억원에 달하는 금융사고가 확인되면서 은행권 내부통제의 실효성에 의문이 커지고 있다. 보험업권에서도 보험사기 가담 이력자의 시장 진입을 제한하는 규제가 새로 도입되는 등, 감독당국이 사고 재발을 막기 위한 진입·감시 규제를 강화하는 추세다. 이는 단발성 사건이 아니라 대형 금융사고가 반복되면서 감독규제와 지배구조, 성과보상 체계 전반을 재점검해야 한다는 구조적 압박으로 이어지고 있다. 향후 관전 포인트는 금융당국이 내부통제 실패에 대한 최고경영진 책임을 얼마나 강하게 물을지, 그리고 이런 규제 강화가 금융회사의 비용 구조와 신뢰도에 어떤 영향을 미칠지에 있다.",
+      "query": "금융사고 내부통제",
+      "articles": [
+        {
+          "title": "보험사기 가담자 시장진입 규제 강화",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260820164900002",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "IBK기업은행서 94억원 규모 '사기' 금융사고",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260820170300002",
+          "date": "2026-08-21"
+        },
+        {
+          "title": "'망가진 내부통제'…4대 은행 금융사고 10년간 5천500억원",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260819159400002",
+          "date": "2026-08-20"
+        }
+      ]
     }
   ],
   "unclassified": [
+    {
+      "title": "2분기 순대외자산 7536억→640억弗…최대폭 감소",
+      "press": "hankyung.com",
+      "url": "https://www.hankyung.com/article/2026082031211",
+      "date": "2026-08-21"
+    },
+    {
+      "title": "신한은행, 중저신용자 대상 '슈퍼SOL중금리대출' 출시",
+      "press": "hankyung.com",
+      "url": "https://www.hankyung.com/article/2026082030011",
+      "date": "2026-08-21"
+    },
+    {
+      "title": "한국은행 부총재에 권민수 부총재보 임명…\"외환·국제금융 전문가\"(상보)",
+      "press": "einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431070",
+      "date": "2026-08-21"
+    },
     {
       "title": "한국주택금융공사 2026년도 특정직 및 계약직 채용공고",
       "press": "alio.go.kr",
@@ -1105,12 +1151,6 @@
       "title": "금감원, 비청산 장외파생거래 증거금 교환 가이드라인 1년 연장",
       "press": "einfomax.co.kr",
       "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430859",
-      "date": "2026-08-20"
-    },
-    {
-      "title": "'망가진 내부통제'…4대 은행 금융사고 10년간 5천500억원",
-      "press": "yna.co.kr",
-      "url": "https://www.yna.co.kr/view/AKR20260819159400002",
       "date": "2026-08-20"
     },
     {
