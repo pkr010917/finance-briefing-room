@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.08.21",
+  "lastUpdated": "2026.08.24",
   "trends": [
     {
       "category": "금리·정책",
@@ -8,6 +8,12 @@
       "summary": "인하 기대는 뒤집혔다. 한은 부총재까지 '추가 인상 가능성' 언급한 국면",
       "desc": "기준금리는 은행업의 모든 것이 시작되는 출발점입니다. 금리가 오르면 예대금리차와 순이자마진(NIM)이 벌어져 은행 이자이익에 유리하게 작용하고, 내려가면 대출 수요와 부동산 시장이 살아나는 대신 마진이 줄어듭니다. 2022년 글로벌 인플레이션과 함께 시작된 고금리 시대는 2024~2025년 네 차례 인하로 한 차례 방향을 틀었고, 이후에도 물가·환율·지정학 변수에 따라 인상과 인하 기대가 수시로 뒤집히고 있습니다. 이 흐름을 읽는 틀은 세 가지입니다. 한국은행 금통위가 어느 방향으로 움직이는지, 미국과의 금리 차가 환율에 어떤 압력을 주는지, 그리고 가계의 이자 부담(주택담보대출 금리)이 소비와 부동산으로 어떻게 번지는지입니다. 개별 금리 뉴스는 결국 이 큰 사이클의 어느 지점에 있는지를 보여주는 조각들입니다.",
       "articles": [
+        {
+          "title": "이번주 한국은행 및 금융위 금감원 일정",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431374",
+          "date": "2026-08-24"
+        },
         {
           "title": "[뉴욕증시] 국채 바이백으론 만족 못 하지…하락 마감",
           "press": "einfomax.co.kr",
@@ -121,12 +127,6 @@
           "press": "news.einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430615",
           "date": "2026-08-19"
-        },
-        {
-          "title": "골드만 \"시장 지나치게 매파적…9월 금리 인상 가능성 매우 작아\"",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430419",
-          "date": "2026-08-18"
         }
       ],
       "query": "한국은행 기준금리 인하"
@@ -269,6 +269,24 @@
       "desc": "한국 은행 수익의 대부분은 예금과 대출의 금리 차이에서 나오는 이자이익입니다. 문제는 이 구조가 금리 사이클에 실적이 통째로 흔들리는 데다, '이자 장사'라는 사회적 비판과 대출 총량규제까지 겹치면서 성장의 한계가 뚜렷해졌다는 점입니다. 그래서 은행들은 수수료·신탁·방카슈랑스·투자은행(IB) 같은 비이자 수익원을 키우는 동시에, 배달앱(신한 땡겨요)·알뜰폰(KB 리브모바일)처럼 은행답지 않은 신사업에도 뛰어들고 있습니다. 겉보기에 '은행이 저걸 왜 하지?' 싶은 뉴스는 대부분 이 트렌드의 연장선입니다. 관전 포인트는 실적 발표 때마다 비이자이익 비중이 실제로 늘고 있는지, 그리고 신사업이 미래 고객 접점 확보(플랫폼 전략)로 이어지는지입니다.",
       "articles": [
         {
+          "title": "[단독] 1년간 수수료 0원, 미래에셋 디지털X에 승부수",
+          "press": "hankyung.com",
+          "url": "https://www.hankyung.com/article/202608237288i",
+          "date": "2026-08-24"
+        },
+        {
+          "title": "디지털엑스 코빗, 수수료 1년간 전면 무료",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/stock/2026/08/23/2026082322442840521",
+          "date": "2026-08-24"
+        },
+        {
+          "title": "은행 ETF신탁 수수료 '선취 쏠림' 손본다",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/finance/2026/08/24/2026082319451145333",
+          "date": "2026-08-24"
+        },
+        {
           "title": "국민은행, 증권사처럼 퇴직연금서 ETF 당일 매매",
           "press": "hankyung.com",
           "url": "https://www.hankyung.com/article/2026082030001",
@@ -368,24 +386,6 @@
           "title": "하나은행, 토스와 '만보기 적금' 출시…최고 연 4.5%",
           "press": "newspim.com",
           "url": "https://www.newspim.com/news/view/20260715001020",
-          "date": "2026-07-30"
-        },
-        {
-          "title": "대부분 단기매매인데도 수수료 7배 더 부담…은행권 ETF 신탁거래 주의보",
-          "press": "fnnews.com",
-          "url": "https://www.fnnews.com/news/202607301204076971",
-          "date": "2026-07-30"
-        },
-        {
-          "title": "은행 ETF '단타' 권하더니…수수료는 적정의 7배 챙겼다",
-          "press": "edaily.co.kr",
-          "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=04608406645519768",
-          "date": "2026-07-30"
-        },
-        {
-          "title": "은행 ETF 신탁 판매 8.8배 급증…금감원 단기투자는 후취수수료 유리",
-          "press": "newspim.com",
-          "url": "https://www.newspim.com/news/view/20260730000685",
           "date": "2026-07-30"
         }
       ],
@@ -659,6 +659,18 @@
       "desc": "한국 은행주는 오랫동안 이익 규모에 비해 주가가 낮은 '만년 저평가' 상태였고, 이를 해소하려는 정부의 밸류업 정책과 함께 금융지주들이 배당 확대와 자사주 매입·소각을 크게 늘리는 흐름입니다. 핵심 지표는 보통주자본(CET1) 비율로, 목표치를 넘는 초과자본을 주주에게 돌려주는 방식이 업계 표준으로 자리잡았습니다. 그래서 은행 실적 뉴스를 볼 때는 순이익 규모만큼이나 '환원율'(순이익 중 배당과 자사주로 돌려주는 비율)이 중요해졌습니다. 외국인 투자자 수급과 주가가 환원 정책 발표에 민감하게 반응하는 것도 특징입니다. 다만 정부가 생산적 금융(대출 확대)을 동시에 요구하고 있어, 자본을 주주환원에 쓸지 성장에 쓸지의 긴장 관계가 상존합니다.",
       "articles": [
         {
+          "title": "수백조 쥐는 삼전닉스 주주에 절반 푼다",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/industry/2026/08/24/2026082319483644936",
+          "date": "2026-08-24"
+        },
+        {
+          "title": "7천피 이번엔 지켜낼까 코스피 운명 가를 2대 변수",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/stock/2026/08/24/2026082319470622957",
+          "date": "2026-08-24"
+        },
+        {
           "title": "SK하이닉스 ADR 이틀째 상승…적극적 주주환원 정책에 5%↑",
           "press": "einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431074",
@@ -764,18 +776,6 @@
           "title": "역대급 주주환원에 가려진 위험신호 [줌인 IT]",
           "press": "it.chosun.com",
           "url": "https://it.chosun.com/news/articleView.html?idxno=2023092166650",
-          "date": "2026-07-28"
-        },
-        {
-          "title": "[클릭 e종목]\"하나금융지주, 밸류업 목표 재설정…목표가↑\"",
-          "press": "view.asiae.co.kr",
-          "url": "https://view.asiae.co.kr/article/2026072716285530664",
-          "date": "2026-07-27"
-        },
-        {
-          "title": "다음주 금융당국 일정 (7.28 저PBR 의견수렴·핀테크위크 2026 등)",
-          "press": "edaily.co.kr",
-          "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=01813846645518128",
           "date": "2026-07-28"
         }
       ],
@@ -1090,6 +1090,12 @@
       "query": "금융사고 내부통제",
       "articles": [
         {
+          "title": "중국업체 800억대 사기당한 기업은행, 허술한 내부통제",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260822049100002",
+          "date": "2026-08-24"
+        },
+        {
           "title": "보험사기 가담자 시장진입 규제 강화",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260820164900002",
@@ -1111,6 +1117,48 @@
     }
   ],
   "unclassified": [
+    {
+      "title": "2026 하반기 공기업 채용 가이드",
+      "press": "manooblllog-1004.kr",
+      "url": "https://abc.manooblllog-1004.kr/2026-%ED%95%98%EB%B0%98%EA%B8%B0-%EA%B3%B5%EA%B8%B0%EC%97%85-%EC%B1%84%EC%9A%A9-%EA%B0%80%EC%9D%B4%EB%93%9C-2-8%EB%A7%8C-%EB%AA%85-%EC%97%AD%EB%8C%80%EA%B8%89-%EA%B8%B0%ED%9A%8C/",
+      "date": "2026-08-24"
+    },
+    {
+      "title": "내년도 지출구조조정 50조 넘어 역대 최대",
+      "press": "hankyung.com",
+      "url": "https://www.hankyung.com/article/2026082371031",
+      "date": "2026-08-24"
+    },
+    {
+      "title": "인상 과도 vs 기여금 종료 효과 예보료율 인상 줄다리기",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260823027000002",
+      "date": "2026-08-24"
+    },
+    {
+      "title": "1주택 비거주 사유 폭넓게 인정 공감",
+      "press": "mt.co.kr",
+      "url": "https://www.mt.co.kr/politics/2026/08/24/2026082319433271051",
+      "date": "2026-08-24"
+    },
+    {
+      "title": "김민석 1주택 종부세 거주 기준 제외를",
+      "press": "mt.co.kr",
+      "url": "https://www.mt.co.kr/politics/2026/08/24/2026082319432021402",
+      "date": "2026-08-24"
+    },
+    {
+      "title": "'비거주 1주택' 종부세 낮추고 양도세 예외 넓힌다",
+      "press": "einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431376",
+      "date": "2026-08-24"
+    },
+    {
+      "title": "금융위 지방이전 강행? 이번주 국무회의 주목",
+      "press": "mt.co.kr",
+      "url": "https://www.mt.co.kr/finance/2026/08/24/2026082319465582489",
+      "date": "2026-08-24"
+    },
     {
       "title": "2분기 순대외자산 7536억→640억弗…최대폭 감소",
       "press": "hankyung.com",
@@ -1248,30 +1296,6 @@
       "press": "jobkorea.co.kr",
       "url": "https://jrs.jobkorea.co.kr/wooribank",
       "date": "2026-08-17"
-    },
-    {
-      "title": "금융감독원, 2025년도 신입 종합직원(5급) 70명 채용 예정",
-      "press": "kdi.re.kr",
-      "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=256664",
-      "date": "2026-08-17"
-    },
-    {
-      "title": "2026년도 종합직원(5급) 채용 (~09/08)",
-      "press": "catch.co.kr",
-      "url": "https://www.catch.co.kr/NCS/RecruitInfoDetails/520546",
-      "date": "2026-08-17"
-    },
-    {
-      "title": "우리은행 대기업영업전략부/연금사업부/신탁부 지원업무전문역(퇴직인력) 채용공고",
-      "press": "woorifg.com",
-      "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do",
-      "date": "2026-08-04"
-    },
-    {
-      "title": "이번주 국내 주요 금융일정(8.3~8.7)",
-      "press": "newspim.com",
-      "url": "https://www.newspim.com/news/view/20260731001282",
-      "date": "2026-08-04"
     }
   ]
 }
