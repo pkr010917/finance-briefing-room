@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.08.24",
+  "lastUpdated": "2026.08.25",
   "trends": [
     {
       "category": "금리·정책",
@@ -8,6 +8,24 @@
       "summary": "인하 기대는 뒤집혔다. 한은 부총재까지 '추가 인상 가능성' 언급한 국면",
       "desc": "기준금리는 은행업의 모든 것이 시작되는 출발점입니다. 금리가 오르면 예대금리차와 순이자마진(NIM)이 벌어져 은행 이자이익에 유리하게 작용하고, 내려가면 대출 수요와 부동산 시장이 살아나는 대신 마진이 줄어듭니다. 2022년 글로벌 인플레이션과 함께 시작된 고금리 시대는 2024~2025년 네 차례 인하로 한 차례 방향을 틀었고, 이후에도 물가·환율·지정학 변수에 따라 인상과 인하 기대가 수시로 뒤집히고 있습니다. 이 흐름을 읽는 틀은 세 가지입니다. 한국은행 금통위가 어느 방향으로 움직이는지, 미국과의 금리 차가 환율에 어떤 압력을 주는지, 그리고 가계의 이자 부담(주택담보대출 금리)이 소비와 부동산으로 어떻게 번지는지입니다. 개별 금리 뉴스는 결국 이 큰 사이클의 어느 지점에 있는지를 보여주는 조각들입니다.",
       "articles": [
+        {
+          "title": "[채권-마감] 국고 3년 1.8bp↓…外人 폭풍매수·초장기물 주시",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431538",
+          "date": "2026-08-25"
+        },
+        {
+          "title": "금리 뛰자 손실도 뛰네… 은행 '채권 앓이'",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/finance/2026/08/25/2026082419452211466",
+          "date": "2026-08-25"
+        },
+        {
+          "title": "현대차, 111일 만에 임금교섭 잠정합의..기본급 10만원↑, 성과금 400% + 1270만원",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/industry/2026/08/25/2026082505404232177",
+          "date": "2026-08-25"
+        },
         {
           "title": "이번주 한국은행 및 금융위 금감원 일정",
           "press": "einfomax.co.kr",
@@ -109,24 +127,6 @@
           "press": "news.einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430621",
           "date": "2026-08-19"
-        },
-        {
-          "title": "[뉴욕증시] 글로벌 금리 상승에 '도망쳐'…필리 지수 5%↓",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430635",
-          "date": "2026-08-19"
-        },
-        {
-          "title": "조달금리 연 4% 육박…증권 발행어음 속도조절",
-          "press": "hankyung.com",
-          "url": "https://www.hankyung.com/article/2026081878141",
-          "date": "2026-08-19"
-        },
-        {
-          "title": "[채권-마감] 약세 스티프닝…유가 급등 속 10년 입찰 소화",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430615",
-          "date": "2026-08-19"
         }
       ],
       "query": "한국은행 기준금리 인하"
@@ -138,6 +138,12 @@
       "summary": "'주담대로 돈 벌던 시대'의 종료. 총량 목표는 3%로 완화했지만 DSR은 그대로",
       "desc": "한국 은행업의 전통적 수익 공식은 '주택담보대출로 돈을 버는 것'이었지만, 정부가 가계부채를 국가적 위험으로 보고 총량을 직접 관리하면서 이 공식이 근본부터 흔들리고 있습니다. 금융당국은 은행별 대출 증가 한도를 정해두고, 스트레스 DSR처럼 개인의 대출 한도를 조이는 규제를 단계적으로 강화해 왔습니다. 은행 입장에서는 가장 안전하고 확실한 성장 엔진이 막힌 것이라, 비이자이익 확대·글로벌 진출 같은 다른 트렌드들이 모두 이 규제에서 출발한다고 해도 과언이 아닙니다. 규제가 조여질 때마다 대출 수요가 저축은행·카드론 등 2금융권으로 옮겨가는 풍선효과가 반복되는 것도 구조적 특징입니다. 뉴스를 볼 때는 규제 강도(총량 목표·DSR 단계)의 변화, 은행별 대출 중단 여부, 풍선효과의 크기를 함께 보면 흐름이 잡힙니다.",
       "articles": [
+        {
+          "title": "이억원 '잔금대출 기준 분양가·감정가, 은행 자율적 판단'(종합)",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260824139251002",
+          "date": "2026-08-25"
+        },
         {
           "title": "6월 서울 아파트값 한달새 2.5%↑…5년 만에 최대폭 상승",
           "press": "yna.co.kr",
@@ -251,12 +257,6 @@
           "press": "kukinews.com",
           "url": "https://www.kukinews.com/article/view/kuk202607270205",
           "date": "2026-07-27"
-        },
-        {
-          "title": "잔금대출 막힌 실거주자, 유주택자 전세대출⋯국민 질문에 대통령이 답...",
-          "press": "etoday.co.kr",
-          "url": "https://www.etoday.co.kr/news/view/2606666",
-          "date": "2026-07-23"
         }
       ],
       "query": "가계대출 총량규제 스트레스 DSR"
@@ -659,6 +659,12 @@
       "desc": "한국 은행주는 오랫동안 이익 규모에 비해 주가가 낮은 '만년 저평가' 상태였고, 이를 해소하려는 정부의 밸류업 정책과 함께 금융지주들이 배당 확대와 자사주 매입·소각을 크게 늘리는 흐름입니다. 핵심 지표는 보통주자본(CET1) 비율로, 목표치를 넘는 초과자본을 주주에게 돌려주는 방식이 업계 표준으로 자리잡았습니다. 그래서 은행 실적 뉴스를 볼 때는 순이익 규모만큼이나 '환원율'(순이익 중 배당과 자사주로 돌려주는 비율)이 중요해졌습니다. 외국인 투자자 수급과 주가가 환원 정책 발표에 민감하게 반응하는 것도 특징입니다. 다만 정부가 생산적 금융(대출 확대)을 동시에 요구하고 있어, 자본을 주주환원에 쓸지 성장에 쓸지의 긴장 관계가 상존합니다.",
       "articles": [
         {
+          "title": "레버리지 빗장 걸자 돈맥경화 풀렸다…코스닥 더 키워줄 '승강제' 대기",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/stock/2026/08/25/2026082418594810193",
+          "date": "2026-08-25"
+        },
+        {
           "title": "수백조 쥐는 삼전닉스 주주에 절반 푼다",
           "press": "mt.co.kr",
           "url": "https://www.mt.co.kr/industry/2026/08/24/2026082319483644936",
@@ -771,12 +777,6 @@
           "press": "mk.co.kr",
           "url": "https://www.mk.co.kr/article/12110418",
           "date": "2026-07-29"
-        },
-        {
-          "title": "역대급 주주환원에 가려진 위험신호 [줌인 IT]",
-          "press": "it.chosun.com",
-          "url": "https://it.chosun.com/news/articleView.html?idxno=2023092166650",
-          "date": "2026-07-28"
         }
       ],
       "query": "금융지주 밸류업 주주환원"
@@ -788,6 +788,18 @@
       "summary": "돈을 부동산이 아닌 산업으로. 다만 늘어난 대출의 절반 이상은 대기업 몫",
       "desc": "'돈이 부동산이 아니라 산업으로 흐르게 하자'는 정부 정책 기조 아래, 5대 금융지주가 2030년까지 생산적·포용금융에 총 508조 원을 투입하기로 약속한 흐름입니다. 은행 자산의 중심을 가계·부동산 대출에서 기업금융·모험자본으로 옮기라는 요구로, 가계대출 총량규제와 동전의 양면을 이룹니다. 각 지주는 반도체·AI·이차전지 같은 전략 산업 지원과 벤처 투자 확대를 앞다퉈 발표하고 있으며, 집행 실적이 분기마다 공개되는 것이 특징입니다. 관전 포인트는 구호에 그치지 않고 실제 자금이 산업으로 도는지(집행률), 그리고 주주환원 확대와 동시에 이만한 자금을 풀 수 있는지(자본 여력)입니다. 은행의 사회적 역할과 수익성 사이의 줄다리기를 가장 잘 보여주는 트렌드입니다.",
       "articles": [
+        {
+          "title": "'실집행 0원에도 하나 더'…정부, '4000억' 주택전용 앵커리츠로 1만가구 착공 지원",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/estate/2026/08/25/2026082411234348781",
+          "date": "2026-08-25"
+        },
+        {
+          "title": "내년 '800조+α' 슈퍼예산…반도체발 국세수입 600조 넘을 듯",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260824145900002",
+          "date": "2026-08-25"
+        },
         {
           "title": "국민연금 책임투자 강화…대체투자에도 ESG 원칙 적용한다",
           "press": "yna.co.kr",
@@ -894,18 +906,6 @@
           "title": "생산적 금융 늘리라는데…금융지주 'RWA 딜레마'",
           "press": "kbanker.co.kr",
           "url": "https://www.kbanker.co.kr/news/articleView.html?idxno=225553",
-          "date": "2026-07-30"
-        },
-        {
-          "title": "서울 밖에 둥지 트는 금융지주…기관·기업금융 공략 가속",
-          "press": "sidae.com",
-          "url": "https://www.sidae.com/article/2026073010060281301",
-          "date": "2026-07-30"
-        },
-        {
-          "title": "국민참여형 국민성장펀드 판매 계획",
-          "press": "fsc.go.kr",
-          "url": "https://www.fsc.go.kr/no010101/86834",
           "date": "2026-07-30"
         }
       ],
@@ -1114,9 +1114,85 @@
           "date": "2026-08-20"
         }
       ]
+    },
+    {
+      "title": "종부세 '비거주 1주택' 특례 확대",
+      "category": "정책·세제",
+      "since": "2026~",
+      "summary": "지방 근무 등으로 실거주하지 못하는 1주택자에 대한 종합부동산세·양도세 부담을 완화하는 세제 개편 논의가 정치권 전반으로 확산되는 흐름",
+      "desc": "1가구 1주택자이지만 직장이나 가족 사정으로 해당 주택에 실거주하지 못하는 경우, 종합부동산세와 양도소득세에서 불이익을 받아온 제도를 손보자는 논의가 여야 정치권과 정부 사이에서 본격화되고 있다. 그동안 1주택 특례는 '실거주'를 전제로 설계돼 있어 비거주 1주택자는 세제 혜택에서 배제되는 경우가 많았는데, 이를 폭넓게 인정하자는 공감대가 형성되는 모습이다. 이는 단순한 세율 조정이 아니라 부동산 보유세 체계의 판정 기준 자체를 바꾸는 구조적 변화로, 은행권 주택담보대출 심사·자산관리 상담에도 영향을 줄 수 있다. 세제 개편이 실제 입법으로 이어지기까지 시간이 걸리는 만큼 여야 협상 과정에서 세부 기준(거주 인정 사유, 적용 대상 등)을 둘러싼 논쟁이 몇 달간 이어질 가능성이 크다. 금융권 입장에서는 종부세·양도세 부담 완화가 매물 잠김 해소나 주택 거래 활성화로 이어질지, 가계대출 총량규제와 맞물려 어떤 파급 효과를 낳을지가 관전 포인트다.",
+      "query": "종부세 비거주 1주택 특례",
+      "articles": [
+        {
+          "title": "1주택 비거주 사유 폭넓게 인정 공감",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/politics/2026/08/24/2026082319433271051",
+          "date": "2026-08-24"
+        },
+        {
+          "title": "김민석 1주택 종부세 거주 기준 제외를",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/politics/2026/08/24/2026082319432021402",
+          "date": "2026-08-24"
+        },
+        {
+          "title": "'비거주 1주택' 종부세 낮추고 양도세 예외 넓힌다",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431376",
+          "date": "2026-08-24"
+        }
+      ]
     }
   ],
   "unclassified": [
+    {
+      "title": "국내기업 경기전망 6개월만에 '긍정적'…환율 안정·추석 특수",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260824125200003",
+      "date": "2026-08-25"
+    },
+    {
+      "title": "주가 하락으로 8월 소비심리 넉 달 만에↓…집값 상승 기대 줄어",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260824149100002",
+      "date": "2026-08-25"
+    },
+    {
+      "title": "美 경제 제재 앞두고 이란 리알화 역대 최저",
+      "press": "einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431542",
+      "date": "2026-08-25"
+    },
+    {
+      "title": "이란, 美 제재에 '완전히 대비…금융 동맥 끊을 수 없어'",
+      "press": "einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431562",
+      "date": "2026-08-25"
+    },
+    {
+      "title": "美, 이란 거래 제3국도 제재…'경제적 왕따 작전 개시'(종합)",
+      "press": "mt.co.kr",
+      "url": "https://www.mt.co.kr/world/2026/08/25/2026082503413787620",
+      "date": "2026-08-25"
+    },
+    {
+      "title": "기업 달러 순매도 1년새 4배…'수출 뭉칫돈'에 달러-원 연저점",
+      "press": "einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431536",
+      "date": "2026-08-25"
+    },
+    {
+      "title": "[외환-마감] 네고·역외 매도에 또 연저점…4.10원↓",
+      "press": "einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431537",
+      "date": "2026-08-25"
+    },
+    {
+      "title": "현대차, 내년부터 2028년까지 기술직 500명 신규 채용 전망",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260824157000057",
+      "date": "2026-08-25"
+    },
     {
       "title": "2026 하반기 공기업 채용 가이드",
       "press": "manooblllog-1004.kr",
@@ -1133,24 +1209,6 @@
       "title": "인상 과도 vs 기여금 종료 효과 예보료율 인상 줄다리기",
       "press": "yna.co.kr",
       "url": "https://www.yna.co.kr/view/AKR20260823027000002",
-      "date": "2026-08-24"
-    },
-    {
-      "title": "1주택 비거주 사유 폭넓게 인정 공감",
-      "press": "mt.co.kr",
-      "url": "https://www.mt.co.kr/politics/2026/08/24/2026082319433271051",
-      "date": "2026-08-24"
-    },
-    {
-      "title": "김민석 1주택 종부세 거주 기준 제외를",
-      "press": "mt.co.kr",
-      "url": "https://www.mt.co.kr/politics/2026/08/24/2026082319432021402",
-      "date": "2026-08-24"
-    },
-    {
-      "title": "'비거주 1주택' 종부세 낮추고 양도세 예외 넓힌다",
-      "press": "einfomax.co.kr",
-      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431376",
       "date": "2026-08-24"
     },
     {
@@ -1248,54 +1306,6 @@
       "press": "hankyung.com",
       "url": "https://www.hankyung.com/article/2026081879171",
       "date": "2026-08-19"
-    },
-    {
-      "title": "하나금융, 울릉도 어르신 대상 금융교육",
-      "press": "hankyung.com",
-      "url": "https://www.hankyung.com/article/2026081879181",
-      "date": "2026-08-19"
-    },
-    {
-      "title": "미·이란 협상 교착에 국제유가 2%대↑…브렌트유 다시 90달러대",
-      "press": "yna.co.kr",
-      "url": "https://www.yna.co.kr/view/AKR20260818005200072",
-      "date": "2026-08-18"
-    },
-    {
-      "title": "청년보다 50대가 많아졌다…대기업 고용시장에 무슨 일이",
-      "press": "hankyung.com",
-      "url": "https://www.hankyung.com/article/2026081857357",
-      "date": "2026-08-18"
-    },
-    {
-      "title": "대기업 신규채용 2년새 15% 감소…청년 줄고 장년 늘며 세대역전",
-      "press": "yna.co.kr",
-      "url": "https://www.yna.co.kr/view/AKR20260817042600003",
-      "date": "2026-08-18"
-    },
-    {
-      "title": "정부, ISA 세제 손질…부동산은 국회 논의",
-      "press": "hankyung.com",
-      "url": "https://www.hankyung.com/article/2026081753061",
-      "date": "2026-08-18"
-    },
-    {
-      "title": "대기업집단, 작년 간판값으로 2.2조 벌었다…SK·LG·한화 순",
-      "press": "yna.co.kr",
-      "url": "https://www.yna.co.kr/view/AKR20260814108000002",
-      "date": "2026-08-18"
-    },
-    {
-      "title": "계열사서 받은 '간판값'만 2.2조…대기업 상표권 수입 역대 최대",
-      "press": "hankyung.com",
-      "url": "https://www.hankyung.com/article/2026081857317",
-      "date": "2026-08-18"
-    },
-    {
-      "title": "우리은행 - 채용 홈페이지",
-      "press": "jobkorea.co.kr",
-      "url": "https://jrs.jobkorea.co.kr/wooribank",
-      "date": "2026-08-17"
     }
   ]
 }
