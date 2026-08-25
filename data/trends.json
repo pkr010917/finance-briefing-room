@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.08.25",
+  "lastUpdated": "2026.08.26",
   "trends": [
     {
       "category": "금리·정책",
@@ -8,6 +8,24 @@
       "summary": "인하 기대는 뒤집혔다. 한은 부총재까지 '추가 인상 가능성' 언급한 국면",
       "desc": "기준금리는 은행업의 모든 것이 시작되는 출발점입니다. 금리가 오르면 예대금리차와 순이자마진(NIM)이 벌어져 은행 이자이익에 유리하게 작용하고, 내려가면 대출 수요와 부동산 시장이 살아나는 대신 마진이 줄어듭니다. 2022년 글로벌 인플레이션과 함께 시작된 고금리 시대는 2024~2025년 네 차례 인하로 한 차례 방향을 틀었고, 이후에도 물가·환율·지정학 변수에 따라 인상과 인하 기대가 수시로 뒤집히고 있습니다. 이 흐름을 읽는 틀은 세 가지입니다. 한국은행 금통위가 어느 방향으로 움직이는지, 미국과의 금리 차가 환율에 어떤 압력을 주는지, 그리고 가계의 이자 부담(주택담보대출 금리)이 소비와 부동산으로 어떻게 번지는지입니다. 개별 금리 뉴스는 결국 이 큰 사이클의 어느 지점에 있는지를 보여주는 조각들입니다.",
       "articles": [
+        {
+          "title": "채권-마감 금통위 경계에 흐릿한 방향성…초장기는 부담 축소에 강세",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431732",
+          "date": "2026-08-26"
+        },
+        {
+          "title": "외환-마감 되돌림·커스터디 달러 매수에 상승 전환…1,380원대 중반",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431730",
+          "date": "2026-08-26"
+        },
+        {
+          "title": "달러-원, 뉴욕장서 1,380원 중반대 거래",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431739",
+          "date": "2026-08-26"
+        },
         {
           "title": "[채권-마감] 국고 3년 1.8bp↓…外人 폭풍매수·초장기물 주시",
           "press": "einfomax.co.kr",
@@ -109,24 +127,6 @@
           "press": "einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430835",
           "date": "2026-08-20"
-        },
-        {
-          "title": "원·달러 환율, 한달 반만에 160원 급락",
-          "press": "hankyung.com",
-          "url": "https://www.hankyung.com/article/2026081904651",
-          "date": "2026-08-20"
-        },
-        {
-          "title": "국제유가, 중동 불안 지속에 사흘 연속 상승…WTI 0.5%↑",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260819005700072",
-          "date": "2026-08-19"
-        },
-        {
-          "title": "SK하이닉스 ADR 주가 6% 급락…美 금리 부담에 6일만에↓",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430621",
-          "date": "2026-08-19"
         }
       ],
       "query": "한국은행 기준금리 인하"
@@ -138,6 +138,18 @@
       "summary": "'주담대로 돈 벌던 시대'의 종료. 총량 목표는 3%로 완화했지만 DSR은 그대로",
       "desc": "한국 은행업의 전통적 수익 공식은 '주택담보대출로 돈을 버는 것'이었지만, 정부가 가계부채를 국가적 위험으로 보고 총량을 직접 관리하면서 이 공식이 근본부터 흔들리고 있습니다. 금융당국은 은행별 대출 증가 한도를 정해두고, 스트레스 DSR처럼 개인의 대출 한도를 조이는 규제를 단계적으로 강화해 왔습니다. 은행 입장에서는 가장 안전하고 확실한 성장 엔진이 막힌 것이라, 비이자이익 확대·글로벌 진출 같은 다른 트렌드들이 모두 이 규제에서 출발한다고 해도 과언이 아닙니다. 규제가 조여질 때마다 대출 수요가 저축은행·카드론 등 2금융권으로 옮겨가는 풍선효과가 반복되는 것도 구조적 특징입니다. 뉴스를 볼 때는 규제 강도(총량 목표·DSR 단계)의 변화, 은행별 대출 중단 여부, 풍선효과의 크기를 함께 보면 흐름이 잡힙니다.",
       "articles": [
+        {
+          "title": "뉴홈 모기지, 원안대로 적용…만기 최장 40년·금리 1.9~3.0%",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431733",
+          "date": "2026-08-26"
+        },
+        {
+          "title": "김윤덕·오세훈 오늘 다시 회동…용산 주택공급 접점 찾나",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260825152600003",
+          "date": "2026-08-26"
+        },
         {
           "title": "이억원 '잔금대출 기준 분양가·감정가, 은행 자율적 판단'(종합)",
           "press": "yna.co.kr",
@@ -244,18 +256,6 @@
           "title": "[부동산 대토론] \"대출규제 엄격히 유지…지방·실수요자는 핀셋 보완\"",
           "press": "dailian.co.kr",
           "url": "https://www.dailian.co.kr/news/view/1671454/?sc=Naver",
-          "date": "2026-07-27"
-        },
-        {
-          "title": "가계대출 조이고 실수요 '핀셋 지원'…\"잔금대출은 은행권과 협의\"",
-          "press": "mt.co.kr",
-          "url": "https://www.mt.co.kr/finance/2026/07/27/2026072718000610763",
-          "date": "2026-07-27"
-        },
-        {
-          "title": "이억원 “막힌 잔금대출, 현실적 방안 찾겠다”",
-          "press": "kukinews.com",
-          "url": "https://www.kukinews.com/article/view/kuk202607270205",
           "date": "2026-07-27"
         }
       ],
@@ -789,6 +789,18 @@
       "desc": "'돈이 부동산이 아니라 산업으로 흐르게 하자'는 정부 정책 기조 아래, 5대 금융지주가 2030년까지 생산적·포용금융에 총 508조 원을 투입하기로 약속한 흐름입니다. 은행 자산의 중심을 가계·부동산 대출에서 기업금융·모험자본으로 옮기라는 요구로, 가계대출 총량규제와 동전의 양면을 이룹니다. 각 지주는 반도체·AI·이차전지 같은 전략 산업 지원과 벤처 투자 확대를 앞다퉈 발표하고 있으며, 집행 실적이 분기마다 공개되는 것이 특징입니다. 관전 포인트는 구호에 그치지 않고 실제 자금이 산업으로 도는지(집행률), 그리고 주주환원 확대와 동시에 이만한 자금을 풀 수 있는지(자본 여력)입니다. 은행의 사회적 역할과 수익성 사이의 줄다리기를 가장 잘 보여주는 트렌드입니다.",
       "articles": [
         {
+          "title": "반도체·휴가철 수요에 전산업 체감경기 3년11개월만에 최고",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260825163500002",
+          "date": "2026-08-26"
+        },
+        {
+          "title": "8월 기업 체감경기 개선세 지속…비제조업도 반등",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431761",
+          "date": "2026-08-26"
+        },
+        {
           "title": "'실집행 0원에도 하나 더'…정부, '4000억' 주택전용 앵커리츠로 1만가구 착공 지원",
           "press": "mt.co.kr",
           "url": "https://www.mt.co.kr/estate/2026/08/25/2026082411234348781",
@@ -895,18 +907,6 @@
           "press": "dt.co.kr",
           "url": "https://www.dt.co.kr/article/12075652",
           "date": "2026-07-31"
-        },
-        {
-          "title": "금융위원회, 2027년 D-SIB·D-SIFI 10개 은행·은행지주회사 선정",
-          "press": "edaily.co.kr",
-          "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=04765846645520096",
-          "date": "2026-07-31"
-        },
-        {
-          "title": "생산적 금융 늘리라는데…금융지주 'RWA 딜레마'",
-          "press": "kbanker.co.kr",
-          "url": "https://www.kbanker.co.kr/news/articleView.html?idxno=225553",
-          "date": "2026-07-30"
         }
       ],
       "query": "생산적 금융 금융지주"
@@ -1050,6 +1050,12 @@
       "query": "집중호우 금융지원 은행 카드사",
       "articles": [
         {
+          "title": "부실 비율이 80%…4대 금융 부동산 신탁사들에 무슨 일",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260825140300002",
+          "date": "2026-08-26"
+        },
+        {
           "title": "카드업계, 호우피해 금융지원…청구유예·카드론 이자 감면 등",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260819159800002",
@@ -1089,6 +1095,24 @@
       "desc": "금융사고란 임직원의 횡령·배임이나 외부 사기 등으로 금융회사가 손실을 입는 사건을 말하며, 내부통제는 이를 예방하기 위한 회사 내부의 감시·점검 체계를 뜻한다. 최근 IBK기업은행에서 94억원 규모의 사기 사고가 발생하고, 4대 시중은행에서 지난 10년간 누적 5,500억원에 달하는 금융사고가 확인되면서 은행권 내부통제의 실효성에 의문이 커지고 있다. 보험업권에서도 보험사기 가담 이력자의 시장 진입을 제한하는 규제가 새로 도입되는 등, 감독당국이 사고 재발을 막기 위한 진입·감시 규제를 강화하는 추세다. 이는 단발성 사건이 아니라 대형 금융사고가 반복되면서 감독규제와 지배구조, 성과보상 체계 전반을 재점검해야 한다는 구조적 압박으로 이어지고 있다. 향후 관전 포인트는 금융당국이 내부통제 실패에 대한 최고경영진 책임을 얼마나 강하게 물을지, 그리고 이런 규제 강화가 금융회사의 비용 구조와 신뢰도에 어떤 영향을 미칠지에 있다.",
       "query": "금융사고 내부통제",
       "articles": [
+        {
+          "title": "불법 공매도 의심, 중앙시스템 도입 후 94건 적발…올해만 36건",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260825166300002",
+          "date": "2026-08-26"
+        },
+        {
+          "title": "공정위, 쿠팡 조사 거부에 사상 초유의 빈손 철수",
+          "press": "hankyung.com",
+          "url": "https://www.hankyung.com/article/2026082524071",
+          "date": "2026-08-26"
+        },
+        {
+          "title": "쿠팡, 공정위 현장조사 거부 논란…대규모유통업법상 처음(종합)",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260825159851002",
+          "date": "2026-08-26"
+        },
         {
           "title": "중국업체 800억대 사기당한 기업은행, 허술한 내부통제",
           "press": "yna.co.kr",
@@ -1142,9 +1166,79 @@
           "date": "2026-08-24"
         }
       ]
+    },
+    {
+      "title": "원화 강세 구조화: 수출기업 달러 매도에 환율 하락 압력 지속",
+      "category": "외환·국제금융",
+      "since": "2026~",
+      "summary": "수출 대기업의 달러 매도(네고) 물량이 급증하며 원/달러 환율이 연저점을 반복 경신하는 구조적 흐름",
+      "desc": "원/달러 환율은 통상 금리차·수급·지정학 리스크 등 복합 요인으로 움직이지만, 최근에는 수출기업들이 벌어들인 달러를 시장에 내다 파는 '네고 물량'이 크게 늘면서 환율 하락(원화 강세) 압력이 지속되는 모습이 뚜렷해지고 있다. 기업의 달러 순매도 규모가 1년 새 수배로 늘었다는 점은 일시적 수급 이벤트가 아니라 수출 대기업 실적 개선과 환헤지 전략 변화가 맞물린 구조적 변화임을 시사한다. 동시에 국가 전체의 순대외자산이 큰 폭으로 줄어든 점은 해외 투자자산 평가 변화나 자본 유출입 구조에도 변화가 생기고 있음을 보여준다. 이런 환율 흐름은 수입물가·기업 채산성·외환시장 변동성은 물론, 한은의 통화정책 운신 폭과 은행권의 외환파생 손익에도 직접 영향을 미치는 만큼 금융권 전반이 예의주시할 변수다. 관전 포인트는 이 같은 원화 강세 기조가 일시적 수급 쏠림인지, 아니면 수출 경기·자본유출입 구조의 근본적 변화로 굳어지는지 여부다.",
+      "query": "원화 강세 달러 순매도 환율 연저점",
+      "articles": [
+        {
+          "title": "기업 달러 순매도 1년새 4배…'수출 뭉칫돈'에 달러-원 연저점",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431536",
+          "date": "2026-08-25"
+        },
+        {
+          "title": "[외환-마감] 네고·역외 매도에 또 연저점…4.10원↓",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431537",
+          "date": "2026-08-25"
+        },
+        {
+          "title": "2분기 순대외자산 7536억→640억弗…최대폭 감소",
+          "press": "hankyung.com",
+          "url": "https://www.hankyung.com/article/2026082031211",
+          "date": "2026-08-21"
+        }
+      ]
     }
   ],
   "unclassified": [
+    {
+      "title": "LG전자, 하반기 신입 채용…로봇·스마트팩토리 등 12개 직군",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260825161100003",
+      "date": "2026-08-26"
+    },
+    {
+      "title": "신임 통상본부장 대미 통상현안 관계부처 원팀으로 총력 대응",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260825164900003",
+      "date": "2026-08-26"
+    },
+    {
+      "title": "부실채권 시장점유율 43%→16%…유암코에 무슨 일이?",
+      "press": "hankyung.com",
+      "url": "https://www.hankyung.com/article/2026082522071",
+      "date": "2026-08-26"
+    },
+    {
+      "title": "현대차, 성과급 400%+1270만원 합의",
+      "press": "hankyung.com",
+      "url": "https://www.hankyung.com/article/2026082520951",
+      "date": "2026-08-26"
+    },
+    {
+      "title": "SK하이닉스, 성과급 60% 자사주 부결",
+      "press": "hankyung.com",
+      "url": "https://www.hankyung.com/article/2026082520971",
+      "date": "2026-08-26"
+    },
+    {
+      "title": "SK이노, 물적분할 7년 만에 자회사 SKIET 흡수 합병",
+      "press": "hankyung.com",
+      "url": "https://www.hankyung.com/article/2026082520961",
+      "date": "2026-08-26"
+    },
+    {
+      "title": "배임 기소 공시 후 기업 현금 보유 확대…투자 위축 우려",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260825136500003",
+      "date": "2026-08-26"
+    },
     {
       "title": "국내기업 경기전망 6개월만에 '긍정적'…환율 안정·추석 특수",
       "press": "yna.co.kr",
@@ -1176,18 +1270,6 @@
       "date": "2026-08-25"
     },
     {
-      "title": "기업 달러 순매도 1년새 4배…'수출 뭉칫돈'에 달러-원 연저점",
-      "press": "einfomax.co.kr",
-      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431536",
-      "date": "2026-08-25"
-    },
-    {
-      "title": "[외환-마감] 네고·역외 매도에 또 연저점…4.10원↓",
-      "press": "einfomax.co.kr",
-      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431537",
-      "date": "2026-08-25"
-    },
-    {
       "title": "현대차, 내년부터 2028년까지 기술직 500명 신규 채용 전망",
       "press": "yna.co.kr",
       "url": "https://www.yna.co.kr/view/AKR20260824157000057",
@@ -1216,12 +1298,6 @@
       "press": "mt.co.kr",
       "url": "https://www.mt.co.kr/finance/2026/08/24/2026082319465582489",
       "date": "2026-08-24"
-    },
-    {
-      "title": "2분기 순대외자산 7536억→640억弗…최대폭 감소",
-      "press": "hankyung.com",
-      "url": "https://www.hankyung.com/article/2026082031211",
-      "date": "2026-08-21"
     },
     {
       "title": "신한은행, 중저신용자 대상 '슈퍼SOL중금리대출' 출시",
@@ -1281,30 +1357,6 @@
       "title": "국세청 '극한호우' 거제·통영 중기 세금 납부기간 두 달 연장",
       "press": "yna.co.kr",
       "url": "https://www.yna.co.kr/view/AKR20260818076951002",
-      "date": "2026-08-19"
-    },
-    {
-      "title": "권영세 '용산공원 주택공급 철회해야'…오세훈 '녹지공간 필수'",
-      "press": "yna.co.kr",
-      "url": "https://www.yna.co.kr/view/AKR20260818155800001",
-      "date": "2026-08-19"
-    },
-    {
-      "title": "용산공원 주택공급 두고 '평행선'…개발 판도 변화 예고",
-      "press": "yna.co.kr",
-      "url": "https://www.yna.co.kr/view/AKR20260818068952003",
-      "date": "2026-08-19"
-    },
-    {
-      "title": "[단독] 22년 만에 닥친 '최악의 상황'…농협에 무슨 일이",
-      "press": "hankyung.com",
-      "url": "https://www.hankyung.com/article/2026081879381",
-      "date": "2026-08-19"
-    },
-    {
-      "title": "현대해상, 다문화가정 아동 성장 지원",
-      "press": "hankyung.com",
-      "url": "https://www.hankyung.com/article/2026081879171",
       "date": "2026-08-19"
     }
   ]
