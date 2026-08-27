@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.08.26",
+  "lastUpdated": "2026.08.27",
   "trends": [
     {
       "category": "금리·정책",
@@ -8,6 +8,54 @@
       "summary": "인하 기대는 뒤집혔다. 한은 부총재까지 '추가 인상 가능성' 언급한 국면",
       "desc": "기준금리는 은행업의 모든 것이 시작되는 출발점입니다. 금리가 오르면 예대금리차와 순이자마진(NIM)이 벌어져 은행 이자이익에 유리하게 작용하고, 내려가면 대출 수요와 부동산 시장이 살아나는 대신 마진이 줄어듭니다. 2022년 글로벌 인플레이션과 함께 시작된 고금리 시대는 2024~2025년 네 차례 인하로 한 차례 방향을 틀었고, 이후에도 물가·환율·지정학 변수에 따라 인상과 인하 기대가 수시로 뒤집히고 있습니다. 이 흐름을 읽는 틀은 세 가지입니다. 한국은행 금통위가 어느 방향으로 움직이는지, 미국과의 금리 차가 환율에 어떤 압력을 주는지, 그리고 가계의 이자 부담(주택담보대출 금리)이 소비와 부동산으로 어떻게 번지는지입니다. 개별 금리 뉴스는 결국 이 큰 사이클의 어느 지점에 있는지를 보여주는 조각들입니다.",
       "articles": [
+        {
+          "title": "국채선물 약세 출발…美금리 추종·금통위 대기",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4432079",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "부동산 전문가들 \"금리 인상에 15억 이하 집값 상승세 둔화할 것\"",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4432089",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "[속보] 한은 총재 \"선제 대응, 수도권 집값 상승세 완화에도 도움\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260827082700002",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "신현송 \"수도권 주택가격 상승률 두 자릿수…금융안정 예의주시\"",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4432103",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "[속보] 신현송 총재 \"점도표 중앙값 3.25%…통화정책 기조로 봐달라\"",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/economy/2026/08/27/2026082711132021586",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "[속보] 신현송 총재 \"향후 완만한 금리 인상 예상\"",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/economy/2026/08/27/2026082711394182760",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "한은총재 \"거시경제 안정 위해 선제 대응…성장 부담 완화\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260827085500002",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "한은 총재 \"선제 대응, 금리 앞당겨 인상…가래 대신 호미로 정책\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260827087400002",
+          "date": "2026-08-27"
+        },
         {
           "title": "채권-마감 금통위 경계에 흐릿한 방향성…초장기는 부담 축소에 강세",
           "press": "einfomax.co.kr",
@@ -79,54 +127,6 @@
           "press": "einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431079",
           "date": "2026-08-21"
-        },
-        {
-          "title": "국제유가, UAE·이란 갈등 고조에 나흘 연속 상승…WTI 1%↑",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260820006400072",
-          "date": "2026-08-20"
-        },
-        {
-          "title": "'기자회견 역풍' 불었던 7월 FOMC…\"인플레 안 낮아지면 긴축\"(상보)",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430860",
-          "date": "2026-08-20"
-        },
-        {
-          "title": "트럼프 \"정말로 금리 내려가야…채권시장 우려하지 않아도 돼\"(종합)",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430866",
-          "date": "2026-08-20"
-        },
-        {
-          "title": "[뉴욕증시] 재무부 '기습 바이백'에 숨통 트였다…강세 마감",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430858",
-          "date": "2026-08-20"
-        },
-        {
-          "title": "금융위기 직전 수준 美 장기금리…베선트, '기습 바이백'으로 맞섰다",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430852",
-          "date": "2026-08-20"
-        },
-        {
-          "title": "교보證 \"달러-원, 연내 1,350원까지 하락 후 완만히 반등할 것\"",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430838",
-          "date": "2026-08-20"
-        },
-        {
-          "title": "달러-원, 美 재무부 '바이백 확대'에 추가 하락…1,387원 거래",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430853",
-          "date": "2026-08-20"
-        },
-        {
-          "title": "[외환-마감] 1,300원대 진입…'弱달러·네고출회·역외숏' 트리오 11개월만에 최저",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430835",
-          "date": "2026-08-20"
         }
       ],
       "query": "한국은행 기준금리 인하"
@@ -399,6 +399,24 @@
       "desc": "금융그룹들이 단순 챗봇을 넘어 업무 방식·고객 접점·인력 구조까지 AI 중심으로 다시 짜는 흐름입니다. 계기는 금융당국의 망분리 규제 완화로, 클라우드와 생성형 AI를 은행 내부 업무에 쓸 수 있는 길이 열리면서 5대 금융그룹의 경쟁이 본격화됐습니다. 농협은행의 '에이전틱 AI 뱅크' 선언, KB금융의 '전 직원 AI 인재화'처럼 그룹 차원의 전환 전략이 잇따르고, AI가 스스로 업무를 처리하는 '에이전틱' 단계로 진화하는 것이 다음 승부처입니다. 이 트렌드는 점포 축소·인력 구조 재편과 맞물려 있어 금융권 취업 시장에도 직접적인 영향을 줍니다. AI 투자가 실제 비용 절감과 수익으로 이어지는지, 아니면 구호에 그치는지가 장기적인 판별 기준입니다.",
       "articles": [
         {
+          "title": "정부가 휴머노이드 '첫 수요자' 된다…2030년까지 1천80대 구입",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260827050100002",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "코스피, 1%대 상승…기준금리 인상 이후 상승폭 축소",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260827076100008",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "금리인상에 약해진 '엔비디아 효과'…삼전닉스 2·3%대 상승",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/stock/2026/08/27/2026082711374892576",
+          "date": "2026-08-27"
+        },
+        {
           "title": "삼성 '모니모' 월 이용자 1000만명 돌파",
           "press": "hankyung.com",
           "url": "https://www.hankyung.com/article/2026081878171",
@@ -498,24 +516,6 @@
           "title": "금융위, 오는 11월 '코리아 핀테크 위크 2026' 개최",
           "press": "heraldcorp.com",
           "url": "https://biz.heraldcorp.com/article/10824027",
-          "date": "2026-07-29"
-        },
-        {
-          "title": "금융위, 코리아 핀테크 위크 2026 11월 개최…AI 중심 미래금융 조망",
-          "press": "newspim.com",
-          "url": "https://www.newspim.com/news/view/20260729000809",
-          "date": "2026-07-29"
-        },
-        {
-          "title": "이사회가 최종책임…금융권 제3자 IT리스크 관리 모범규준 11월 시행",
-          "press": "heraldcorp.com",
-          "url": "https://biz.heraldcorp.com/article/10824140",
-          "date": "2026-07-29"
-        },
-        {
-          "title": "금융사 외부 IT 위탁 리스크, 이사회가 최종 책임진다",
-          "press": "etoday.co.kr",
-          "url": "https://www.etoday.co.kr/news/view/2608630",
           "date": "2026-07-29"
         }
       ],
@@ -789,6 +789,18 @@
       "desc": "'돈이 부동산이 아니라 산업으로 흐르게 하자'는 정부 정책 기조 아래, 5대 금융지주가 2030년까지 생산적·포용금융에 총 508조 원을 투입하기로 약속한 흐름입니다. 은행 자산의 중심을 가계·부동산 대출에서 기업금융·모험자본으로 옮기라는 요구로, 가계대출 총량규제와 동전의 양면을 이룹니다. 각 지주는 반도체·AI·이차전지 같은 전략 산업 지원과 벤처 투자 확대를 앞다퉈 발표하고 있으며, 집행 실적이 분기마다 공개되는 것이 특징입니다. 관전 포인트는 구호에 그치지 않고 실제 자금이 산업으로 도는지(집행률), 그리고 주주환원 확대와 동시에 이만한 자금을 풀 수 있는지(자본 여력)입니다. 은행의 사회적 역할과 수익성 사이의 줄다리기를 가장 잘 보여주는 트렌드입니다.",
       "articles": [
         {
+          "title": "정부, 中企 지원사업 절반 구조조정…4조원 절감해 신성장 육성",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260827002900030",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "개인도 퇴직연금계좌로 10·20년물 국채 투자…9월 9∼15일 청약",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260827065700002",
+          "date": "2026-08-27"
+        },
+        {
           "title": "반도체·휴가철 수요에 전산업 체감경기 3년11개월만에 최고",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260825163500002",
@@ -894,18 +906,6 @@
           "title": "농협금융 '생산적 금융 4호'는 '지역밀착금융 프로젝트'",
           "press": "edaily.co.kr",
           "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03585046645520096",
-          "date": "2026-07-31"
-        },
-        {
-          "title": "농협금융 \"생산적·포용금융 올해 목표 70% 달성..지역밀착금융 집중\"",
-          "press": "fnnews.com",
-          "url": "http://www.fnnews.com/news/202607310951097917",
-          "date": "2026-07-31"
-        },
-        {
-          "title": "발행액 40조원 넘긴 녹색채권… 시장 저변 여전히 제자리",
-          "press": "dt.co.kr",
-          "url": "https://www.dt.co.kr/article/12075652",
           "date": "2026-07-31"
         }
       ],
@@ -1096,6 +1096,12 @@
       "query": "금융사고 내부통제",
       "articles": [
         {
+          "title": "금융사 40곳, 비밀번호 변경 등에도 불필요하게 주민번호 요구",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260827052700530",
+          "date": "2026-08-27"
+        },
+        {
           "title": "불법 공매도 의심, 중앙시스템 도입 후 94건 적발…올해만 36건",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260825166300002",
@@ -1176,6 +1182,18 @@
       "query": "원화 강세 달러 순매도 환율 연저점",
       "articles": [
         {
+          "title": "신현송 \"금융취약지수 46.5 수준…9월엔 장기평균 웃돌 것\"",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4432102",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "한은 총재 \"통화정책 선제적 대응에 원화 추가 강세 여지\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260827088800002",
+          "date": "2026-08-27"
+        },
+        {
           "title": "기업 달러 순매도 1년새 4배…'수출 뭉칫돈'에 달러-원 연저점",
           "press": "einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431536",
@@ -1194,9 +1212,55 @@
           "date": "2026-08-21"
         }
       ]
+    },
+    {
+      "title": "금융 공공기관 지방이전 갈등",
+      "category": "정책/금융공공기관",
+      "since": "2026~",
+      "summary": "금융위원회·국책은행 등 금융 공공기관의 지방 이전 추진을 둘러싸고 정부와 금융노조·관가의 갈등이 확산되는 흐름",
+      "desc": "정부는 국가균형발전 차원에서 금융위원회를 비롯한 금융 공공기관과 국책은행 등을 수도권 밖으로 이전하는 방안을 추진하고 있다. 이는 과거 공공기관 지방이전 시즌2 격으로, 서울 여의도·광화문에 집중된 금융 인프라의 지역 재배치를 목표로 한다. 그러나 금융노조는 전문인력 이탈, 업무 효율성 저하, 국제금융 허브 기능 약화 등을 이유로 강하게 반발하며 총파업까지 예고하는 등 집단행동이 구체화되고 있다. 관가와 금융권 내부에서도 이전 방식과 대상 기관 범위를 둘러싼 술렁임이 커지고 있어 정책 추진 과정에서 상당한 진통이 예상된다. 이 사안은 단순한 조직 개편이 아니라 한국 금융산업의 지리적 기반과 인력 구조, 서울의 국제금융센터 지위에 장기적 영향을 미칠 수 있는 구조적 이슈로, 향후 국무회의 및 관련 법안 처리 과정, 노동계 대응 수위가 관전 포인트다. 이전이 실제 확정될 경우 은행·보험·증권 등 민간 금융회사의 인력 채용·조직 운영 전략에도 파급 효과가 예상된다.",
+      "query": "금융위 지방이전 금융노조",
+      "articles": [
+        {
+          "title": "금융노조 내달 4일 총파업…\"국책은행 지방이전 시도 중단해야\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260827079600004",
+          "date": "2026-08-27"
+        },
+        {
+          "title": "금융위 지방이전 강행? 이번주 국무회의 주목",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/finance/2026/08/24/2026082319465582489",
+          "date": "2026-08-24"
+        },
+        {
+          "title": "지방이전 발표 목전 술렁이는 관가·금융권…집단행동 확대 조짐",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260818159800002",
+          "date": "2026-08-19"
+        }
+      ]
     }
   ],
   "unclassified": [
+    {
+      "title": "우체국금융개발원 2026년 1차 공개채용 공고",
+      "press": "incruit.com",
+      "url": "https://m.incruit.com/jobdb_list/searchjob.asp?ct=9&ty=1&cd=5&occ1=210",
+      "date": "2026-08-27"
+    },
+    {
+      "title": "iM뱅크, 2026년 하반기 신입행원 공개채용 진행",
+      "press": "heraldcorp.com",
+      "url": "https://biz.heraldcorp.com/article/10842800",
+      "date": "2026-08-27"
+    },
+    {
+      "title": "\"전국 예술인 전세자금 87% 수도권 집중…정책금융 지역 소외\"",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260827088700063",
+      "date": "2026-08-27"
+    },
     {
       "title": "LG전자, 하반기 신입 채용…로봇·스마트팩토리 등 12개 직군",
       "press": "yna.co.kr",
@@ -1294,12 +1358,6 @@
       "date": "2026-08-24"
     },
     {
-      "title": "금융위 지방이전 강행? 이번주 국무회의 주목",
-      "press": "mt.co.kr",
-      "url": "https://www.mt.co.kr/finance/2026/08/24/2026082319465582489",
-      "date": "2026-08-24"
-    },
-    {
       "title": "신한은행, 중저신용자 대상 '슈퍼SOL중금리대출' 출시",
       "press": "hankyung.com",
       "url": "https://www.hankyung.com/article/2026082030011",
@@ -1342,21 +1400,9 @@
       "date": "2026-08-19"
     },
     {
-      "title": "지방이전 발표 목전 술렁이는 관가·금융권…집단행동 확대 조짐",
-      "press": "yna.co.kr",
-      "url": "https://www.yna.co.kr/view/AKR20260818159800002",
-      "date": "2026-08-19"
-    },
-    {
       "title": "2분기 수출 절반이 '톱5'…작년 100대 기업 합계보다 많아",
       "press": "yna.co.kr",
       "url": "https://www.yna.co.kr/view/AKR20260818165000002",
-      "date": "2026-08-19"
-    },
-    {
-      "title": "국세청 '극한호우' 거제·통영 중기 세금 납부기간 두 달 연장",
-      "press": "yna.co.kr",
-      "url": "https://www.yna.co.kr/view/AKR20260818076951002",
       "date": "2026-08-19"
     }
   ]
