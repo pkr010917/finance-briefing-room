@@ -1,7 +1,7 @@
 /* ─────────────────────────────────────────────
    금융 브리핑 룸 — 미니멀 리디자인 (2026-08)
-   원칙: 흰 배경, 본질만 남기기, 색은 '오늘 신규'의
-   초록 하나만. 그래프가 주인공, 나머지는 물러선다.
+   원칙: 흰 배경, 본질만 남기기, 색은 '최신 브리핑'의
+   초록 하나만. 뉴스 제목이 주인공 — 장식은 물러선다.
    ───────────────────────────────────────────── */
 
 :root {
@@ -10,10 +10,9 @@
   --ink-faint: #a1a1a6;    /* 흐린 텍스트 */
   --line: #e8e8ed;         /* 헤어라인 */
   --fill: #f5f5f7;         /* 옅은 배경 */
-  --green: #34c759;        /* 오늘 신규 — 유일한 색 */
-  --green-soft: rgba(52, 199, 89, 0.14);
+  --green: #34c759;        /* 최신 브리핑 표시 — 유일한 색 */
   --link: #0066cc;
-  --radius: 18px;
+  --radius: 14px;
   --shadow: 0 12px 48px rgba(0, 0, 0, 0.10);
   --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
           "Apple SD Gothic Neo", "Segoe UI", sans-serif;
@@ -21,193 +20,215 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html, body { height: 100%; }
-
 body {
   font-family: var(--font);
   background: #ffffff;
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+}
+
+.wrap {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 40px 28px 24px;
 }
 
 /* ── 상단 ─────────────────────────────── */
-.top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 24px;
-  padding: 28px 36px 8px;
-}
-
 .top__title {
-  font-size: 21px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 750;
   letter-spacing: -0.02em;
 }
 
 .top__meta {
-  margin-top: 4px;
+  margin-top: 5px;
   font-size: 13px;
   color: var(--ink-soft);
   letter-spacing: -0.01em;
 }
 
-.top__side {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
-}
+/* ── 최신 브리핑 보드 ──────────────────── */
+.board { margin-top: 40px; }
 
-.hot {
+.board__head {
   display: flex;
-  gap: 8px;
+  align-items: baseline;
+  gap: 12px;
   flex-wrap: wrap;
-  justify-content: flex-end;
 }
 
-.hot__chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12.5px;
-  font-weight: 600;
+.board__title {
+  font-size: 17px;
+  font-weight: 700;
   letter-spacing: -0.01em;
-  color: var(--ink);
-  background: var(--fill);
-  border: none;
-  border-radius: 999px;
-  padding: 6px 12px;
-  cursor: pointer;
-  font-family: inherit;
-  transition: background 0.2s ease;
-}
-
-.hot__chip:hover { background: #ebebf0; }
-
-.hot__chip .n {
-  color: var(--ink-faint);
-  font-weight: 500;
-  font-variant-numeric: tabular-nums;
-}
-
-.hot__chip--first .n { color: var(--green); }
-
-.legend {
-  font-size: 12px;
-  color: var(--ink-faint);
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
-.legend__dot {
+/* 제목 앞의 초록 점 — "살아있는 최신 정보"의 표식 */
+.board__title::before {
+  content: "";
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: var(--green);
-  display: inline-block;
 }
 
-/* ── 그래프 ───────────────────────────── */
-.stage {
-  flex: 1;
-  position: relative;
-  min-height: 0;
-}
-
-#graph {
-  width: 100%;
-  height: 100%;
-  display: block;
-  cursor: default;
-}
-
-#graph line {
-  stroke: var(--line);
-  stroke-width: 1;
-}
-
-#graph .leaf {
-  fill: #c7c7cc;
-  cursor: pointer;
-  transition: fill 0.2s ease;
-}
-
-#graph .leaf:hover { fill: var(--ink-soft); }
-
-#graph .leaf--new { fill: var(--green); }
-#graph .leaf--new:hover { fill: #248a3d; }
-
-#graph .hub {
-  fill: #ffffff;
-  stroke: var(--ink);
-  stroke-width: 1.5;
-  cursor: pointer;
-  transition: stroke-width 0.2s ease;
-}
-
-#graph .hub:hover { stroke-width: 2.5; }
-
-#graph .hub--selected { stroke-width: 2.5; }
-
-#graph .hub-halo {
-  fill: var(--green-soft);
-  pointer-events: none;
-}
-
-#graph .hub-label {
-  font-family: var(--font);
+.board__sub {
   font-size: 13px;
-  font-weight: 650;
+  color: var(--ink-faint);
   letter-spacing: -0.01em;
-  fill: var(--ink);
-  text-anchor: middle;
-  pointer-events: none;
-  paint-order: stroke;
-  stroke: #ffffff;
-  stroke-width: 4px;
-  stroke-linejoin: round;
 }
 
-#graph .hub-sub {
-  font-family: var(--font);
+.board__grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 14px;
+}
+
+/* 카드: 테마 하나 = 카드 하나. 그림자 대신 헤어라인 */
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px 10px;
+}
+
+.card__head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0 0 4px;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+
+.card__cat {
   font-size: 11px;
-  font-weight: 450;
-  fill: var(--ink-faint);
-  text-anchor: middle;
-  pointer-events: none;
-  font-variant-numeric: tabular-nums;
-  paint-order: stroke;
-  stroke: #ffffff;
-  stroke-width: 4px;
-  stroke-linejoin: round;
+  font-weight: 600;
+  color: var(--ink-faint);
+  letter-spacing: 0.03em;
+  flex: none;
 }
 
-/* ── 툴팁 ─────────────────────────────── */
-.tooltip {
-  position: absolute;
-  max-width: 300px;
-  background: rgba(29, 29, 31, 0.92);
-  color: #ffffff;
+.card__name {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.card__head:hover .card__name { color: var(--link); }
+
+.card__count {
+  margin-left: auto;
   font-size: 12.5px;
+  font-weight: 700;
+  color: var(--green);
+  font-variant-numeric: tabular-nums;
+  flex: none;
+}
+
+.card__list { list-style: none; }
+
+.card__list a {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 0;
+  text-decoration: none;
+  border-top: 1px solid var(--fill);
+}
+
+.a-dot {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  position: relative;
+  top: -2px;
+}
+
+.a-title {
+  flex: 1;
+  font-size: 14px;
   line-height: 1.5;
   letter-spacing: -0.01em;
-  padding: 9px 12px;
-  border-radius: 10px;
-  pointer-events: none;
-  z-index: 30;
-  backdrop-filter: blur(8px);
+  color: var(--ink);
 }
 
-.tooltip .sub {
-  display: block;
-  margin-top: 2px;
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 11.5px;
+.card__list a:hover .a-title { color: var(--link); }
+
+.a-press {
+  flex: none;
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+/* ── 모든 트렌드 ───────────────────────── */
+.all { margin-top: 48px; }
+
+.all__title {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--ink-soft);
+  letter-spacing: -0.01em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.all__list { }
+
+.trow {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  width: 100%;
+  padding: 13px 2px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--fill);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+
+.trow__hot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  position: relative;
+  top: -1px;
+}
+
+.trow__name {
+  font-size: 14.5px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.trow:hover .trow__name { color: var(--link); }
+
+.trow__cat {
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+.trow__stat {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+  flex: none;
 }
 
 /* ── 패널 ─────────────────────────────── */
@@ -218,7 +239,7 @@ body {
   bottom: 24px;
   width: min(420px, calc(100vw - 48px));
   background: #ffffff;
-  border-radius: var(--radius);
+  border-radius: 18px;
   box-shadow: var(--shadow);
   padding: 32px 30px 28px;
   overflow-y: auto;
@@ -319,14 +340,6 @@ body {
   font-weight: 700;
 }
 
-.a-title { flex: 1; }
-
-.a-press {
-  flex: none;
-  font-size: 11px;
-  color: var(--ink-faint);
-}
-
 .panel__more {
   display: inline-block;
   margin-top: 20px;
@@ -340,28 +353,20 @@ body {
 
 /* ── 하단 ─────────────────────────────── */
 .foot {
-  padding: 10px 36px 16px;
+  margin-top: 56px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
   font-size: 12px;
   color: var(--ink-faint);
-  text-align: center;
   letter-spacing: -0.01em;
 }
 
 /* ── 모바일 ───────────────────────────── */
 @media (max-width: 720px) {
-  body { overflow: auto; }
-
-  .top {
-    flex-direction: column;
-    padding: 20px 20px 4px;
-    gap: 12px;
-  }
-
-  .top__side { align-items: flex-start; }
-  .hot { justify-content: flex-start; }
-
-  /* 좁은 화면에서는 세로로 조금 더 펼쳐 겹침을 줄인다 (스크롤 허용) */
-  .stage { min-height: 86vh; }
+  .wrap { padding: 28px 18px 20px; }
+  .board { margin-top: 30px; }
+  .board__grid { grid-template-columns: 1fr; gap: 12px; }
+  .all { margin-top: 38px; }
 
   .panel {
     top: auto;
@@ -369,7 +374,7 @@ body {
     right: 12px;
     bottom: 12px;
     width: auto;
-    max-height: 72vh;
+    max-height: 74vh;
     animation-name: panel-up;
   }
 
@@ -377,6 +382,4 @@ body {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
-  .foot { padding: 10px 20px 14px; }
 }

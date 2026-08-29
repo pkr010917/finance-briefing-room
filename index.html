@@ -5,26 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>금융 브리핑 룸</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <!-- ?v= 는 캐시 무효화용 — style.css나 script.js를 고치면 두 곳 모두 숫자를 올릴 것.
+       안 올리면 방문자가 옛 JS + 새 HTML 조합으로 깨진 화면을 볼 수 있다 (2026-08-29 실제 발생) -->
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
-  <!-- 상단: 최소한의 정보만 -->
-  <header class="top">
-    <div class="top__brand">
+  <div class="wrap">
+    <!-- 상단: 최소한의 정보만 -->
+    <header class="top">
       <h1 class="top__title">금융 브리핑 룸</h1>
       <p class="top__meta" id="meta"></p>
-    </div>
-    <div class="top__side">
-      <div class="hot" id="hot" aria-label="지금 활발한 트렌드"></div>
-      <p class="legend"><span class="legend__dot"></span>오늘 새로 연결된 뉴스</p>
-    </div>
-  </header>
+    </header>
 
-  <!-- 중심: 트렌드 그래프 -->
-  <main class="stage">
-    <svg id="graph" aria-label="트렌드 그래프"></svg>
-    <div class="tooltip" id="tooltip" hidden></div>
-  </main>
+    <!-- 최신 브리핑: 그날 텔레그램에서 본 뉴스가 어떤 테마였는지 -->
+    <section class="board" id="board">
+      <div class="board__head">
+        <h2 class="board__title" id="board-title"></h2>
+        <p class="board__sub" id="board-sub"></p>
+      </div>
+      <div class="board__grid" id="board-grid"></div>
+    </section>
+
+    <!-- 모든 트렌드: 축적된 흐름 전체 -->
+    <section class="all">
+      <h2 class="all__title">모든 트렌드</h2>
+      <div class="all__list" id="trend-list"></div>
+    </section>
+
+    <footer class="foot" id="foot"></footer>
+  </div>
 
   <!-- 트렌드 선택 시 나타나는 패널 -->
   <aside class="panel" id="panel" hidden>
@@ -38,8 +47,6 @@
     <a class="panel__more" id="panel-more" target="_blank" rel="noopener">네이버 뉴스에서 더 찾아보기</a>
   </aside>
 
-  <footer class="foot" id="foot"></footer>
-
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
