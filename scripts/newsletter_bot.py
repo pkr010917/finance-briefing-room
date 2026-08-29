@@ -43,7 +43,9 @@ HISTORY_FILE = DATA_DIR / "history.json"
 TRENDS_FILE = DATA_DIR / "trends.json"
 HISTORY_DAYS = 14                # 최근 14일 주제를 중복 방지에 사용
 MAX_ARTICLES_PER_TREND = 20      # 트렌드당 축적할 기사 수 (오래된 것부터 삭제)
-MAX_UNCLASSIFIED = 30            # 미분류 기사 보관 수
+# 새 트렌드 발굴은 미분류가 25건 이상 쌓여야 시도하고 근거 기사 8건을 요구하므로,
+# 보관량이 부족하면 판단할 재료 자체가 모이지 않는다.
+MAX_UNCLASSIFIED = 80            # 미분류 기사 보관 수
 MAX_RESUMES = 2                  # 검색 루프가 멈췄을 때 이어서 진행할 최대 횟수
 
 # 발송 전 점검 기준 (아래를 못 채우면 실패 처리하고 발송하지 않음)
