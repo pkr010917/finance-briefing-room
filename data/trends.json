@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.02",
+  "lastUpdated": "2026.09.03",
   "trends": [
     {
       "category": "금리·정책",
@@ -8,6 +8,42 @@
       "summary": "인하 기대는 뒤집혔다. 한은 부총재까지 '추가 인상 가능성' 언급한 국면",
       "desc": "기준금리는 은행업의 모든 것이 시작되는 출발점입니다. 금리가 오르면 예대금리차와 순이자마진(NIM)이 벌어져 은행 이자이익에 유리하게 작용하고, 내려가면 대출 수요와 부동산 시장이 살아나는 대신 마진이 줄어듭니다. 2022년 글로벌 인플레이션과 함께 시작된 고금리 시대는 2024~2025년 네 차례 인하로 한 차례 방향을 틀었고, 이후에도 물가·환율·지정학 변수에 따라 인상과 인하 기대가 수시로 뒤집히고 있습니다. 이 흐름을 읽는 틀은 세 가지입니다. 한국은행 금통위가 어느 방향으로 움직이는지, 미국과의 금리 차가 환율에 어떤 압력을 주는지, 그리고 가계의 이자 부담(주택담보대출 금리)이 소비와 부동산으로 어떻게 번지는지입니다. 개별 금리 뉴스는 결국 이 큰 사이클의 어느 지점에 있는지를 보여주는 조각들입니다.",
       "articles": [
+        {
+          "title": "네덜란드중앙은행, 뉴욕에 보관하던 금괴 런던으로 이전",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433190",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "[마켓뷰] 美증시 반등…코스피, 전날 하락 딛고 일어서나",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260903020100008",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "[뉴욕증시] 채권금리 조정에 한숨 돌렸다…상승 마감",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433185",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "美-이란 충돌에 금리 5% 뚫나…\"증시 하방압력 속 반도체가 방어선\"",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433205",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "8월 외환보유액 143.3억弗 급증…외화예수금 크게 늘어",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433199",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "[외환] 日 '레이트 체크' 의심에 1,350원대로 급락…연저점 또 경신",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433207",
+          "date": "2026-09-03"
+        },
         {
           "title": "채권시장 호재 없다…30년물 입찰 부진에 재정·물가 경계도",
           "press": "yna.co.kr",
@@ -91,42 +127,6 @@
           "press": "news.einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4432396",
           "date": "2026-08-28"
-        },
-        {
-          "title": "올해 잭슨홀 회의, '금융혁신' 논한다…워시·로고프 등 경제리더 총출동",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4432386",
-          "date": "2026-08-28"
-        },
-        {
-          "title": "금통위 강세 일부 되돌림…잭슨홀·예산안 대기 속 국고채 약세",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4432402",
-          "date": "2026-08-28"
-        },
-        {
-          "title": "국채선물 약세 출발…美금리 추종·금통위 대기",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4432079",
-          "date": "2026-08-27"
-        },
-        {
-          "title": "부동산 전문가들 \"금리 인상에 15억 이하 집값 상승세 둔화할 것\"",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4432089",
-          "date": "2026-08-27"
-        },
-        {
-          "title": "[속보] 한은 총재 \"선제 대응, 수도권 집값 상승세 완화에도 도움\"",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260827082700002",
-          "date": "2026-08-27"
-        },
-        {
-          "title": "신현송 \"수도권 주택가격 상승률 두 자릿수…금융안정 예의주시\"",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4432103",
-          "date": "2026-08-27"
         }
       ],
       "query": "한국은행 기준금리 인하"
@@ -138,6 +138,12 @@
       "summary": "'주담대로 돈 벌던 시대'의 종료. 총량 목표는 3%로 완화했지만 DSR은 그대로",
       "desc": "한국 은행업의 전통적 수익 공식은 '주택담보대출로 돈을 버는 것'이었지만, 정부가 가계부채를 국가적 위험으로 보고 총량을 직접 관리하면서 이 공식이 근본부터 흔들리고 있습니다. 금융당국은 은행별 대출 증가 한도를 정해두고, 스트레스 DSR처럼 개인의 대출 한도를 조이는 규제를 단계적으로 강화해 왔습니다. 은행 입장에서는 가장 안전하고 확실한 성장 엔진이 막힌 것이라, 비이자이익 확대·글로벌 진출 같은 다른 트렌드들이 모두 이 규제에서 출발한다고 해도 과언이 아닙니다. 규제가 조여질 때마다 대출 수요가 저축은행·카드론 등 2금융권으로 옮겨가는 풍선효과가 반복되는 것도 구조적 특징입니다. 뉴스를 볼 때는 규제 강도(총량 목표·DSR 단계)의 변화, 은행별 대출 중단 여부, 풍선효과의 크기를 함께 보면 흐름이 잡힙니다.",
       "articles": [
+        {
+          "title": "여신회사도 가계대출 목표치 소폭 상향…\"불이익 없게 선별배정\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260902177700002",
+          "date": "2026-09-03"
+        },
         {
           "title": "국힘 박성훈 '고위험 금융상품 출시 전 스트레스테스트 의무화' 법안 발의",
           "press": "mt.co.kr",
@@ -251,12 +257,6 @@
           "press": "biz.newdaily.co.kr",
           "url": "https://biz.newdaily.co.kr/site/data/html/2026/07/29/2026072900216.html",
           "date": "2026-07-29"
-        },
-        {
-          "title": "갭투자 잡다 실수요 잡았나…조건부 전세대출 수술대",
-          "press": "inews24.com",
-          "url": "http://www.inews24.com/view/1989211",
-          "date": "2026-07-27"
         }
       ],
       "query": "가계대출 총량규제 스트레스 DSR"
@@ -399,6 +399,12 @@
       "desc": "금융그룹들이 단순 챗봇을 넘어 업무 방식·고객 접점·인력 구조까지 AI 중심으로 다시 짜는 흐름입니다. 계기는 금융당국의 망분리 규제 완화로, 클라우드와 생성형 AI를 은행 내부 업무에 쓸 수 있는 길이 열리면서 5대 금융그룹의 경쟁이 본격화됐습니다. 농협은행의 '에이전틱 AI 뱅크' 선언, KB금융의 '전 직원 AI 인재화'처럼 그룹 차원의 전환 전략이 잇따르고, AI가 스스로 업무를 처리하는 '에이전틱' 단계로 진화하는 것이 다음 승부처입니다. 이 트렌드는 점포 축소·인력 구조 재편과 맞물려 있어 금융권 취업 시장에도 직접적인 영향을 줍니다. AI 투자가 실제 비용 절감과 수익으로 이어지는지, 아니면 구호에 그치는지가 장기적인 판별 기준입니다.",
       "articles": [
         {
+          "title": "한은 \"향후 3~5년 한중 첨단메모리 격차 확대…장기적으론 위협\"",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433198",
+          "date": "2026-09-03"
+        },
+        {
           "title": "중진공 AX 스프린트 우대트랙 1400억 지원",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260831021500030",
@@ -511,12 +517,6 @@
           "press": "enewstoday.co.kr",
           "url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2445639",
           "date": "2026-08-03"
-        },
-        {
-          "title": "LG CNS, 상반기 매출 2.8조…AI·클라우드가 성장 견인",
-          "press": "zdnet.co.kr",
-          "url": "https://zdnet.co.kr/view/?no=20260731095726",
-          "date": "2026-07-31"
         }
       ],
       "query": "은행 AI 전환 에이전틱"
@@ -659,6 +659,30 @@
       "desc": "한국 은행주는 오랫동안 이익 규모에 비해 주가가 낮은 '만년 저평가' 상태였고, 이를 해소하려는 정부의 밸류업 정책과 함께 금융지주들이 배당 확대와 자사주 매입·소각을 크게 늘리는 흐름입니다. 핵심 지표는 보통주자본(CET1) 비율로, 목표치를 넘는 초과자본을 주주에게 돌려주는 방식이 업계 표준으로 자리잡았습니다. 그래서 은행 실적 뉴스를 볼 때는 순이익 규모만큼이나 '환원율'(순이익 중 배당과 자사주로 돌려주는 비율)이 중요해졌습니다. 외국인 투자자 수급과 주가가 환원 정책 발표에 민감하게 반응하는 것도 특징입니다. 다만 정부가 생산적 금융(대출 확대)을 동시에 요구하고 있어, 자본을 주주환원에 쓸지 성장에 쓸지의 긴장 관계가 상존합니다.",
       "articles": [
         {
+          "title": "메리츠증권 \"두산퓨얼셀, 데이터센터향 추가 수주 기대\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260903024300008",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "LS증권, 산일전기 목표가 16%↑…\"과도한 저평가 상태 지속\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260903024000008",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "신한증권, 알테오젠 목표주가 상향…'노바티스와 4.4조 메가딜'",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260903027400008",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "SK증권 \"롯데지주, 수익 개선·주주환원에 주가 상승 기대\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260903028000008",
+          "date": "2026-09-03"
+        },
+        {
           "title": "\"롯데렌탈, 피인수 따른 배당증가 전망…목표가↑\"-하나",
           "press": "mt.co.kr",
           "url": "https://www.mt.co.kr/stock/2026/09/02/2026090208361775354",
@@ -753,30 +777,6 @@
           "press": "kbanker.co.kr",
           "url": "https://www.kbanker.co.kr/news/articleView.html?idxno=225680",
           "date": "2026-08-17"
-        },
-        {
-          "title": "밸류업 공시 완료 기업 누적 747곳…시총 비중 85%로 확대",
-          "press": "sidae.com",
-          "url": "https://www.sidae.com/article/2026080613491999903",
-          "date": "2026-08-06"
-        },
-        {
-          "title": "밸류업 참여 확산…상장사 747곳, 시총 80% 넘었다",
-          "press": "metroseoul.co.kr",
-          "url": "http://www.metroseoul.co.kr/article/20260806500178",
-          "date": "2026-08-06"
-        },
-        {
-          "title": "획일적인 보험사 자본규제 … 금융지주 주주환원 '발목'",
-          "press": "mk.co.kr",
-          "url": "https://www.mk.co.kr/article/12114599",
-          "date": "2026-08-02"
-        },
-        {
-          "title": "우리금융지주, CET1 13% 넘겼다…이제는 총주주환원율 50% 보여줄 차례",
-          "press": "press9.kr",
-          "url": "http://www.press9.kr/news/articleView.html?idxno=80448",
-          "date": "2026-08-03"
         }
       ],
       "query": "금융지주 밸류업 주주환원"
@@ -1137,6 +1137,42 @@
     }
   ],
   "unclassified": [
+    {
+      "title": "기업은행, 하반기 신입행원 175명 채용…내달 14일까지 서류접수",
+      "press": "mt.co.kr",
+      "url": "https://www.mt.co.kr/finance/2026/08/31/2026083115510731522",
+      "date": "2026-09-03"
+    },
+    {
+      "title": "우리은행, 하반기 신입행원 채용…내달 8일까지 접수",
+      "press": "ajunews.com",
+      "url": "https://www.ajunews.com/view/20260827160654340",
+      "date": "2026-09-03"
+    },
+    {
+      "title": "새 수장 맞는 보험개발원, '실손24' 확산 속도 낸다",
+      "press": "einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433206",
+      "date": "2026-09-03"
+    },
+    {
+      "title": "금융권 서민금융에 4년반동안 1조5천억 출연…부실 급증에 부담도↑",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260902172500002",
+      "date": "2026-09-03"
+    },
+    {
+      "title": "외환보유액 순위 25년 만에 '슬쩍' 비공개로 돌린 한은",
+      "press": "yna.co.kr",
+      "url": "https://www.yna.co.kr/view/AKR20260902157200002",
+      "date": "2026-09-03"
+    },
+    {
+      "title": "李대통령, 부동산 세제 후퇴 비판에 \"강남 주택가격 급락 살펴봐라\"",
+      "press": "einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433188",
+      "date": "2026-09-03"
+    },
     {
       "title": "우체국금융개발원 2026년 1차 공개채용 공고 (D-5)",
       "press": "incruit.com",
