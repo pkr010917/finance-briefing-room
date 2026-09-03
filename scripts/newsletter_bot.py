@@ -12,6 +12,9 @@
   TELEGRAM_CHAT_ID   : 뉴스레터를 받을 채팅 ID
 """
 
+# 타입 표기를 실행 시점에 해석하지 않게 한다 (로컬 파이썬 3.9에서도 검증을 돌리기 위해)
+from __future__ import annotations
+
 import json
 import os
 import re
@@ -22,6 +25,7 @@ from pathlib import Path
 import anthropic
 import requests
 
+import jobs as jobs_registry
 import rss_feeds
 
 # ────────────────────────── 설정 ──────────────────────────
@@ -116,7 +120,10 @@ def save_topics(topics: list[str]) -> None:
 
 # ────────────────────────── 뉴스레터 생성 ──────────────────────────
 def build_prompt(
-    recent_topics: list[str], trend_titles: list[str], rss_articles: list[dict]
+    recent_topics: list[str],
+    trend_titles: list[str],
+    rss_articles: list[dict],
+    known_jobs: str,
 ) -> str:
     today = datetime.now(KST).strftime("%Y년 %m월 %d일 (%a)")
     topics_block = (
@@ -156,10 +163,31 @@ def build_prompt(
 
 {feed_block}
 
-## 2단계: 채용 정보만 웹 검색
+## 2단계: 아직 모르는 채용 공고만 웹 검색
 위 피드에는 채용 공고가 잘 잡히지 않습니다. **채용 관련해서만** web_search를 최대 {MAX_WEB_SEARCHES}회 쓰세요.
 (예: "은행 신입행원 채용 공고", "금융공기업 채용 마감") 은행·정책 뉴스는 검색하지 마세요 — 이미 위에 있습니다.
-3️⃣ 섹션은 이 검색 결과로 작성하고, 마감일과 남은 기간(D-N)을 명시하세요.
+
+### 이미 대장에 있는 공고 (다시 보고하지 마세요)
+{known_jobs}
+
+이 목록에 있는 공고는 접수 마감일까지 자동으로 뉴스레터에 계속 표시되고 D-day도 자동 계산됩니다.
+**목록에 없는 공고만** 찾아서 아래 형식으로 보고하세요. 없으면 빈 배열을 쓰면 됩니다.
+뉴스레터 본문에 3️⃣ 섹션을 직접 쓰지 마세요 — 이 목록으로 자동 생성됩니다.
+
+뉴스레터 맨 끝(<articles> 블록 다음)에 붙이세요:
+<jobs>
+[
+  {{"company": "하나은행", "title": "2026 신입행원 공채", "group": "은행",
+    "deadline": "2026-09-16", "url": "https://...",
+    "note": "서류 → 필기(NCS) → 면접. 학력·전공 무관."}}
+]
+</jobs>
+
+- group은 반드시 다음 넷 중 하나: 은행 / 금융공기업 / 증권 / 기타
+  (보험·카드·핀테크·자산운용은 '기타', 산업은행·기업은행·예금보험공사 등은 '금융공기업')
+- deadline은 서류접수 **마감일**을 YYYY-MM-DD로. **연도를 반드시 확인하세요.**
+  마감일을 확실히 알 수 없는 공고는 아예 보고하지 마세요 (추측한 날짜는 틀린 D-day가 되어 계속 발송됩니다).
+- note는 전형 절차·자격요건을 한 줄로. D-day나 마감일은 note에 쓰지 마세요 (자동 계산됩니다).
 
 도구를 쓸 때는 **같은 턴에 한꺼번에** 호출하세요. 한 번에 하나씩 나눠 부르면
 그때까지의 대화가 매번 다시 전송되어 비용이 몇 배로 늘어납니다.
@@ -202,11 +230,7 @@ web_fetch로 본문을 읽으세요 (최대 {MAX_WEB_FETCHES}건, 대개 0~1건�
 
 ▪️ (1️⃣과 완전히 같은 구조로 2~3건)
 
-━━━━━━━━━━━━━━━━━━
-3️⃣ 금융권 채용·취업
-
-▪️ 하나은행 2026 신입행원 공채 — D-12 (마감 9/16)
-   서류 → 필기(NCS) → 면접 순. 학력·전공 무관, 디지털 직무는 별도 모집.
+(여기에 3️⃣ 채용 섹션이 자동으로 들어갑니다 — 직접 쓰지 말고 2️⃣ 다음에 바로 4️⃣를 쓰세요)
 
 ━━━━━━━━━━━━━━━━━━
 4️⃣ 오늘의 면접포인트
@@ -224,9 +248,10 @@ web_fetch로 본문을 읽으세요 (최대 {MAX_WEB_FETCHES}건, 대개 0~1건�
   제목 바로 다음 줄은 언제나 `오늘의 요약`입니다.
 - '오늘의 요약'은 2~3문장. 오늘 브리핑을 관통하는 흐름을 쓰고, 기사 제목을 나열하지 마세요.
 - 기사 1건은 세 부분 고정입니다: `▪️ 제목 [트렌드명]` → 사실 2~3문장(3칸 들여쓰기) → `💡 의미:` 1~2문장.
-  순서를 바꾸거나 일부를 빼지 마세요. (3️⃣ 채용 공고는 💡 줄 없이 사실만 씁니다)
-- 섹션당 기사 수: 1️⃣ 2~3건, 2️⃣ 2~3건, 3️⃣ 1~3건, 4️⃣ 1건.
-- 3️⃣에 넣을 신규 공고를 찾지 못했으면 `오늘 확인된 신규 공고는 없습니다.` 한 줄만 쓰세요. 억지로 채우지 마세요.
+  순서를 바꾸거나 일부를 빼지 마세요.
+- 섹션당 기사 수: 1️⃣ 2~3건, 2️⃣ 2~3건, 4️⃣ 1건.
+- **3️⃣ 섹션은 쓰지 마세요.** 2단계에서 보고한 공고로 자동 생성되어 끼워 넣어집니다.
+  2️⃣를 마치면 바로 4️⃣로 넘어가세요.
 - 섹션 사이에는 `━━━━━━━━━━━━━━━━━━` 구분선을 넣고, 4️⃣ 뒤에는 넣지 마세요.
 - **쓸 수 있는 이모지는 이것뿐입니다: 📬 1️⃣ 2️⃣ 3️⃣ 4️⃣ ▪️ 💡 ❓ 🗂 🔁**
   🔹 📌 ✅ 🏦 📊 📈 같은 다른 이모지는 하나도 쓰지 마세요.
@@ -379,12 +404,14 @@ def check_format(body: str) -> list[str]:
     elif positions != sorted(positions):
         warnings.append("섹션이 1️⃣2️⃣3️⃣4️⃣ 순서가 아닙니다")
 
-    bullets = body.count(BULLET)
-    sowhats = body.count(SOWHAT)
+    # 1️⃣2️⃣ 구간만 셉니다. 3️⃣ 채용 섹션은 jobs.py가 조립한 것이라 💡가 없는 게 정상입니다.
+    start, end = body.find("1️⃣"), body.find("3️⃣")
+    news = body[start:end] if 0 <= start < end else body
+    bullets = news.count(BULLET)
+    sowhats = news.count(SOWHAT)
     if bullets == 0:
         warnings.append(f"기사 줄({BULLET})이 하나도 없습니다")
-    elif sowhats < bullets - 3:
-        # 3️⃣ 채용 공고(최대 3건)에는 💡가 없어도 정상이라 3건을 빼고 비교합니다.
+    elif sowhats < bullets:
         warnings.append(f"'{SOWHAT} 의미' 줄이 부족합니다 (기사 {bullets}건 / 의미 {sowhats}건)")
 
     stray = sorted(set(EMOJI_PATTERN.findall(body)) - ALLOWED_EMOJI)
@@ -401,17 +428,28 @@ def check_format(body: str) -> list[str]:
     return warnings
 
 
-def extract_topics(newsletter: str) -> tuple[str, list[str], list[dict]]:
-    """<topics>·<articles> 블록을 분리해 (발송용 본문, 주제 리스트, 기사 리스트)를 반환."""
-    articles: list[dict] = []
-    articles_match = re.search(r"<articles>(.*?)</articles>", newsletter, re.DOTALL)
-    if articles_match:
-        try:
-            parsed = json.loads(articles_match.group(1).strip())
-            if isinstance(parsed, list):
-                articles = [a for a in parsed if isinstance(a, dict)]
-        except json.JSONDecodeError:
-            print("⚠️  <articles> 블록 파싱 실패 — 오늘은 기사 축적을 건너뜁니다")
+def _json_block(newsletter: str, tag: str) -> tuple[list[dict], re.Match | None]:
+    """<tag>…</tag> 안의 JSON 배열을 읽는다. 깨져 있으면 빈 목록으로 넘어간다."""
+    match = re.search(rf"<{tag}>(.*?)</{tag}>", newsletter, re.DOTALL)
+    if not match:
+        return [], None
+    try:
+        parsed = json.loads(match.group(1).strip())
+    except json.JSONDecodeError:
+        print(f"⚠️  <{tag}> 블록 파싱 실패 — 오늘은 이 부분을 건너뜁니다")
+        return [], match
+    if not isinstance(parsed, list):
+        return [], match
+    return [item for item in parsed if isinstance(item, dict)], match
+
+
+def extract_blocks(newsletter: str) -> tuple[str, list[str], list[dict], list[dict]]:
+    """모델 응답을 (발송용 본문, 주제, 기사, 채용 공고)로 나눈다.
+
+    <topics>·<articles>·<jobs>는 발송하지 않는 부속 데이터라 본문에서 잘라낸다.
+    """
+    articles, articles_match = _json_block(newsletter, "articles")
+    found_jobs, jobs_match = _json_block(newsletter, "jobs")
 
     topics: list[str] = []
     topics_match = re.search(r"<topics>(.*?)</topics>", newsletter, re.DOTALL)
@@ -421,9 +459,9 @@ def extract_topics(newsletter: str) -> tuple[str, list[str], list[dict]]:
         ]
 
     # 본문 = 첫 번째 블록이 시작되기 전까지
-    cut_positions = [m.start() for m in (topics_match, articles_match) if m]
-    body = newsletter[: min(cut_positions)] if cut_positions else newsletter
-    return strip_preamble(body.strip()), topics, articles
+    cuts = [m.start() for m in (topics_match, articles_match, jobs_match) if m]
+    body = newsletter[: min(cuts)] if cuts else newsletter
+    return strip_preamble(body.strip()), topics, articles, found_jobs
 
 
 def strip_preamble(body: str) -> str:
@@ -555,10 +593,16 @@ def main() -> None:
 
     client = anthropic.Anthropic(api_key=api_key)
 
-    print("1) 과거 주제·트렌드 목록 로드 중...")
+    today = datetime.now(KST).date()
+
+    print("1) 과거 주제·트렌드·채용 대장 로드 중...")
     recent_topics = load_recent_topics()
     trend_titles = load_trend_titles()
+    open_jobs, closed = jobs_registry.prune(jobs_registry.load(), today)
     print(f"   최근 {HISTORY_DAYS}일 주제 {len(recent_topics)}건, 트렌드 {len(trend_titles)}개")
+    print(f"   접수 중인 채용 공고 {len(open_jobs)}건" + (f", 마감 처리 {len(closed)}건" if closed else ""))
+    for name in closed:
+        print(f"   - 마감: {name}")
 
     print("2) RSS 피드에서 뉴스 수집 중... (API 비용 없음)")
     rss_articles, failures = rss_feeds.fetch_all()
@@ -577,23 +621,41 @@ def main() -> None:
     print("3) 뉴스레터 생성 중... (채용 검색 포함, 1~2분 소요)")
     raw = generate_newsletter(
         client,
-        build_prompt(recent_topics, trend_titles, rss_articles[:MAX_RSS_IN_PROMPT]),
+        build_prompt(
+            recent_topics,
+            trend_titles,
+            rss_articles[:MAX_RSS_IN_PROMPT],
+            jobs_registry.known_block(open_jobs),
+        ),
     )
 
-    body, topics, articles = extract_topics(raw)
+    body, topics, articles, found_jobs = extract_blocks(raw)
     print(f"   생성 완료: 본문 {len(body)}자, 주제 {len(topics)}건, 기사 {len(articles)}건")
 
-    print("4) 발송 전 점검 중...")
+    print("4) 채용 3️⃣ 섹션 조립 중... (D-day는 마감일에서 직접 계산)")
+    open_jobs, added, warnings = jobs_registry.merge(open_jobs, found_jobs, today)
+    for warning in warnings:
+        print(f"   ⚠️  {warning}")
+    print(f"   새 공고 {len(added)}건 추가, 접수 중 총 {len(open_jobs)}건")
+    body, notes = jobs_registry.insert_section(
+        body, jobs_registry.render_section(open_jobs, added, today)
+    )
+    for note in notes:
+        print(f"   ⚠️  {note}")
+
+    print("5) 발송 전 점검 중...")
     validate_newsletter(body, topics)
     print("   점검 통과")
 
-    print("5) 텔레그램 발송 중...")
+    print("6) 텔레그램 발송 중...")
     send_to_telegram(bot_token, chat_id, body + SITE_FOOTER)
 
+    # 발송에 성공한 뒤에만 기록을 남긴다 (실패한 회차의 흔적이 남지 않도록)
     save_topics(topics)  # 점검을 통과했으므로 topics는 비어 있지 않음
-    print("6) 주제 기록 저장 완료 (data/history.json)")
+    jobs_registry.save(open_jobs, today)
+    print("7) 주제·채용 대장 저장 완료 (data/history.json, data/jobs.json)")
 
-    print("7) 기사를 트렌드별로 축적 중... (data/trends.json)")
+    print("8) 기사를 트렌드별로 축적 중... (data/trends.json)")
     merge_articles_into_trends(articles)
 
     print("✅ 모든 작업 완료")
