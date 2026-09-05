@@ -45,6 +45,10 @@ MIN_RSS_ARTICLES = 10            # 이보다 적게 수집되면 피드 이상�
 DATA_DIR = Path(__file__).parent.parent / "data"
 HISTORY_FILE = DATA_DIR / "history.json"
 TRENDS_FILE = DATA_DIR / "trends.json"
+COLUMNS_FILE = DATA_DIR / "columns.json"
+MAX_COLUMNS = 2                  # 뉴스레터 끝에 붙일 칼럼 수 (링크만)
+MAX_OPINIONS_IN_PROMPT = 15      # 모델에게 보여줄 칼럼 후보 수
+COLUMN_MEMORY = 40               # 최근 소개한 칼럼 URL 기억 수 (같은 글 재등장 방지)
 HISTORY_DAYS = 14                # 최근 14일 주제를 중복 방지에 사용
 MAX_ARTICLES_PER_TREND = 20      # 트렌드당 축적할 기사 수 (오래된 것부터 삭제)
 # 새 트렌드 발굴은 미분류가 25건 이상 쌓여야 시도하고 근거 기사 8건을 요구하므로,
@@ -64,7 +68,8 @@ KST = timezone(timedelta(hours=9))
 SUMMARY_MARKER = "오늘의 요약"    # 제목 다음에 오는 고정 문구 (인사말 방지)
 BULLET = "▪️"                    # 기사 한 건의 시작
 SOWHAT = "💡"                    # 기사의 '의미' 줄
-ALLOWED_EMOJI = {"📬", "💡", "❓", "🗂", "🔁"}
+COLUMN_MARKER = "📖"             # 맨 끝 '읽어볼 만한 칼럼' 머리
+ALLOWED_EMOJI = {"📬", "💡", "❓", "🗂", "🔁", "📖"}
 # 숫자 이모지(1️⃣)와 ▪️·구분선(━)은 아래 범위에 걸리지 않으므로 따로 허용할 필요가 없습니다.
 EMOJI_PATTERN = re.compile("[\U0001f300-\U0001faff☀-➿]")
 
@@ -118,14 +123,76 @@ def save_topics(topics: list[str]) -> None:
     )
 
 
+# ────────────────────────── 읽어볼 만한 칼럼 ──────────────────────────
+def load_recent_columns() -> list[str]:
+    """최근 소개한 칼럼 URL. 같은 글이 며칠 연속 나가지 않게 후보에서 뺀다."""
+    try:
+        saved = json.loads(COLUMNS_FILE.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    return [u for u in saved if isinstance(u, str)]
+
+
+def save_columns(previous: list[str], chosen: list[dict]) -> None:
+    urls = [c["url"] for c in chosen] + previous
+    COLUMNS_FILE.write_text(
+        json.dumps(urls[:COLUMN_MEMORY], ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def pick_columns(pool: list[dict], urls: list) -> tuple[list[dict], list[str]]:
+    """모델이 고른 URL을 후보 목록에서 찾아온다.
+
+    목록에 없는 URL은 버린다. 모델이 링크를 지어내면 독자가 죽은 링크를 받게 되는데,
+    제목·언론사도 후보에서 그대로 가져오므로 오타나 각색이 끼어들 여지가 없다.
+    """
+    by_key = {rss_feeds.dedupe_key(a["url"]): a for a in pool}
+    chosen: list[dict] = []
+    warnings: list[str] = []
+    for url in urls:
+        if not isinstance(url, str):
+            continue
+        found = by_key.get(rss_feeds.dedupe_key(url))
+        if not found:
+            warnings.append(f"후보 목록에 없는 칼럼 링크라 제외 — {url[:70]}")
+            continue
+        if any(c["url"] == found["url"] for c in chosen):
+            continue
+        chosen.append(found)
+        if len(chosen) >= MAX_COLUMNS:
+            break
+    return chosen, warnings
+
+
+def render_columns(chosen: list[dict]) -> str:
+    """링크만 거는 블록. 본문 요약은 넣지 않는다.
+
+    언론사는 도메인(view.asiae.co.kr) 대신 피드 이름(아시아경제)을 쓴다 — 읽는 사람에게
+    도메인은 아무 의미가 없다.
+    """
+    blocks = [
+        f"· {c['title']} ({c.get('source', '').replace(' 오피니언', '') or c['press']})"
+        f"\n  {c['url']}"
+        for c in chosen
+    ]
+    return f"{COLUMN_MARKER} 읽어볼 만한 칼럼\n\n" + "\n\n".join(blocks)
+
+
 # ────────────────────────── 뉴스레터 생성 ──────────────────────────
 def build_prompt(
     recent_topics: list[str],
     trend_titles: list[str],
     rss_articles: list[dict],
     known_jobs: str,
+    opinions: list[dict],
 ) -> str:
     today = datetime.now(KST).strftime("%Y년 %m월 %d일 (%a)")
+    opinion_block = (
+        "\n".join(f"- {o['title']} ({o['press']})\n  {o['url']}" for o in opinions)
+        if opinions
+        else "(오늘은 후보가 없습니다 — 빈 배열을 쓰세요)"
+    )
     topics_block = (
         "\n".join(f"- {t}" for t in recent_topics)
         if recent_topics
@@ -256,7 +323,7 @@ web_fetch로 본문을 읽으세요 (최대 {MAX_WEB_FETCHES}건, 대개 0~1건�
 - **쓸 수 있는 이모지는 이것뿐입니다: 📬 1️⃣ 2️⃣ 3️⃣ 4️⃣ ▪️ 💡 ❓ 🗂 🔁**
   🔹 📌 ✅ 🏦 📊 📈 같은 다른 이모지는 하나도 쓰지 마세요.
 - 마크다운 특수문자(*, _, #, [ ] 등)는 쓰지 말고 일반 텍스트로 작성하세요. ([트렌드명] 태그는 예외)
-- 맨 끝에 웹사이트 주소를 쓰지 마세요 — 발송할 때 자동으로 붙습니다.
+- 맨 끝에 웹사이트 주소나 칼럼 목록을 쓰지 마세요 — 둘 다 발송할 때 자동으로 붙습니다.
 - 도구를 쓰는 동안 "리서치하겠습니다", "추가로 검색하겠습니다" 같은 진행 상황 설명을 쓰지 마세요.
   조용히 하고, 완성된 뉴스레터만 출력하세요. (독자가 그 과정을 그대로 받아보게 됩니다)
 - 기사 제목 끝의 [트렌드명]은 아래 4단계의 거시 트렌드 목록에서 고르고, 4단계에서 분류할 trend 값과
@@ -280,7 +347,23 @@ web_fetch로 본문을 읽으세요 (최대 {MAX_WEB_FETCHES}건, 대개 0~1건�
 [
   {{"title": "기사 제목", "url": "https://...", "press": "언론사 도메인(예: yna.co.kr)", "trend": "트렌드 제목 또는 기타"}}
 ]
-</articles>"""
+</articles>
+
+## 5단계: 읽어볼 만한 칼럼 고르기 (뉴스레터 맨 끝에 링크로만 붙습니다)
+아래는 오늘 수집한 오피니언·칼럼입니다. 이 중 **금융권 취업 준비생이 읽으면 시야가 넓어질 글**을
+**최대 {MAX_COLUMNS}편** 고르세요. 마땅한 게 없으면 억지로 고르지 말고 빈 배열을 쓰세요.
+
+- 오늘 브리핑에서 다룬 주제와 **연결되는 글**을 우선하세요.
+- 정치 논쟁, 특정 정당·인물 비판, 문화·생활·여행 칼럼은 고르지 마세요.
+- 사실 전달에 그치는 일반 기사는 칼럼이 아니므로 제외하세요.
+- **요약이나 설명을 쓰지 마세요.** 제목과 링크만 자동으로 붙습니다.
+- url은 아래 목록에 있는 것을 **글자 그대로** 쓰세요. 목록에 없는 링크는 버려집니다.
+
+{opinion_block}
+
+<columns>
+["https://...", "https://..."]
+</columns>"""
 
 
 def generate_newsletter(client: anthropic.Anthropic, prompt: str) -> str:
@@ -428,7 +511,7 @@ def check_format(body: str) -> list[str]:
     return warnings
 
 
-def _json_block(newsletter: str, tag: str) -> tuple[list[dict], re.Match | None]:
+def _json_block(newsletter: str, tag: str) -> tuple[list, re.Match | None]:
     """<tag>…</tag> 안의 JSON 배열을 읽는다. 깨져 있으면 빈 목록으로 넘어간다."""
     match = re.search(rf"<{tag}>(.*?)</{tag}>", newsletter, re.DOTALL)
     if not match:
@@ -438,18 +521,17 @@ def _json_block(newsletter: str, tag: str) -> tuple[list[dict], re.Match | None]
     except json.JSONDecodeError:
         print(f"⚠️  <{tag}> 블록 파싱 실패 — 오늘은 이 부분을 건너뜁니다")
         return [], match
-    if not isinstance(parsed, list):
-        return [], match
-    return [item for item in parsed if isinstance(item, dict)], match
+    return (parsed if isinstance(parsed, list) else []), match
 
 
-def extract_blocks(newsletter: str) -> tuple[str, list[str], list[dict], list[dict]]:
-    """모델 응답을 (발송용 본문, 주제, 기사, 채용 공고)로 나눈다.
+def extract_blocks(newsletter: str) -> tuple[str, list[str], list[dict], list[dict], list]:
+    """모델 응답을 (발송용 본문, 주제, 기사, 채용 공고, 칼럼 URL)로 나눈다.
 
-    <topics>·<articles>·<jobs>는 발송하지 않는 부속 데이터라 본문에서 잘라낸다.
+    <topics>·<articles>·<jobs>·<columns>는 발송하지 않는 부속 데이터라 본문에서 잘라낸다.
     """
-    articles, articles_match = _json_block(newsletter, "articles")
-    found_jobs, jobs_match = _json_block(newsletter, "jobs")
+    raw_articles, articles_match = _json_block(newsletter, "articles")
+    raw_jobs, jobs_match = _json_block(newsletter, "jobs")
+    column_urls, columns_match = _json_block(newsletter, "columns")
 
     topics: list[str] = []
     topics_match = re.search(r"<topics>(.*?)</topics>", newsletter, re.DOTALL)
@@ -459,9 +541,19 @@ def extract_blocks(newsletter: str) -> tuple[str, list[str], list[dict], list[di
         ]
 
     # 본문 = 첫 번째 블록이 시작되기 전까지
-    cuts = [m.start() for m in (topics_match, articles_match, jobs_match) if m]
+    cuts = [
+        m.start()
+        for m in (topics_match, articles_match, jobs_match, columns_match)
+        if m
+    ]
     body = newsletter[: min(cuts)] if cuts else newsletter
-    return strip_preamble(body.strip()), topics, articles, found_jobs
+    return (
+        strip_preamble(body.strip()),
+        topics,
+        [a for a in raw_articles if isinstance(a, dict)],
+        [j for j in raw_jobs if isinstance(j, dict)],
+        column_urls,
+    )
 
 
 def strip_preamble(body: str) -> str:
@@ -609,6 +701,15 @@ def main() -> None:
     for f in failures:
         print(f"   ⚠️  피드 실패: {f}")
     print(f"   총 {len(rss_articles)}건 수집 (프롬프트에 상위 {MAX_RSS_IN_PROMPT}건 사용)")
+
+    opinions, op_failures = rss_feeds.fetch_opinions()
+    for f in op_failures:
+        print(f"   ⚠️  칼럼 피드 실패: {f}")
+    recent_columns = load_recent_columns()
+    already = {rss_feeds.dedupe_key(u) for u in recent_columns}
+    opinions = [o for o in opinions if rss_feeds.dedupe_key(o["url"]) not in already]
+    print(f"   칼럼 후보 {len(opinions)}건 (최근 소개한 {len(recent_columns)}건 제외)")
+
     if len(rss_articles) < MIN_RSS_ARTICLES:
         # 피드가 대부분 죽었는데 그대로 진행하면 모델이 기억으로 지어낸다.
         # 비싼 검색으로 조용히 대체하지 않고 실패시켜 원인을 보게 한다.
@@ -626,10 +727,11 @@ def main() -> None:
             trend_titles,
             rss_articles[:MAX_RSS_IN_PROMPT],
             jobs_registry.known_block(open_jobs),
+            opinions[:MAX_OPINIONS_IN_PROMPT],
         ),
     )
 
-    body, topics, articles, found_jobs = extract_blocks(raw)
+    body, topics, articles, found_jobs, column_urls = extract_blocks(raw)
     print(f"   생성 완료: 본문 {len(body)}자, 주제 {len(topics)}건, 기사 {len(articles)}건")
 
     print("4) 채용 3️⃣ 섹션 조립 중... (D-day는 마감일에서 직접 계산)")
@@ -643,6 +745,17 @@ def main() -> None:
     for note in notes:
         print(f"   ⚠️  {note}")
 
+    chosen_columns, column_warnings = pick_columns(opinions, column_urls)
+    for warning in column_warnings:
+        print(f"   ⚠️  {warning}")
+    if chosen_columns:
+        # 브리핑 룸 링크(SITE_FOOTER) 바로 위에 붙는다
+        body = f"{body}\n\n{'━' * 18}\n{render_columns(chosen_columns)}"
+        for c in chosen_columns:
+            print(f"   📖 칼럼: {c['title'][:45]} ({c['press']})")
+    else:
+        print("   📖 오늘은 소개할 칼럼 없음")
+
     print("5) 발송 전 점검 중...")
     validate_newsletter(body, topics)
     print("   점검 통과")
@@ -653,7 +766,8 @@ def main() -> None:
     # 발송에 성공한 뒤에만 기록을 남긴다 (실패한 회차의 흔적이 남지 않도록)
     save_topics(topics)  # 점검을 통과했으므로 topics는 비어 있지 않음
     jobs_registry.save(open_jobs, today)
-    print("7) 주제·채용 대장 저장 완료 (data/history.json, data/jobs.json)")
+    save_columns(recent_columns, chosen_columns)
+    print("7) 주제·채용·칼럼 기록 저장 완료 (data/ 아래 3개 파일)")
 
     print("8) 기사를 트렌드별로 축적 중... (data/trends.json)")
     merge_articles_into_trends(articles)

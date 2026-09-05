@@ -38,6 +38,20 @@ FEEDS = [
     {"name": "머니투데이", "url": "https://rss.mt.co.kr/mt_news.xml", "focused": False},
 ]
 
+# 오피니언·칼럼 전용 피드. 뉴스와 섞지 않고 따로 모아 '읽어볼 만한 칼럼'에만 쓴다.
+# 2026-09-04 실측: 이데일리·서울경제·머니투데이 오피니언은 404, 한겨레는 308.
+# 경향은 살아 있지만 정치 사설 위주라 이 뉴스레터 성격과 맞지 않아 뺐다.
+OPINION_FEEDS = [
+    {"name": "한국경제 오피니언", "url": "https://www.hankyung.com/feed/opinion"},
+    {"name": "연합뉴스 오피니언", "url": "https://www.yna.co.kr/rss/opinion.xml"},
+    {"name": "아시아경제 오피니언", "url": "https://www.asiae.co.kr/rss/opinion.htm"},
+]
+# 칼럼은 뉴스만큼 시의성이 급하지 않다. 오피니언 면은 금융 글의 밀도가 낮아서
+# (한국경제 오피니언 50건 중 금융은 3건) 창을 좁히면 후보가 말라붙는다.
+# 2026-09-04 실측: 48시간 5건 / 72시간 9건 / 96시간 14건 / 120시간 15건 → 96시간에서 포화.
+# 같은 글이 다시 나가는 건 data/columns.json이 막으므로 창을 넓혀도 중복 걱정은 없다.
+OPINION_MAX_AGE_HOURS = 96
+
 # focused=False 피드(전체 기사)는 정치·사회 기사가 섞여 들어오므로 키워드로 걸러낸다.
 FINANCE_KEYWORDS = [
     "은행", "금융", "금리", "대출", "예금", "증권", "보험", "카드", "신탁",
@@ -114,13 +128,16 @@ def is_finance(title: str, summary: str) -> bool:
     return any(k in text for k in FINANCE_KEYWORDS)
 
 
-def fetch_feed(feed: dict) -> list[dict]:
-    """피드 하나를 읽어 최근 기사 목록을 반환. 실패하면 예외를 그대로 올린다."""
+def fetch_feed(feed: dict, max_age_hours: int = MAX_AGE_HOURS) -> list[dict]:
+    """피드 하나를 읽어 최근 기사 목록을 반환. 실패하면 예외를 그대로 올린다.
+
+    focused 키가 없는 피드(오피니언 등)는 금융 키워드 필터를 항상 거친다.
+    """
     req = urllib.request.Request(feed["url"], headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=TIMEOUT) as res:
         root = ET.fromstring(res.read())
 
-    cutoff = datetime.now(KST) - timedelta(hours=MAX_AGE_HOURS)
+    cutoff = datetime.now(KST) - timedelta(hours=max_age_hours)
     out = []
     for item in root.findall(".//item")[:MAX_PER_FEED * 2]:
         title = clean(item.findtext("title", ""))
@@ -133,8 +150,8 @@ def fetch_feed(feed: dict) -> list[dict]:
         if when and when < cutoff:
             continue
         summary = clean(item.findtext("description", ""))[:200]
-        if not feed["focused"] and not is_finance(title, summary):
-            continue  # 전체 기사 피드에서 정치·사회 기사 제거
+        if not feed.get("focused", False) and not is_finance(title, summary):
+            continue  # 전체 기사·오피니언 피드에서 정치·사회·문화 글 제거
         out.append({
             "title": title,
             "url": link,
@@ -177,6 +194,33 @@ def fetch_all() -> tuple[list[dict], list[str]]:
     return articles, failures
 
 
+def fetch_opinions() -> tuple[list[dict], list[str]]:
+    """오피니언·칼럼 피드를 모아 (칼럼 목록, 실패 메시지)를 반환.
+
+    뉴스 수집과 분리한 이유: 칼럼은 '읽어볼 만한 글' 자리에만 쓰이고,
+    뉴스 풀에 섞이면 상위 70건 안에서 사실 기사와 자리를 다투게 된다.
+    """
+    columns, failures, seen = [], [], set()
+    for feed in OPINION_FEEDS:
+        try:
+            got = fetch_feed(feed, max_age_hours=OPINION_MAX_AGE_HOURS)
+        except (urllib.error.URLError, urllib.error.HTTPError, ET.ParseError, OSError) as e:
+            failures.append(f"{feed['name']}: {type(e).__name__} {str(e)[:60]}")
+            continue
+        added = 0
+        for a in got:
+            key = dedupe_key(a["url"])
+            if key in seen:
+                continue
+            seen.add(key)
+            columns.append(a)
+            added += 1
+        print(f"   ✍️  {feed['name']}: {added}건")
+
+    columns.sort(key=lambda a: (a["date"], a["time"]), reverse=True)
+    return columns, failures
+
+
 if __name__ == "__main__":  # python3 scripts/rss_feeds.py 로 단독 점검
     arts, fails = fetch_all()
     print(f"\n총 {len(arts)}건 수집, 실패 {len(fails)}건")
@@ -184,3 +228,10 @@ if __name__ == "__main__":  # python3 scripts/rss_feeds.py 로 단독 점검
         print(f"   ⚠️  {f}")
     for a in arts[:8]:
         print(f"   [{a['date']} {a['time']}] {a['title'][:52]} ({a['press']})")
+
+    cols, col_fails = fetch_opinions()
+    print(f"\n칼럼 {len(cols)}건 수집, 실패 {len(col_fails)}건")
+    for f in col_fails:
+        print(f"   ⚠️  {f}")
+    for c in cols[:8]:
+        print(f"   [{c['date']} {c['time']}] {c['title'][:52]} ({c['press']})")
