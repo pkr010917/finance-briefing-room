@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.11",
+  "lastUpdated": "2026.09.14",
   "trends": [
     {
       "category": "금리·정책",
@@ -529,6 +529,12 @@
       "desc": "원화 가치에 1:1로 고정된 디지털 화폐(스테이블코인)를 누가 발행할 것인가를 둘러싼 경쟁으로, 돈의 형태 자체가 바뀔 수 있다는 점에서 금융권 전체가 주목하는 판입니다. 법제화의 핵심 쟁점은 발행사 지분의 51% 이상을 은행이 갖게 하는 '은행 중심 규칙'이 통과되느냐이며, 이에 따라 은행 컨소시엄과 빅테크(두나무·네이버 등) 진영의 주도권이 갈립니다. 은행들이 컨소시엄 구성을 서두르는 배경에는 새 수수료 수익원 확보만이 아니라, 예금이 스테이블코인으로 이동하면 은행의 자금 조달 구조가 흔들릴 수 있다는 방어 논리도 있습니다. 한국은행의 기관용 CBDC 실험, 국채 토큰화 같은 정부 차원의 실증 사업과도 연결됩니다. 발행 주도권·법제화 속도·컨소시엄 구도, 이 세 축으로 개별 뉴스를 배치해 보면 전체 그림이 보입니다.",
       "articles": [
         {
+          "title": "토큰증권 첫판은 채권·MMF…증권사 '디지털 IB' 경쟁 열린다",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434619",
+          "date": "2026-09-14"
+        },
+        {
           "title": "공짜 수수료로 반짝 흥행…알고보니 속 빈 '스테이블코인 잔치'",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260905041000002",
@@ -641,12 +647,6 @@
           "press": "biz.chosun.com",
           "url": "https://biz.chosun.com/stock/finance/2026/07/31/SBP2BVFJOZE6RJG5OMKNF5QNUU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
           "date": "2026-07-31"
-        },
-        {
-          "title": "[구멍 난 위믹스]③ 원화코인 제도화 앞두고…'발행권 통제' 경고등",
-          "press": "bloter.net",
-          "url": "https://www.bloter.net/news/articleView.html?idxno=669117",
-          "date": "2026-07-30"
         }
       ],
       "query": "원화 스테이블코인 은행"
@@ -658,6 +658,36 @@
       "summary": "만년 저평가 은행주의 재평가. 자본규제 강화로 '환원 여력'이 시험대에",
       "desc": "한국 은행주는 오랫동안 이익 규모에 비해 주가가 낮은 '만년 저평가' 상태였고, 이를 해소하려는 정부의 밸류업 정책과 함께 금융지주들이 배당 확대와 자사주 매입·소각을 크게 늘리는 흐름입니다. 핵심 지표는 보통주자본(CET1) 비율로, 목표치를 넘는 초과자본을 주주에게 돌려주는 방식이 업계 표준으로 자리잡았습니다. 그래서 은행 실적 뉴스를 볼 때는 순이익 규모만큼이나 '환원율'(순이익 중 배당과 자사주로 돌려주는 비율)이 중요해졌습니다. 외국인 투자자 수급과 주가가 환원 정책 발표에 민감하게 반응하는 것도 특징입니다. 다만 정부가 생산적 금융(대출 확대)을 동시에 요구하고 있어, 자본을 주주환원에 쓸지 성장에 쓸지의 긴장 관계가 상존합니다.",
       "articles": [
+        {
+          "title": "[4대금융 자본전략③] 롯데손보에 신중한 신한금융…가격 아닌 자본효율",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434632",
+          "date": "2026-09-14"
+        },
+        {
+          "title": "이재근 \"회장 중심 경영 지양…KB금융, 시스템·프로세스로 운영\"",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434618",
+          "date": "2026-09-14"
+        },
+        {
+          "title": "KB금융 이재근 \"나이 아닌 역량·전문성 중심 세대교체\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260914014900002",
+          "date": "2026-09-14"
+        },
+        {
+          "title": "유독 회장 교체 때마다…KB 이사회 독립적 기질 빛나는 이유",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434629",
+          "date": "2026-09-14"
+        },
+        {
+          "title": "KB국민은행 오늘 이사회…계열사도 차기 회장 전격교체 배경 파악",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434635",
+          "date": "2026-09-14"
+        },
         {
           "title": "불안한 증시엔 은행주 '방패' … 금리·실적·배당까지 '3박자'",
           "press": "mt.co.kr",
@@ -747,36 +777,6 @@
           "press": "einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431097",
           "date": "2026-08-21"
-        },
-        {
-          "title": "\"삼성전자·SK하이닉스 300조원 환원 시 달러-원 하단 1,325원\"",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4431060",
-          "date": "2026-08-21"
-        },
-        {
-          "title": "'40조 자사주 매입' 하이닉스 당장 내일부터 산다…1조원 장내 매수 신청",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4430834",
-          "date": "2026-08-20"
-        },
-        {
-          "title": "SK하이닉스, 100조 주주환원 시동",
-          "press": "hankyung.com",
-          "url": "https://www.hankyung.com/article/2026081904641",
-          "date": "2026-08-20"
-        },
-        {
-          "title": "'돈만 잘 벌면 끝 아냐' 4대 금융 회장 성과급 잣대는",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260818155200002",
-          "date": "2026-08-19"
-        },
-        {
-          "title": "\"주주 가치 제고 및 상법 준수\"…카카오뱅크, 자사주 27만 주 소각 결정",
-          "press": "srtimes.kr",
-          "url": "http://www.srtimes.kr/news/articleView.html?idxno=210165",
-          "date": "2026-08-17"
         }
       ],
       "query": "금융지주 밸류업 주주환원"
@@ -919,6 +919,12 @@
       "desc": "국내 시장이 저성장·규제·포화 상태에 갇히면서, 은행들이 성장의 답을 해외에서 찾는 흐름입니다. 동남아(베트남·인도네시아·캄보디아)가 주력 무대이고, 중소기업의 해외 진출을 따라가는 폴란드 같은 신규 거점도 등장했습니다. 각 은행은 글로벌 이익 비중 목표(전체 순이익의 몇 %)를 내걸고 전담 조직을 신설하며 현지 법인을 키우고 있습니다. 해외 이익 비중이 얼마나 커지는지가 은행별 성장성을 가르는 기준이 되고 있으며, 주요 은행의 동남아 법인 실적이 대표적인 비교 지표입니다. 다만 현지 경기·환율 변동·부실채권 리스크가 국내보다 크기 때문에, 확장 속도와 리스크 관리의 균형이 늘 함께 언급됩니다.",
       "articles": [
         {
+          "title": "[4대금융 자본전략④] KB금융, 테크콤뱅크 2.7조 '베팅'…지분 15% 택한 이유",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434633",
+          "date": "2026-09-14"
+        },
+        {
           "title": "신한은행, 6억유로 커버드본드 발행 성공…활황 지속",
           "press": "news.einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433825",
@@ -1031,12 +1037,6 @@
           "press": "youthdaily.co.kr",
           "url": "https://www.youthdaily.co.kr/news/article.html?no=223822",
           "date": "2026-07-27"
-        },
-        {
-          "title": "삼전닉스 레버리지·해외주식 투자 '쌍끌이'…외화예금 석 달째 증가",
-          "press": "edaily.co.kr",
-          "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=03079926645518784",
-          "date": "2026-07-27"
         }
       ],
       "query": "은행 글로벌 진출 동남아"
@@ -1049,6 +1049,12 @@
       "desc": "금융사고란 임직원의 횡령·배임이나 외부 사기 등으로 금융회사가 손실을 입는 사건을 말하며, 내부통제는 이를 예방하기 위한 회사 내부의 감시·점검 체계를 뜻한다. 최근 IBK기업은행에서 94억원 규모의 사기 사고가 발생하고, 4대 시중은행에서 지난 10년간 누적 5,500억원에 달하는 금융사고가 확인되면서 은행권 내부통제의 실효성에 의문이 커지고 있다. 보험업권에서도 보험사기 가담 이력자의 시장 진입을 제한하는 규제가 새로 도입되는 등, 감독당국이 사고 재발을 막기 위한 진입·감시 규제를 강화하는 추세다. 이는 단발성 사건이 아니라 대형 금융사고가 반복되면서 감독규제와 지배구조, 성과보상 체계 전반을 재점검해야 한다는 구조적 압박으로 이어지고 있다. 향후 관전 포인트는 금융당국이 내부통제 실패에 대한 최고경영진 책임을 얼마나 강하게 물을지, 그리고 이런 규제 강화가 금융회사의 비용 구조와 신뢰도에 어떤 영향을 미칠지에 있다.",
       "query": "금융사고 내부통제",
       "articles": [
+        {
+          "title": "업무정지 해제 앞둔 롯데카드…지점 신설 등 영업 정상화 '시동'",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434636",
+          "date": "2026-09-14"
+        },
         {
           "title": "무역실적 부풀려 주가 부양, '국산 둔갑' 조달…범부처 합동단속",
           "press": "yna.co.kr",
@@ -1161,12 +1167,6 @@
           "title": "보험사기 가담자 시장진입 규제 강화",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260820164900002",
-          "date": "2026-08-21"
-        },
-        {
-          "title": "IBK기업은행서 94억원 규모 '사기' 금융사고",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260820170300002",
           "date": "2026-08-21"
         }
       ]
