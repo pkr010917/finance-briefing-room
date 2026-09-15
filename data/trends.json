@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.14",
+  "lastUpdated": "2026.09.15",
   "trends": [
     {
       "category": "금리·정책",
@@ -8,6 +8,18 @@
       "summary": "인하 기대는 뒤집혔다. 한은 부총재까지 '추가 인상 가능성' 언급한 국면",
       "desc": "기준금리는 은행업의 모든 것이 시작되는 출발점입니다. 금리가 오르면 예대금리차와 순이자마진(NIM)이 벌어져 은행 이자이익에 유리하게 작용하고, 내려가면 대출 수요와 부동산 시장이 살아나는 대신 마진이 줄어듭니다. 2022년 글로벌 인플레이션과 함께 시작된 고금리 시대는 2024~2025년 네 차례 인하로 한 차례 방향을 틀었고, 이후에도 물가·환율·지정학 변수에 따라 인상과 인하 기대가 수시로 뒤집히고 있습니다. 이 흐름을 읽는 틀은 세 가지입니다. 한국은행 금통위가 어느 방향으로 움직이는지, 미국과의 금리 차가 환율에 어떤 압력을 주는지, 그리고 가계의 이자 부담(주택담보대출 금리)이 소비와 부동산으로 어떻게 번지는지입니다. 개별 금리 뉴스는 결국 이 큰 사이클의 어느 지점에 있는지를 보여주는 조각들입니다.",
       "articles": [
+        {
+          "title": "美국채 10년물 5% 장중 돌파…시장선 '9월 금리인상 기정사실'",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/world/2026/09/15/2026091508563052127",
+          "date": "2026-09-15"
+        },
+        {
+          "title": "'4.9%까지 뛰었다'…삼성도 내주 참전, 발행어음 '조달전쟁'",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434820",
+          "date": "2026-09-15"
+        },
         {
           "title": "[뉴욕증시] 뜨거운 PPI에 트럼프 현금 살포까지…나흘째 하락",
           "press": "news.einfomax.co.kr",
@@ -114,18 +126,6 @@
           "title": "[뉴욕증시] 채권금리 조정에 한숨 돌렸다…상승 마감",
           "press": "einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433185",
-          "date": "2026-09-03"
-        },
-        {
-          "title": "美-이란 충돌에 금리 5% 뚫나…\"증시 하방압력 속 반도체가 방어선\"",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433205",
-          "date": "2026-09-03"
-        },
-        {
-          "title": "8월 외환보유액 143.3억弗 급증…외화예수금 크게 늘어",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433199",
           "date": "2026-09-03"
         }
       ],
@@ -269,6 +269,12 @@
       "desc": "한국 은행 수익의 대부분은 예금과 대출의 금리 차이에서 나오는 이자이익입니다. 문제는 이 구조가 금리 사이클에 실적이 통째로 흔들리는 데다, '이자 장사'라는 사회적 비판과 대출 총량규제까지 겹치면서 성장의 한계가 뚜렷해졌다는 점입니다. 그래서 은행들은 수수료·신탁·방카슈랑스·투자은행(IB) 같은 비이자 수익원을 키우는 동시에, 배달앱(신한 땡겨요)·알뜰폰(KB 리브모바일)처럼 은행답지 않은 신사업에도 뛰어들고 있습니다. 겉보기에 '은행이 저걸 왜 하지?' 싶은 뉴스는 대부분 이 트렌드의 연장선입니다. 관전 포인트는 실적 발표 때마다 비이자이익 비중이 실제로 늘고 있는지, 그리고 신사업이 미래 고객 접점 확보(플랫폼 전략)로 이어지는지입니다.",
       "articles": [
         {
+          "title": "보장성 한풀 꺾인 생보업계…고금리 저축성보험 뜬다",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434839",
+          "date": "2026-09-15"
+        },
+        {
           "title": "자산운용사 2분기 순익 2.7조…증시 활황에 '역대급 실적 잔치'",
           "press": "news.einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434371",
@@ -381,12 +387,6 @@
           "press": "autodaily.co.kr",
           "url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546678",
           "date": "2026-08-17"
-        },
-        {
-          "title": "SC제일은행, 상반기 순익 4244억…비이자이익 성장에 전년比 2배",
-          "press": "bloter.net",
-          "url": "https://www.bloter.net/news/articleView.html?idxno=671053",
-          "date": "2026-08-14"
         }
       ],
       "query": "은행 비이자이익 확대"
@@ -1050,6 +1050,24 @@
       "query": "금융사고 내부통제",
       "articles": [
         {
+          "title": "상반기 車보험 1천848억 손실…손해율 악화에 6년 만에 적자전환",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434824",
+          "date": "2026-09-15"
+        },
+        {
+          "title": "경찰청, 신한금융과 소상공인 '노쇼사기' 피해 예방 캠페인",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260914140800004",
+          "date": "2026-09-15"
+        },
+        {
+          "title": "현대카드, 이사회 내 소비자보호위원회 신설…당국 '발맞추기'",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434852",
+          "date": "2026-09-15"
+        },
+        {
           "title": "업무정지 해제 앞둔 롯데카드…지점 신설 등 영업 정상화 '시동'",
           "press": "news.einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434636",
@@ -1150,24 +1168,6 @@
           "press": "hankyung.com",
           "url": "https://www.hankyung.com/article/2026082524071",
           "date": "2026-08-26"
-        },
-        {
-          "title": "쿠팡, 공정위 현장조사 거부 논란…대규모유통업법상 처음(종합)",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260825159851002",
-          "date": "2026-08-26"
-        },
-        {
-          "title": "중국업체 800억대 사기당한 기업은행, 허술한 내부통제",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260822049100002",
-          "date": "2026-08-24"
-        },
-        {
-          "title": "보험사기 가담자 시장진입 규제 강화",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260820164900002",
-          "date": "2026-08-21"
         }
       ]
     }
@@ -1618,5 +1618,5 @@
       "date": "2026-08-19"
     }
   ],
-  "lastDiscoveryAt": "2026-09-08T08:55:30.299751+09:00"
+  "lastDiscoveryAt": "2026-09-15T09:11:09.849643+09:00"
 }
