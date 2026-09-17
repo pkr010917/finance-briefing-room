@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.16",
+  "lastUpdated": "2026.09.17",
   "trends": [
     {
       "category": "금리·정책",
@@ -8,6 +8,24 @@
       "summary": "인하 기대는 뒤집혔다. 한은 부총재까지 '추가 인상 가능성' 언급한 국면",
       "desc": "기준금리는 은행업의 모든 것이 시작되는 출발점입니다. 금리가 오르면 예대금리차와 순이자마진(NIM)이 벌어져 은행 이자이익에 유리하게 작용하고, 내려가면 대출 수요와 부동산 시장이 살아나는 대신 마진이 줄어듭니다. 2022년 글로벌 인플레이션과 함께 시작된 고금리 시대는 2024~2025년 네 차례 인하로 한 차례 방향을 틀었고, 이후에도 물가·환율·지정학 변수에 따라 인상과 인하 기대가 수시로 뒤집히고 있습니다. 이 흐름을 읽는 틀은 세 가지입니다. 한국은행 금통위가 어느 방향으로 움직이는지, 미국과의 금리 차가 환율에 어떤 압력을 주는지, 그리고 가계의 이자 부담(주택담보대출 금리)이 소비와 부동산으로 어떻게 번지는지입니다. 개별 금리 뉴스는 결국 이 큰 사이클의 어느 지점에 있는지를 보여주는 조각들입니다.",
       "articles": [
+        {
+          "title": "한은 부총재 \"각별한 경계감 갖고 금융·외환시장 상황 점검\"",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4435318",
+          "date": "2026-09-17"
+        },
+        {
+          "title": "美 긴축 전환에 한은도 연내 추가 금리인상 가능성",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260917015800002",
+          "date": "2026-09-17"
+        },
+        {
+          "title": "[연준 3년만 인상] 가산금리 내려도 주담대 7% 굳어졌다…부담 장기화",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4435317",
+          "date": "2026-09-17"
+        },
         {
           "title": "CNBC 설문 \"美 금리인상, 한 번으로 안 끝나\"…3회 인상 전망도 '득세'",
           "press": "einfomax.co.kr",
@@ -109,24 +127,6 @@
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260906048400083",
           "date": "2026-09-07"
-        },
-        {
-          "title": "금리인상 우려에 '방어주 매력' 커진 은행주…환율 여건도 우호적",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433647",
-          "date": "2026-09-07"
-        },
-        {
-          "title": "\"원/달러 환율, 안정세 이어갈 것… 4분기 평균 1380원 전망\"-NH",
-          "press": "mt.co.kr",
-          "url": "https://www.mt.co.kr/stock/2026/09/04/2026090407551370792",
-          "date": "2026-09-04"
-        },
-        {
-          "title": "7월 경상수지 420.8억달러 흑자…6월 이어 역대 2위",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433398",
-          "date": "2026-09-04"
         }
       ],
       "query": "한국은행 기준금리 인하"
@@ -1050,6 +1050,18 @@
       "query": "금융사고 내부통제",
       "articles": [
         {
+          "title": "150조원 채권 '돌려막기' 뒤에 중개사…금융위, BNK·다올증권 제재",
+          "press": "einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4435289",
+          "date": "2026-09-17"
+        },
+        {
+          "title": "BNK금융, 회장·자회사 대표 승계 절차 개선…\"공정성 강화\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260916166000051",
+          "date": "2026-09-17"
+        },
+        {
           "title": "\"보이스피싱 당하면 은행이 배상\" 연 2800억 독박...영국은 효과 미미",
           "press": "mt.co.kr",
           "url": "https://www.mt.co.kr/finance/2026/09/16/2026091516560437013",
@@ -1156,23 +1168,17 @@
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260828077800004",
           "date": "2026-08-28"
-        },
-        {
-          "title": "하나카드, 중앙일보 법인카드 복원… 다른 카드사도 재개 가능성",
-          "press": "mt.co.kr",
-          "url": "https://www.mt.co.kr/finance/2026/08/28/2026082810484349681",
-          "date": "2026-08-28"
-        },
-        {
-          "title": "금융사 40곳, 비밀번호 변경 등에도 불필요하게 주민번호 요구",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260827052700530",
-          "date": "2026-08-27"
         }
       ]
     }
   ],
   "unclassified": [
+    {
+      "title": "이재근, 양종희와 나란히 업무보고…KB금융 승계 작업 본격화",
+      "press": "einfomax.co.kr",
+      "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4435297",
+      "date": "2026-09-17"
+    },
     {
       "title": "취업자 18만4천명 늘었지만…청년 고용한파 지속·내수도 위축(종합)",
       "press": "yna.co.kr",
