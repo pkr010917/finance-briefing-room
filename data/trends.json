@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.22",
+  "lastUpdated": "2026.09.23",
   "trends": [
     {
       "category": "금리·정책",
@@ -8,6 +8,18 @@
       "summary": "인하 기대는 뒤집혔다. 한은 부총재까지 '추가 인상 가능성' 언급한 국면",
       "desc": "기준금리는 은행업의 모든 것이 시작되는 출발점입니다. 금리가 오르면 예대금리차와 순이자마진(NIM)이 벌어져 은행 이자이익에 유리하게 작용하고, 내려가면 대출 수요와 부동산 시장이 살아나는 대신 마진이 줄어듭니다. 2022년 글로벌 인플레이션과 함께 시작된 고금리 시대는 2024~2025년 네 차례 인하로 한 차례 방향을 틀었고, 이후에도 물가·환율·지정학 변수에 따라 인상과 인하 기대가 수시로 뒤집히고 있습니다. 이 흐름을 읽는 틀은 세 가지입니다. 한국은행 금통위가 어느 방향으로 움직이는지, 미국과의 금리 차가 환율에 어떤 압력을 주는지, 그리고 가계의 이자 부담(주택담보대출 금리)이 소비와 부동산으로 어떻게 번지는지입니다. 개별 금리 뉴스는 결국 이 큰 사이클의 어느 지점에 있는지를 보여주는 조각들입니다.",
       "articles": [
+        {
+          "title": "9월 소비심리 한 달 만에 반등…\"집값 상승 기대 여전히 높아\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260922176500002",
+          "date": "2026-09-23"
+        },
+        {
+          "title": "9월 소비자심리 개선…가계수입 전망 '쑥'",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436203",
+          "date": "2026-09-23"
+        },
         {
           "title": "스트레이트 MBS 한도 늘린 주금공…고금리에 조달 다변화",
           "press": "news.einfomax.co.kr",
@@ -114,18 +126,6 @@
           "title": "美 장기물 바이백 '60억달러' 한도 안 채워…국채금리 추가 상승(상보)",
           "press": "news.einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434361",
-          "date": "2026-09-11"
-        },
-        {
-          "title": "미국산 원유도 100달러 돌파…美국채 30년물 18년만 최고",
-          "press": "mt.co.kr",
-          "url": "https://www.mt.co.kr/world/2026/09/11/2026091105325969397",
-          "date": "2026-09-11"
-        },
-        {
-          "title": "한투증권 \"하반기 환율 전망치 1,380원…기존 대비 40원 내려\"",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260911021500008",
           "date": "2026-09-11"
         }
       ],
@@ -399,6 +399,12 @@
       "desc": "금융그룹들이 단순 챗봇을 넘어 업무 방식·고객 접점·인력 구조까지 AI 중심으로 다시 짜는 흐름입니다. 계기는 금융당국의 망분리 규제 완화로, 클라우드와 생성형 AI를 은행 내부 업무에 쓸 수 있는 길이 열리면서 5대 금융그룹의 경쟁이 본격화됐습니다. 농협은행의 '에이전틱 AI 뱅크' 선언, KB금융의 '전 직원 AI 인재화'처럼 그룹 차원의 전환 전략이 잇따르고, AI가 스스로 업무를 처리하는 '에이전틱' 단계로 진화하는 것이 다음 승부처입니다. 이 트렌드는 점포 축소·인력 구조 재편과 맞물려 있어 금융권 취업 시장에도 직접적인 영향을 줍니다. AI 투자가 실제 비용 절감과 수익으로 이어지는지, 아니면 구호에 그치는지가 장기적인 판별 기준입니다.",
       "articles": [
         {
+          "title": "KB국민카드 테크그룹, 청계천 사옥서 광화문으로 대이동",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436231",
+          "date": "2026-09-23"
+        },
+        {
           "title": "[마켓뷰] 오픈AI발 호재에 美반도체 급등…코스피도 강세 기대",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260907016300008",
@@ -511,12 +517,6 @@
           "press": "businesspost.co.kr",
           "url": "https://www.businesspost.co.kr/BP?command=article_view&num=443798",
           "date": "2026-08-03"
-        },
-        {
-          "title": "LG CNS 상반기 매출 2.8조…AI·클라우드 성장",
-          "press": "nocutnews.co.kr",
-          "url": "https://www.nocutnews.co.kr/news/6556559?utm_source=naver&utm_medium=article&utm_campaign=20260731025534",
-          "date": "2026-07-31"
         }
       ],
       "query": "은행 AI 전환 에이전틱"
@@ -919,6 +919,18 @@
       "desc": "국내 시장이 저성장·규제·포화 상태에 갇히면서, 은행들이 성장의 답을 해외에서 찾는 흐름입니다. 동남아(베트남·인도네시아·캄보디아)가 주력 무대이고, 중소기업의 해외 진출을 따라가는 폴란드 같은 신규 거점도 등장했습니다. 각 은행은 글로벌 이익 비중 목표(전체 순이익의 몇 %)를 내걸고 전담 조직을 신설하며 현지 법인을 키우고 있습니다. 해외 이익 비중이 얼마나 커지는지가 은행별 성장성을 가르는 기준이 되고 있으며, 주요 은행의 동남아 법인 실적이 대표적인 비교 지표입니다. 다만 현지 경기·환율 변동·부실채권 리스크가 국내보다 크기 때문에, 확장 속도와 리스크 관리의 균형이 늘 함께 언급됩니다.",
       "articles": [
         {
+          "title": "하나증권, 3억달러 신종자본증권 발행 성공…국내 증권사 최초",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436223",
+          "date": "2026-09-23"
+        },
+        {
+          "title": "산업은행, 폭스콘 유로엔채 주관까지…글로벌 DCM 역량 두각",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436238",
+          "date": "2026-09-23"
+        },
+        {
           "title": "롯데카드, 3억달러 규모 해외 ABS 발행",
           "press": "news.einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4435529",
@@ -1025,18 +1037,6 @@
           "press": "zdnet.co.kr",
           "url": "https://zdnet.co.kr/view/?no=20260730163359",
           "date": "2026-07-31"
-        },
-        {
-          "title": "2분기 외환거래 1214억달러, 환율 변동성·외국인 매매 확대로 역대 최대",
-          "press": "newspim.com",
-          "url": "https://www.newspim.com/news/view/20260731000412",
-          "date": "2026-07-31"
-        },
-        {
-          "title": "SK행복나눔재단·IBK기업은행·하나증권, 청년 현장 사회문제 탐색 프로...",
-          "press": "wsobi.com",
-          "url": "http://www.wsobi.com/news/articleView.html?idxno=315895",
-          "date": "2026-07-28"
         }
       ],
       "query": "은행 글로벌 진출 동남아"
@@ -1049,6 +1049,30 @@
       "desc": "금융사고란 임직원의 횡령·배임이나 외부 사기 등으로 금융회사가 손실을 입는 사건을 말하며, 내부통제는 이를 예방하기 위한 회사 내부의 감시·점검 체계를 뜻한다. 최근 IBK기업은행에서 94억원 규모의 사기 사고가 발생하고, 4대 시중은행에서 지난 10년간 누적 5,500억원에 달하는 금융사고가 확인되면서 은행권 내부통제의 실효성에 의문이 커지고 있다. 보험업권에서도 보험사기 가담 이력자의 시장 진입을 제한하는 규제가 새로 도입되는 등, 감독당국이 사고 재발을 막기 위한 진입·감시 규제를 강화하는 추세다. 이는 단발성 사건이 아니라 대형 금융사고가 반복되면서 감독규제와 지배구조, 성과보상 체계 전반을 재점검해야 한다는 구조적 압박으로 이어지고 있다. 향후 관전 포인트는 금융당국이 내부통제 실패에 대한 최고경영진 책임을 얼마나 강하게 물을지, 그리고 이런 규제 강화가 금융회사의 비용 구조와 신뢰도에 어떤 영향을 미칠지에 있다.",
       "query": "금융사고 내부통제",
       "articles": [
+        {
+          "title": "수수료 우회지급·비급여 풍선효과…국감 도마 위에 오르나",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436227",
+          "date": "2026-09-23"
+        },
+        {
+          "title": "이찬진 \"금융 자회사 CEO 선임절차 개시 전 미흡한점 보완해라\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260922185300002",
+          "date": "2026-09-23"
+        },
+        {
+          "title": "이찬진 \"금융지주 CEO 선임 절차 미흡…자회사 임추위 역할 보장해야\"",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436215",
+          "date": "2026-09-23"
+        },
+        {
+          "title": "한국씨티은행장에 김경호 기업금융그룹장…6년 만에 교체",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436217",
+          "date": "2026-09-23"
+        },
         {
           "title": "김우찬 코스닥시장위원장, 산은 사외이사 사임…'이해충돌' 우려",
           "press": "news.einfomax.co.kr",
@@ -1144,30 +1168,6 @@
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260909186300002",
           "date": "2026-09-10"
-        },
-        {
-          "title": "'나사빠진' 기업은행…영장에도 금융사고 몰라, 사고 뒤 또 대출",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260908137700002",
-          "date": "2026-09-09"
-        },
-        {
-          "title": "제동 걸린 SK이노-SKIET 합병…이유는 '소통 부족'",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433824",
-          "date": "2026-09-08"
-        },
-        {
-          "title": "토스뱅크, 유동성 관리부터 임원 보수체계까지 대대적 손질",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433814",
-          "date": "2026-09-08"
-        },
-        {
-          "title": "상위 20개 저축銀 상반기 순이익 3배로↑…유동성비율 '정상화'",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260905040400002",
-          "date": "2026-09-07"
         }
       ]
     }
