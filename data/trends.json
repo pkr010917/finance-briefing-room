@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.09.23",
+  "lastUpdated": "2026.09.24",
   "trends": [
     {
       "category": "금리·정책",
@@ -8,6 +8,30 @@
       "summary": "인하 기대는 뒤집혔다. 한은 부총재까지 '추가 인상 가능성' 언급한 국면",
       "desc": "기준금리는 은행업의 모든 것이 시작되는 출발점입니다. 금리가 오르면 예대금리차와 순이자마진(NIM)이 벌어져 은행 이자이익에 유리하게 작용하고, 내려가면 대출 수요와 부동산 시장이 살아나는 대신 마진이 줄어듭니다. 2022년 글로벌 인플레이션과 함께 시작된 고금리 시대는 2024~2025년 네 차례 인하로 한 차례 방향을 틀었고, 이후에도 물가·환율·지정학 변수에 따라 인상과 인하 기대가 수시로 뒤집히고 있습니다. 이 흐름을 읽는 틀은 세 가지입니다. 한국은행 금통위가 어느 방향으로 움직이는지, 미국과의 금리 차가 환율에 어떤 압력을 주는지, 그리고 가계의 이자 부담(주택담보대출 금리)이 소비와 부동산으로 어떻게 번지는지입니다. 개별 금리 뉴스는 결국 이 큰 사이클의 어느 지점에 있는지를 보여주는 조각들입니다.",
       "articles": [
+        {
+          "title": "연휴 뒤 채권시장 변수는…미중 정상회담·유가·10월 발행물량",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260921153900008",
+          "date": "2026-09-24"
+        },
+        {
+          "title": "[외환] 강달러·고금리 흐름에 1,360원대로 반등",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436379",
+          "date": "2026-09-24"
+        },
+        {
+          "title": "[뉴욕채권] 국채가 급락…악재 총출동에 10년물 금리 5.10%도 돌파",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436364",
+          "date": "2026-09-24"
+        },
+        {
+          "title": "갈 길 먼 9000피, 금리도 뛰어...증권사, 3분기 순이익 전망 '반토막'",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/stock/2026/09/24/2026092314131221073",
+          "date": "2026-09-24"
+        },
         {
           "title": "9월 소비심리 한 달 만에 반등…\"집값 상승 기대 여전히 높아\"",
           "press": "yna.co.kr",
@@ -103,30 +127,6 @@
           "press": "einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4435072",
           "date": "2026-09-16"
-        },
-        {
-          "title": "美국채 10년물 5% 장중 돌파…시장선 '9월 금리인상 기정사실'",
-          "press": "mt.co.kr",
-          "url": "https://www.mt.co.kr/world/2026/09/15/2026091508563052127",
-          "date": "2026-09-15"
-        },
-        {
-          "title": "'4.9%까지 뛰었다'…삼성도 내주 참전, 발행어음 '조달전쟁'",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434820",
-          "date": "2026-09-15"
-        },
-        {
-          "title": "[뉴욕증시] 뜨거운 PPI에 트럼프 현금 살포까지…나흘째 하락",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434363",
-          "date": "2026-09-11"
-        },
-        {
-          "title": "美 장기물 바이백 '60억달러' 한도 안 채워…국채금리 추가 상승(상보)",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434361",
-          "date": "2026-09-11"
         }
       ],
       "query": "한국은행 기준금리 인하"
@@ -138,6 +138,18 @@
       "summary": "'주담대로 돈 벌던 시대'의 종료. 총량 목표는 3%로 완화했지만 DSR은 그대로",
       "desc": "한국 은행업의 전통적 수익 공식은 '주택담보대출로 돈을 버는 것'이었지만, 정부가 가계부채를 국가적 위험으로 보고 총량을 직접 관리하면서 이 공식이 근본부터 흔들리고 있습니다. 금융당국은 은행별 대출 증가 한도를 정해두고, 스트레스 DSR처럼 개인의 대출 한도를 조이는 규제를 단계적으로 강화해 왔습니다. 은행 입장에서는 가장 안전하고 확실한 성장 엔진이 막힌 것이라, 비이자이익 확대·글로벌 진출 같은 다른 트렌드들이 모두 이 규제에서 출발한다고 해도 과언이 아닙니다. 규제가 조여질 때마다 대출 수요가 저축은행·카드론 등 2금융권으로 옮겨가는 풍선효과가 반복되는 것도 구조적 특징입니다. 뉴스를 볼 때는 규제 강도(총량 목표·DSR 단계)의 변화, 은행별 대출 중단 여부, 풍선효과의 크기를 함께 보면 흐름이 잡힙니다.",
       "articles": [
+        {
+          "title": "팍팍한 청춘…올해 2030 개인회생 3만명·채무조정 10만명 육박",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260923146800002",
+          "date": "2026-09-24"
+        },
+        {
+          "title": "저소득 자영업자 연체율 10년 6개월 만에 최고",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260923177100002",
+          "date": "2026-09-24"
+        },
         {
           "title": "심상찮은 금리 상승세…금융위, 가계대출 매주 밀착점검 재개",
           "press": "news.einfomax.co.kr",
@@ -245,18 +257,6 @@
           "press": "mt.co.kr",
           "url": "https://www.mt.co.kr/finance/2026/08/18/2026081719385785583",
           "date": "2026-08-18"
-        },
-        {
-          "title": "이번주 국내 주요 금융일정(8.17~8.21)",
-          "press": "newspim.com",
-          "url": "https://www.newspim.com/news/view/20260814001168",
-          "date": "2026-08-17"
-        },
-        {
-          "title": "대출 숨통 트여도…‘이것’부터 먼저 체크해보세요",
-          "press": "segyebiz.com",
-          "url": "http://www.segyebiz.com/newsView/20260813522050?OutUrl=naver",
-          "date": "2026-08-16"
         }
       ],
       "query": "가계대출 총량규제 스트레스 DSR"
@@ -268,6 +268,12 @@
       "summary": "'이자 장사' 탈피. 자산관리·외환에서 앞선 곳과 뒤처진 곳의 격차가 벌어진다",
       "desc": "한국 은행 수익의 대부분은 예금과 대출의 금리 차이에서 나오는 이자이익입니다. 문제는 이 구조가 금리 사이클에 실적이 통째로 흔들리는 데다, '이자 장사'라는 사회적 비판과 대출 총량규제까지 겹치면서 성장의 한계가 뚜렷해졌다는 점입니다. 그래서 은행들은 수수료·신탁·방카슈랑스·투자은행(IB) 같은 비이자 수익원을 키우는 동시에, 배달앱(신한 땡겨요)·알뜰폰(KB 리브모바일)처럼 은행답지 않은 신사업에도 뛰어들고 있습니다. 겉보기에 '은행이 저걸 왜 하지?' 싶은 뉴스는 대부분 이 트렌드의 연장선입니다. 관전 포인트는 실적 발표 때마다 비이자이익 비중이 실제로 늘고 있는지, 그리고 신사업이 미래 고객 접점 확보(플랫폼 전략)로 이어지는지입니다.",
       "articles": [
+        {
+          "title": "추석에 60조 '상생 보따리' 푸는 4대 은행...신규대출·만기연장 지원",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/finance/2026/09/24/2026092314554258908",
+          "date": "2026-09-24"
+        },
         {
           "title": "회사채 16조 순상환·대출 57조↑…기업 '돈줄' 은행으로",
           "press": "news.einfomax.co.kr",
@@ -381,12 +387,6 @@
           "press": "mt.co.kr",
           "url": "https://www.mt.co.kr/finance/2026/08/24/2026082319451145333",
           "date": "2026-08-24"
-        },
-        {
-          "title": "국민은행, 증권사처럼 퇴직연금서 ETF 당일 매매",
-          "press": "hankyung.com",
-          "url": "https://www.hankyung.com/article/2026082030001",
-          "date": "2026-08-21"
         }
       ],
       "query": "은행 비이자이익 확대"
@@ -1050,6 +1050,12 @@
       "query": "금융사고 내부통제",
       "articles": [
         {
+          "title": "'매출 높은 기업'에 신보 보증 쏠림…100억 초과 승인액 65%↑",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20260923197500002",
+          "date": "2026-09-24"
+        },
+        {
           "title": "수수료 우회지급·비급여 풍선효과…국감 도마 위에 오르나",
           "press": "news.einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436227",
@@ -1161,12 +1167,6 @@
           "title": "'수출실적 뻥튀기'로 상장하고 대출까지…정부, 집중 점검 실시",
           "press": "einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4434189",
-          "date": "2026-09-10"
-        },
-        {
-          "title": "금감원, 보험사 '분쟁 민원 관리' 현장점검…KB·DB손보 첫 타자",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260909186300002",
           "date": "2026-09-10"
         }
       ]
