@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.02",
+  "lastUpdated": "2026.10.05",
   "trends": [
     {
       "category": "금리·정책",
@@ -269,6 +269,18 @@
       "desc": "한국 은행 수익의 대부분은 예금과 대출의 금리 차이에서 나오는 이자이익입니다. 문제는 이 구조가 금리 사이클에 실적이 통째로 흔들리는 데다, '이자 장사'라는 사회적 비판과 대출 총량규제까지 겹치면서 성장의 한계가 뚜렷해졌다는 점입니다. 그래서 은행들은 수수료·신탁·방카슈랑스·투자은행(IB) 같은 비이자 수익원을 키우는 동시에, 배달앱(신한 땡겨요)·알뜰폰(KB 리브모바일)처럼 은행답지 않은 신사업에도 뛰어들고 있습니다. 겉보기에 '은행이 저걸 왜 하지?' 싶은 뉴스는 대부분 이 트렌드의 연장선입니다. 관전 포인트는 실적 발표 때마다 비이자이익 비중이 실제로 늘고 있는지, 그리고 신사업이 미래 고객 접점 확보(플랫폼 전략)로 이어지는지입니다.",
       "articles": [
         {
+          "title": "설계사 늘어나도 직영 점포 '뚝'…보험업계, 대리점 중심 가속화",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4437743",
+          "date": "2026-10-05"
+        },
+        {
+          "title": "'쌀 때 사자' 금값 떨어지자 '줍줍'…골드바 매달 300억씩 팔렸다",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/finance/2026/10/05/2026093014465828714",
+          "date": "2026-10-05"
+        },
+        {
           "title": "하나금융 청라시대 본격 개막…새로운 100년 향해 출발",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20261002037200002",
@@ -375,18 +387,6 @@
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20260908161200002",
           "date": "2026-09-09"
-        },
-        {
-          "title": "코리안리, 운용수익률 10% 육박…주식 확대·환이익 덕봤다",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433821",
-          "date": "2026-09-08"
-        },
-        {
-          "title": "나라사랑카드 혜택 쩐쟁, 요동치는 군심",
-          "press": "mt.co.kr",
-          "url": "https://www.mt.co.kr/finance/2026/09/07/2026090619520830599",
-          "date": "2026-09-07"
         }
       ],
       "query": "은행 비이자이익 확대"
@@ -1050,6 +1050,30 @@
       "query": "금융사고 내부통제",
       "articles": [
         {
+          "title": "'700종신' 판매 중단에 중소 생보사 '패닉'…GA는 '달러보험'이 활로",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/finance/2026/10/05/2026100216555425325",
+          "date": "2026-10-05"
+        },
+        {
+          "title": "과기정통부, 금융권 해킹사고에 사이버위협 대응 강화",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4437730",
+          "date": "2026-10-05"
+        },
+        {
+          "title": "5대 은행, 보안에 순익의 1%만 투자",
+          "press": "hankyung.com",
+          "url": "https://www.hankyung.com/article/2026100427041",
+          "date": "2026-10-05"
+        },
+        {
+          "title": "5대 은행장 연말 '물갈이' 현실화하나…'친소 배제'에 연임 셈법 복잡",
+          "press": "mt.co.kr",
+          "url": "https://www.mt.co.kr/finance/2026/10/05/2026100215065869551",
+          "date": "2026-10-05"
+        },
+        {
           "title": "금감원 사모운용사 위법행위, 시장퇴출로 단호히 대응",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20261002037900002",
@@ -1144,30 +1168,6 @@
           "press": "news.einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436217",
           "date": "2026-09-23"
-        },
-        {
-          "title": "김우찬 코스닥시장위원장, 산은 사외이사 사임…'이해충돌' 우려",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436002",
-          "date": "2026-09-22"
-        },
-        {
-          "title": "은행 연체증가와 뉴욕증시 상승 등 이시각 주요뉴스",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436013",
-          "date": "2026-09-22"
-        },
-        {
-          "title": "李도 인정한 '삼전닉스 레버리지' 빈틈…왜 규제는 뒤늦게 왔나",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4435818",
-          "date": "2026-09-21"
-        },
-        {
-          "title": "'실세 원장'에 금감원 2인자 공식도 흔들리나…'금융위 몫' 주목",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4435522",
-          "date": "2026-09-18"
         }
       ]
     }

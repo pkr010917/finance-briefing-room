@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026.10.02",
+  "lastUpdated": "2026.10.05",
   "jobs": [
     {
-      "company": "BNK부산은행",
-      "title": "2026년 하반기 신입행원 채용",
+      "company": "신한은행",
+      "title": "2026년 하반기 신입행원 채용(개인·기업금융 일반직 등)",
       "group": "은행",
-      "deadline": "2026-10-02",
-      "url": "https://busanbank.recruiter.co.kr/career/home",
-      "note": "공채·일반채용, 신입 대상. 서류 → 필기 → 면접 전형 (세부 절차는 홈페이지 확인).",
-      "found": "2026-09-28"
+      "deadline": "2026-10-17",
+      "url": "https://www.shinhan.com/index.jsp",
+      "note": "자소서 폐지, 영상 인터뷰·AI 협업면접 도입. 서류→심층·그룹·AI협업 통합면접. 약 130명 선발.",
+      "found": "2026-10-05"
     }
   ]
 }
