@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.06",
+  "lastUpdated": "2026.10.07",
   "trends": [
     {
       "category": "금리·정책",
@@ -529,6 +529,12 @@
       "desc": "원화 가치에 1:1로 고정된 디지털 화폐(스테이블코인)를 누가 발행할 것인가를 둘러싼 경쟁으로, 돈의 형태 자체가 바뀔 수 있다는 점에서 금융권 전체가 주목하는 판입니다. 법제화의 핵심 쟁점은 발행사 지분의 51% 이상을 은행이 갖게 하는 '은행 중심 규칙'이 통과되느냐이며, 이에 따라 은행 컨소시엄과 빅테크(두나무·네이버 등) 진영의 주도권이 갈립니다. 은행들이 컨소시엄 구성을 서두르는 배경에는 새 수수료 수익원 확보만이 아니라, 예금이 스테이블코인으로 이동하면 은행의 자금 조달 구조가 흔들릴 수 있다는 방어 논리도 있습니다. 한국은행의 기관용 CBDC 실험, 국채 토큰화 같은 정부 차원의 실증 사업과도 연결됩니다. 발행 주도권·법제화 속도·컨소시엄 구도, 이 세 축으로 개별 뉴스를 배치해 보면 전체 그림이 보입니다.",
       "articles": [
         {
+          "title": "국경 간 가상자산 이전 '통합 모니터링'…개인지갑도 대상",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4438039",
+          "date": "2026-10-07"
+        },
+        {
           "title": "LG CNS, 디지털자산 블록체인 인프라 플랫폼 '기틀' 출시",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20261006027000017",
@@ -641,12 +647,6 @@
           "press": "edaily.co.kr",
           "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=04680566645547320",
           "date": "2026-08-14"
-        },
-        {
-          "title": "삼성전자·현대차까지…스테이블코인 사업화로 미래 연다",
-          "press": "biz.heraldcorp.com",
-          "url": "https://biz.heraldcorp.com/article/10840059?ref=naver",
-          "date": "2026-08-13"
         }
       ],
       "query": "원화 스테이블코인 은행"
@@ -1050,6 +1050,42 @@
       "query": "금융사고 내부통제",
       "articles": [
         {
+          "title": "금융당국, 금융사 해킹 보안망 전수점검…회사별 취약점 찾아낸다",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4438036",
+          "date": "2026-10-07"
+        },
+        {
+          "title": "금감원 \"증권사들, 기본도 안 지키는 위법행위 여전…감사 강화해야\"",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4438064",
+          "date": "2026-10-07"
+        },
+        {
+          "title": "금감원, 증권업계에 \"경각심 갖고 IT보안 전면 재점검\"",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20261007051500002",
+          "date": "2026-10-07"
+        },
+        {
+          "title": "저축은행중앙회, 1천억대 차세대시스템에 'AI 해킹' 보안 강화",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4438045",
+          "date": "2026-10-07"
+        },
+        {
+          "title": "올해 수은 해킹 시도 283건, 작년의 8배…지난달 한은 공격도",
+          "press": "yna.co.kr",
+          "url": "https://www.yna.co.kr/view/AKR20261007044800002",
+          "date": "2026-10-07"
+        },
+        {
+          "title": "정보유출에 영화 '암살자(들)' 후폭풍까지…은행장 국감 줄소환",
+          "press": "news.einfomax.co.kr",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4438040",
+          "date": "2026-10-07"
+        },
+        {
           "title": "LGU+·우리은행, 보이스피싱 '통화 단계'부터 막는다",
           "press": "yna.co.kr",
           "url": "https://www.yna.co.kr/view/AKR20261006043400017",
@@ -1132,42 +1168,6 @@
           "press": "news.einfomax.co.kr",
           "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4437039",
           "date": "2026-09-30"
-        },
-        {
-          "title": "금융당국, 적기시정조치 금융사 5곳 재점검…탈출 가능할까",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436845",
-          "date": "2026-09-29"
-        },
-        {
-          "title": "[금융가 이모저모] 지방지주 회장들 시·도금고 '성토'…이찬진 조찬 길어진 까닭",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436612",
-          "date": "2026-09-28"
-        },
-        {
-          "title": "KB금융 양종희-이재근, 자회사 CEO 승계 룰 함께 만든다",
-          "press": "einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436619",
-          "date": "2026-09-28"
-        },
-        {
-          "title": "라임·옵티머스 40명 아직도 안 돼…사모펀드 배상 천차만별",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260924000900002",
-          "date": "2026-09-25"
-        },
-        {
-          "title": "'매출 높은 기업'에 신보 보증 쏠림…100억 초과 승인액 65%↑",
-          "press": "yna.co.kr",
-          "url": "https://www.yna.co.kr/view/AKR20260923197500002",
-          "date": "2026-09-24"
-        },
-        {
-          "title": "수수료 우회지급·비급여 풍선효과…국감 도마 위에 오르나",
-          "press": "news.einfomax.co.kr",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436227",
-          "date": "2026-09-23"
         }
       ]
     }

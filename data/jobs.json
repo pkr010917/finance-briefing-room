@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026.10.06",
+  "lastUpdated": "2026.10.07",
   "jobs": [
     {
       "company": "신한은행",
@@ -9,6 +9,15 @@
       "url": "https://www.shinhan.com/index.jsp",
       "note": "자소서 폐지, 영상 인터뷰·AI 협업면접 도입. 서류→심층·그룹·AI협업 통합면접. 약 130명 선발.",
       "found": "2026-10-05"
+    },
+    {
+      "company": "한국수출입은행",
+      "title": "2026년 하반기 전문직행원(신입) 채용",
+      "group": "금융공기업",
+      "deadline": "2026-10-19",
+      "url": "https://linkareer.com/activity/354604",
+      "note": "총 68명 모집, 학력·전공·연령 제한 없음. 서류→필기→면접 전형.",
+      "found": "2026-10-07"
     }
   ]
 }
